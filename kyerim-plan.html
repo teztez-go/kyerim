@@ -182,16 +182,16 @@ if (window.self !== window.top) {
         <div class="flex items-center justify-between">
           <label for="inputMembers" class="text-xs font-bold text-slate-700">1. 등록 회원 수</label>
           <div class="flex items-baseline gap-1">
-            <input type="number" id="inputMembers" min="40" max="300" step="5" value="150" class="w-20 text-right font-mono font-black text-xl text-slate-900 bg-white border border-slate-300 focus:border-slate-900 rounded-lg px-2 py-0.5 outline-none tabular-nums">
+            <input type="number" id="inputMembers" min="40" max="300" step="5" value="180" class="w-20 text-right font-mono font-black text-xl text-slate-900 bg-white border border-slate-300 focus:border-slate-900 rounded-lg px-2 py-0.5 outline-none tabular-nums">
             <span class="text-xs font-bold text-slate-600">명</span>
           </div>
         </div>
-        <input type="range" id="rangeMembers" min="40" max="250" step="5" value="150" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+        <input type="range" id="rangeMembers" min="40" max="250" step="5" value="180" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer">
         <div class="flex items-center justify-between gap-1 pt-0.5">
-          <button type="button" data-member-preset="100" class="preset-chip px-2 py-1 rounded-md text-[11px] font-mono font-medium bg-white border border-slate-200 text-slate-600 hover:border-slate-400 transition">100명 (초기)</button>
-          <button type="button" data-member-preset="150" class="preset-chip active px-2 py-1 rounded-md text-[11px] font-mono font-medium bg-white border border-slate-200 text-slate-600 hover:border-slate-400 transition">150명 (목표)</button>
-          <button type="button" data-member-preset="180" class="preset-chip px-2 py-1 rounded-md text-[11px] font-mono font-medium bg-white border border-slate-200 text-slate-600 hover:border-slate-400 transition">180명 (성장)</button>
-          <button type="button" data-member-preset="220" class="preset-chip px-2 py-1 rounded-md text-[11px] font-mono font-medium bg-white border border-slate-200 text-slate-600 hover:border-slate-400 transition">220명 (만실)</button>
+          <button type="button" data-member-preset="150" class="preset-chip px-2 py-1 rounded-md text-[11px] font-mono font-medium bg-white border border-slate-200 text-slate-600 hover:border-slate-400 transition">150명 (기본)</button>
+          <button type="button" data-member-preset="180" class="preset-chip active px-2 py-1 rounded-md text-[11px] font-mono font-medium bg-white border border-slate-200 text-slate-600 hover:border-slate-400 transition">180명 (목표)</button>
+          <button type="button" data-member-preset="210" class="preset-chip px-2 py-1 rounded-md text-[11px] font-mono font-medium bg-white border border-slate-200 text-slate-600 hover:border-slate-400 transition">210명 (성장)</button>
+          <button type="button" data-member-preset="240" class="preset-chip px-2 py-1 rounded-md text-[11px] font-mono font-medium bg-white border border-slate-200 text-slate-600 hover:border-slate-400 transition">240명 (만실)</button>
         </div>
       </div>
 
@@ -558,12 +558,12 @@ if (window.self !== window.top) {
             <span class="font-bold text-slate-800">회원 수 연동 시뮬레이션</span>
             <span class="font-mono font-black text-sm text-slate-900" id="card1SummaryLabel">150명 · 순수익 1,783만원</span>
           </div>
-          <input type="range" id="card1RangeMembers" min="40" max="250" step="5" value="150" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+          <input type="range" id="card1RangeMembers" min="40" max="250" step="5" value="180" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer">
           <div class="flex justify-between text-[10px] text-slate-400 font-mono">
             <span>40명</span>
-            <span>100명</span>
-            <span>150명 (목표)</span>
-            <span>220명 (만실)</span>
+            <span>150명 (기본)</span>
+            <span>180명 (목표)</span>
+            <span>240명 (만실)</span>
           </div>
         </div>
 
@@ -666,7 +666,7 @@ const inSharePct = document.getElementById("inputSharePct");
 const rngSharePct = document.getElementById("rangeSharePct");
 
 // Defaults
-const DEFAULT_MEMBERS = 150;
+const DEFAULT_MEMBERS = 180;
 const DEFAULT_PRICE = 17;
 const DEFAULT_OPEX = 767;
 const DEFAULT_SHARE_PCT = 40;
@@ -1025,9 +1025,10 @@ function renderScenarioTable(price, opex, broPct, ourPct, capex, curMembers, bep
     { label: "손익분기 (BEP)", badge: "비용 충당", m: Math.max(40, bep), isBep: true },
     { label: "초기 안착", badge: "오픈 2~3개월", m: 100 },
     { label: "안정화 단계", badge: "안정 궤도", m: 120 },
-    { label: "기준 목표", badge: "핵심 타깃", m: 150, isTarget: true },
-    { label: "성장 확장", badge: "활성화", m: 180 },
-    { label: "만실 가동", badge: "230평 풀가동", m: 220 }
+    { label: "기본 기준", badge: "기본 안", m: 150 },
+    { label: "기본 목표", badge: "핵심 타깃", m: 180, isTarget: true },
+    { label: "성장 확장", badge: "활성화", m: 210 },
+    { label: "만실 가동", badge: "230평 풀가동", m: 240 }
   ];
 
   const tbody = document.getElementById("scenarioTableBody");
