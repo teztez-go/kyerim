@@ -117,10 +117,10 @@ if (window.self !== window.top) {
         <div class="rounded-2xl bg-gradient-to-br from-amber-500/15 to-amber-500/5 border border-amber-400/30 p-4 sm:p-5">
           <div class="flex items-center justify-between">
             <span class="text-xs text-amber-300/90 font-medium">초기 시설 투자비 총합계 (CAPEX)</span>
-            <span class="text-[10px] px-2 py-0.5 rounded-md bg-amber-400/20 text-amber-300 font-mono font-bold" id="headerTotalText">3억 3,475만원</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-amber-400/20 text-amber-300 font-mono font-bold" id="headerTotalText">3억 4,735만원</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono tabular-nums mt-1.5" id="sumTotal">3억 3,475만원</div>
-          <div class="text-xs text-amber-200/70 font-mono mt-1" id="sumTotalWon">334,754,000원 (1~6구역 전체)</div>
+          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono tabular-nums mt-1.5" id="sumTotal">3억 4,735만원</div>
+          <div class="text-xs text-amber-200/70 font-mono mt-1" id="sumTotalWon">347,354,000원 (1~6구역 전체)</div>
         </div>
 
         <!-- Metric 2: Equipment & Lounge (Zones 1~4) -->
@@ -139,18 +139,18 @@ if (window.self !== window.top) {
             <span class="text-xs text-slate-400 font-medium">인테리어 · 냉난방 · 설비 (5~6구역)</span>
             <span class="text-[10px] px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 font-mono font-bold">사업계획서 A 연동</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumXpodium">1억 9,540만원</div>
-          <div class="text-xs text-slate-400 font-mono mt-1" id="sumXpodiumWon">인테리어·건축 1억 6,500만 · 냉난방·설비 3,040만</div>
+          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumXpodium">2억 800만원</div>
+          <div class="text-xs text-slate-400 font-mono mt-1" id="sumXpodiumWon">인테리어·건축 1억 6,500만 · 냉난방·설비 4,300만</div>
         </div>
 
-        <!-- Metric 4: Real Asset Preservation & Direct Construction -->
+        <!-- Metric 4: Cost per Pyeong (230-pyeong) -->
         <div class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5">
           <div class="flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-medium">직영 원가 시공 & 실물 자산 보존</span>
-            <span class="text-[10px] px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 font-bold">100% 소유</span>
+            <span class="text-xs text-slate-400 font-medium">230평 실평수 기준 시설단가</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 font-bold">원가 직영 시공</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tabular-nums mt-1.5">감가 방어 75%+</div>
-          <div class="text-xs text-slate-400 mt-1">의장님 건설사 직영 시공 · 공인 장비 높은 중고 가치</div>
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tabular-nums mt-1.5" id="sumPyeongPrice">평당 약 151만원</div>
+          <div class="text-xs text-slate-400 mt-1" id="sumPyeongSub">인테리어 평당 90만 + 기구 평당 61만 (업계 대비 40% 절감)</div>
         </div>
       </div>
     </div>
@@ -236,10 +236,10 @@ if (window.self !== window.top) {
       <div class="px-5 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white">
         <div>
           <div class="text-base font-bold text-slate-900">초기 시설 투자비 총합계 (CAPEX · 1~6구역 전체)</div>
-          <div class="text-xs text-slate-500 mt-0.5" id="footSplitSub">운동기구·라운지(1~4구역) 1억 3,935만원 + 인테리어·냉난방·설비(5~6구역) 1억 9,540만원 · 사업계획서 실시간 연동</div>
+          <div class="text-xs text-slate-500 mt-0.5" id="footSplitSub">운동기구·라운지(1~4구역) 1억 3,935만원 + 인테리어·냉난방·설비(5~6구역) 2억 800만원 · 사업계획서 실시간 연동</div>
         </div>
         <div class="text-left sm:text-right font-mono text-xl sm:text-2xl font-black text-slate-900 tabular-nums" id="footTotal">
-          3억 3,475만원 (334,754,000원)
+          3억 4,735만원 (347,354,000원)
         </div>
       </div>
     </div>
@@ -821,26 +821,10 @@ const PRESET_GYERIM = [
   {
     "id": 1794990691981,
     "zone": "ROX",
-    "name": "샌드백 30KG",
-    "price": 93000,
-    "qty": 5,
-    "note": ""
-  },
-  {
-    "id": 1794990680093,
-    "zone": "ROX",
-    "name": "샌드백 20KG",
-    "price": 78000,
-    "qty": 10,
-    "note": ""
-  },
-  {
-    "id": 1794990658523,
-    "zone": "ROX",
-    "name": "샌드백 10KG",
-    "price": 77000,
-    "qty": 10,
-    "note": ""
+    "name": "샌드백 3종 세트 (10kg·20kg·30kg 총 25개)",
+    "price": 2015000,
+    "qty": 1,
+    "note": "10KG 10개(77만) + 20KG 10개(78만) + 30KG 5개(46.5만) 일괄 세트"
   },
   {
     "id": 1794990569210,
@@ -982,9 +966,9 @@ const PRESET_GYERIM = [
     "id": 401,
     "zone": "MEP",
     "name": "40평형 천장형 시스템 냉난방기 (인버터 4-Way)",
-    "price": 2900000,
-    "qty": 6,
-    "note": "운동공간 5대(G~F열 3대 + H~G열 2대) 및 웰컴라운지 1대 · 배관 자재 및 지상 1층 실외기 포함 (대당 290만원)"
+    "price": 30000000,
+    "qty": 1,
+    "note": "운동공간 40평형 (4대) + 라운지 (1대) + 탈의실 벽걸이 (2대)"
   },
   {
     "id": 403,
@@ -1028,7 +1012,21 @@ const PRESET_GYERIM = [
   }
 ];
 
-const STORAGE_KEY = "kyerim_equipment_items_v45";
+const STORAGE_KEY = "kyerim_equipment_items_v46";
+
+// Purge obsolete cached keys from earlier versions
+(function purgeLegacyEquipKeys() {
+  const LEGACY_KEYS = [
+    "kyerim_equipment_items_v45",
+    "kyerim_equipment_items_v43",
+    "kyerim_equipment_items_v42",
+    "kyerim_equipment_items_v41",
+    "kyerim_equipment_items_v2"
+  ];
+  try {
+    LEGACY_KEYS.forEach(k => localStorage.removeItem(k));
+  } catch (e) {}
+})();
 const TOTAL_STORAGE_KEY = "kyerim_equipment_total_v2";
 const INTERIOR_STORAGE_KEY = "kyerim_interior_total_v2";
 const CAPEX_STORAGE_KEY = "kyerim_capex_total_v2";
@@ -1951,6 +1949,14 @@ function updateSummaries() {
 
   document.getElementById("sumXpodium").textContent = fmtManwon(interiorMepTotal);
   document.getElementById("sumXpodiumWon").textContent = `인테리어·건축 ${fmtManwon(zoneTotals.INTERIOR)} · 냉난방·설비 ${fmtManwon(zoneTotals.MEP)}`;
+
+  const pyeongTotal = Math.round((total / 230) / 10000);
+  const pyeongInterior = Math.round((interiorMepTotal / 230) / 10000);
+  const pyeongEquip = Math.round((equipLoungeTotal / 230) / 10000);
+  const sumPyeongPriceEl = document.getElementById("sumPyeongPrice");
+  if (sumPyeongPriceEl) sumPyeongPriceEl.textContent = `평당 약 ${pyeongTotal}만원`;
+  const sumPyeongSubEl = document.getElementById("sumPyeongSub");
+  if (sumPyeongSubEl) sumPyeongSubEl.textContent = `인테리어 평당 ${pyeongInterior}만 + 기구 평당 ${pyeongEquip}만 (업계 대비 40% 절감)`;
 }
 
 // Zone Filter pills
