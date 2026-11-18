@@ -234,8 +234,8 @@ if (window.self !== window.top) {
           <input type="range" id="rangeOpex" min="500" max="2500" step="5" value="1584" disabled class="w-full h-1.5 bg-slate-200/80 rounded-lg appearance-none cursor-not-allowed opacity-60 accent-slate-400" title="명세서 연동 항목으로 슬라이더 조작이 잠겨 있습니다">
         </div>
         <div class="flex justify-between text-[11px] text-slate-500 font-mono pt-0.5" id="opexBreakdownText">
-          <span id="opexLaborSubLabel">인건비 약 608만</span>
-          <span id="opexOpsSubLabel">공과금·관리비 약 159만</span>
+          <span id="opexLaborSubLabel">인건비 약 1,116.3만</span>
+          <span id="opexOpsSubLabel">관리·공과금 약 467.4만</span>
         </div>
       </div>
 
@@ -643,15 +643,38 @@ if (window.self !== window.top) {
 
 <script>
 // LocalStorage Keys for Persistence & Cross-Page Sync
+// Purge obsolete cached keys from earlier versions so stale OPEX (767만원) never pollutes calculations
+(function purgeLegacyKeys() {
+  const LEGACY_KEYS = [
+    "kyerim_opex_items_v7",
+    "kyerim_opex_items_v6",
+    "kyerim_opex_items_v5",
+    "kyerim_opex_items_v4",
+    "kyerim_opex_items_v3",
+    "kyerim_opex_items_v2",
+    "kyerim_opex_items_v1",
+    "kyerim_opex_total_v1",
+    "kyerim_plan_opex_custom"
+  ];
+  try {
+    LEGACY_KEYS.forEach(k => localStorage.removeItem(k));
+    const oldTot = localStorage.getItem("kyerim_opex_total_v2");
+    if (oldTot && Number(oldTot) < 1000) {
+      localStorage.removeItem("kyerim_opex_total_v2");
+    }
+  } catch (e) {}
+})();
+
 const KEY_MEMBERS = "kyerim_plan_members";
 const KEY_PRICE = "kyerim_plan_price";
-const KEY_OPEX = "kyerim_plan_opex_custom";
 const KEY_SHARE_PCT = "kyerim_plan_share_pct";
-const OPEX_STORAGE_TOTAL = "kyerim_opex_total_v2";
+const OPEX_STORAGE_TOTAL = "kyerim_opex_total_v3";
+const OPEX_STORAGE_ITEMS = "kyerim_opex_items_v8";
 
 const EQUIPMENT_STORAGE_TOTAL_V2 = "kyerim_equipment_total_v2";
-const EQUIPMENT_STORAGE_ITEMS_V2 = "kyerim_equipment_items_v2";
+const EQUIPMENT_STORAGE_ITEMS_V45 = "kyerim_equipment_items_v45";
 const EQUIPMENT_STORAGE_ITEMS_V43 = "kyerim_equipment_items_v43";
+const EQUIPMENT_STORAGE_ITEMS_V2 = "kyerim_equipment_items_v2";
 const EQUIPMENT_STORAGE_TOTAL_V1 = "kyerim_equipment_total_v1";
 const INTERIOR_STORAGE_TOTAL_V2 = "kyerim_interior_total_v2";
 
@@ -674,21 +697,18 @@ const DEFAULT_EQUIPMENT_TOTAL = 13935; // 1억 3,935만원 (1~4구역)
 const DEFAULT_INTERIOR_TOTAL = 19540; // 1억 9,540만원 (5~6구역)
 
 function getSavedOpex() {
-  const opexFromTable = localStorage.getItem(OPEX_STORAGE_TOTAL);
+  const opexFromTable = localStorage.getItem(OPEX_STORAGE_TOTAL) || localStorage.getItem("kyerim_opex_total_v2");
   if (opexFromTable && !isNaN(Number(opexFromTable))) {
     let val = Number(opexFromTable);
     if (val > 100000) val = Math.round(val / 10000);
-    if (val >= 1000) return val; // valid if updated
+    if (val >= 1000) return val; // valid if >= 1,000만원
   }
   return DEFAULT_OPEX;
 }
 
 function updateOpexMeta() {
   const CANDIDATE_KEYS = [
-    "kyerim_opex_items_v7",
-    "kyerim_opex_items_v6",
-    "kyerim_opex_items_v5",
-    "kyerim_opex_items_v4"
+    "kyerim_opex_items_v8"
   ];
   let laborWon = 0;
   let opsWon = 0;
@@ -702,9 +722,9 @@ function updateOpexMeta() {
         if (Array.isArray(items) && items.length > 0) {
           items.forEach(it => {
             let rowTotal = 0;
-            if (it.name.includes("금융이자") || it.isLoan) {
+            if (it.name && (it.name.includes("금융이자") || it.isLoan)) {
               rowTotal = Math.round(Number(it.price || 0) * (Number(it.qty || 0) / 100) / 12);
-            } else if (it.name.includes("사업주공과세") || it.isOwnerTax) {
+            } else if (it.name && (it.name.includes("사업주공과세") || it.isOwnerTax)) {
               rowTotal = Number(it.price || 0);
             } else {
               rowTotal = Number(it.price || 0) * Number(it.qty || 0);
@@ -733,13 +753,13 @@ function updateOpexMeta() {
     const laborMan = (laborWon / 10000).toFixed(1);
     const opsMan = (opsWon / 10000).toFixed(1);
     if (laborEl) laborEl.textContent = `인건비 약 ${laborMan}만`;
-    if (opsEl) opsEl.textContent = `공과금·관리비 약 ${opsMan}만`;
+    if (opsEl) opsEl.textContent = `관리·공과금 약 ${opsMan}만`;
     const totalMan = Math.round((laborWon + opsWon) / 10000);
     inOpex.value = totalMan;
     rngOpex.value = totalMan;
   } else {
-    if (laborEl) laborEl.textContent = "인건비 약 608만";
-    if (opsEl) opsEl.textContent = "공과금·관리비 약 159만";
+    if (laborEl) laborEl.textContent = "인건비 약 1,116.3만";
+    if (opsEl) opsEl.textContent = "관리·공과금 약 467.4만";
     inOpex.value = getSavedOpex();
     rngOpex.value = inOpex.value;
   }
@@ -768,13 +788,14 @@ function getSavedInteriorTotal() {
 }
 
 function updateEquipmentMeta() {
+  const savedV45 = localStorage.getItem(EQUIPMENT_STORAGE_ITEMS_V45);
   const savedV43 = localStorage.getItem(EQUIPMENT_STORAGE_ITEMS_V43);
-  const savedV2 = localStorage.getItem(EQUIPMENT_STORAGE_ITEMS_V2);
+  const saved = savedV45 || savedV43;
   const eqLabelEl = document.getElementById("equipmentCountLabel");
   const intLabelEl = document.getElementById("interiorCountLabel");
-  if (savedV43) {
+  if (saved) {
     try {
-      const items = JSON.parse(savedV43);
+      const items = JSON.parse(saved);
       if (Array.isArray(items) && items.length > 0) {
         const intCount = items.filter(it => it.zone === 'INTERIOR' || it.zone === 'MEP').length;
         const eqCount = items.length - intCount;
@@ -784,6 +805,7 @@ function updateEquipmentMeta() {
       }
     } catch (e) {}
   }
+  const savedV2 = localStorage.getItem(EQUIPMENT_STORAGE_ITEMS_V2);
   if (savedV2 && eqLabelEl) {
     try {
       const items = JSON.parse(savedV2);
@@ -793,8 +815,8 @@ function updateEquipmentMeta() {
       }
     } catch (e) {}
   }
-  if (eqLabelEl) eqLabelEl.textContent = "1~4구역 실견적 실시간 연동";
-  if (intLabelEl) intLabelEl.textContent = "5~6구역 실견적 실시간 연동";
+  if (eqLabelEl) eqLabelEl.textContent = "1~4구역 82개 품목 실시간 연동";
+  if (intLabelEl) intLabelEl.textContent = "5~6구역 5개 품목 실시간 연동";
 }
 
 function loadState() {
@@ -1147,11 +1169,11 @@ function bindEvents() {
 window.addEventListener('storage', e => {
   if (
     e.key === OPEX_STORAGE_TOTAL ||
-    e.key === "kyerim_opex_items_v7" ||
-    e.key === "kyerim_opex_items_v6" ||
-    e.key === "kyerim_opex_items_v5" ||
+    e.key === "kyerim_opex_total_v2" ||
+    e.key === "kyerim_opex_items_v8" ||
     e.key === EQUIPMENT_STORAGE_TOTAL_V2 ||
     e.key === INTERIOR_STORAGE_TOTAL_V2 ||
+    e.key === EQUIPMENT_STORAGE_ITEMS_V45 ||
     e.key === EQUIPMENT_STORAGE_ITEMS_V43 ||
     e.key === EQUIPMENT_STORAGE_ITEMS_V2 ||
     e.key === EQUIPMENT_STORAGE_TOTAL_V1

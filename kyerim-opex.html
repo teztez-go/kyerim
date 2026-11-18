@@ -452,7 +452,24 @@ const DEFAULT_OPEX = [
 ];
 
 const STORAGE_KEY = "kyerim_opex_items_v8";
-const TOTAL_STORAGE_KEY = "kyerim_opex_total_v2";
+const TOTAL_STORAGE_KEY = "kyerim_opex_total_v3";
+
+// Purge obsolete cached keys from earlier versions
+(function purgeLegacyKeys() {
+  const LEGACY_KEYS = [
+    "kyerim_opex_items_v7",
+    "kyerim_opex_items_v6",
+    "kyerim_opex_items_v5",
+    "kyerim_opex_items_v4",
+    "kyerim_opex_items_v3",
+    "kyerim_opex_items_v2",
+    "kyerim_opex_items_v1",
+    "kyerim_opex_total_v1"
+  ];
+  try {
+    LEGACY_KEYS.forEach(k => localStorage.removeItem(k));
+  } catch (e) {}
+})();
 
 let items = [];
 let currentFilter = 'all'; // 'all' | 'labor' | 'ops'
@@ -682,6 +699,7 @@ function saveData() {
   const totalWon = calculateTotal();
   const totalManwon = Math.round(totalWon / 10000);
   localStorage.setItem(TOTAL_STORAGE_KEY, totalManwon);
+  localStorage.setItem("kyerim_opex_total_v2", totalManwon);
   showSaveIndicator();
 }
 
