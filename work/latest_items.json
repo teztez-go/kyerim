@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "category": "labor",
+    "name": "코치 기본급",
+    "price": 2400000,
+    "qty": 3,
+    "note": "코치 기본급여 (오후2명+오전1명)"
+  },
+  {
+    "id": 2,
+    "category": "labor",
+    "name": "퇴직금(10%)",
+    "price": 720000,
+    "qty": 1,
+    "isAutoSeverance": true,
+    "note": "기본급의 10% 자동 연동 (법정 퇴직연금)"
+  },
+  {
+    "id": 3,
+    "category": "labor",
+    "name": "4대보험(업장분)",
+    "price": 720000,
+    "qty": 1,
+    "isFourIns": true,
+    "note": "기본급의 10% 자동 연동 (사업주 법정 부담분: 국민연금·건강·고용·산재)"
+  },
+  {
+    "id": 4,
+    "category": "labor",
+    "name": "근로소득세",
+    "price": 766290,
+    "qty": 1,
+    "isIncomeTax": true,
+    "note": "국세청 근로소득 간이세액표 공식 자동 산출 (소득세법 시행령 별표2)"
+  },
+  {
+    "id": 5,
+    "category": "labor",
+    "name": "지방소득세",
+    "price": 76620,
+    "qty": 1,
+    "isLocalTax": true,
+    "note": "근로소득세의 10% 자동 산출 (지방세법 제87조)"
+  },
+  {
+    "id": 6,
+    "category": "labor",
+    "name": "헤드코치 직급수당",
+    "price": 400000,
+    "qty": 1,
+    "note": "센터/코치/수업 중간관리자 수당"
+  },
+  {
+    "id": 1794982523179,
+    "category": "labor",
+    "name": "데스크 매니저",
+    "price": 600000,
+    "qty": 1,
+    "note": "회원등록&상담 등 (주12시간)"
+  },
+  {
+    "id": 7,
+    "category": "labor",
+    "name": "월차수당",
+    "price": 120000,
+    "qty": 3,
+    "note": "법정 월차 / 연차 정산 수당"
+  },
+  {
+    "id": 8,
+    "category": "labor",
+    "name": "일요일 수업료",
+    "price": 40000,
+    "qty": 8,
+    "note": "일요일(2타임)x4주"
+  },
+  {
+    "id": 9,
+    "category": "ops",
+    "name": "임대료",
+    "price": 0,
+    "qty": 1,
+    "note": "의장님이 해당 층 소유자이므로 0원 확정"
+  },
+  {
+    "id": 1794981957415,
+    "category": "ops",
+    "name": "관리비 (모름)",
+    "price": 1800000,
+    "qty": 1,
+    "note": "해당 230평 건물 자체 관리비 (모름)"
+  },
+  {
+    "id": 10,
+    "category": "ops",
+    "name": "전기요금",
+    "price": 800000,
+    "qty": 1,
+    "note": "지하 230평 공조·환기 및 냉난방 전기료"
+  },
+  {
+    "id": 11,
+    "category": "ops",
+    "name": "수도요금",
+    "price": 100000,
+    "qty": 1,
+    "note": "남녀 샤워실 및 센터 위생 수도요금"
+  },
+  {
+    "id": 12,
+    "category": "ops",
+    "name": "금융이자(튼튼론)",
+    "price": 400000000,
+    "qty": 4.08,
+    "isLoan": true,
+    "note": "시설자금 대출이자 (대출금액 × 연금리 ÷ 12)"
+  },
+  {
+    "id": 13,
+    "category": "ops",
+    "name": "세무기장료",
+    "price": 100000,
+    "qty": 1,
+    "note": "세무회계사무소 매월 장부 기장 수수료"
+  },
+  {
+    "id": 14,
+    "category": "ops",
+    "name": "CRM사용료",
+    "price": 100000,
+    "qty": 1,
+    "note": "회원 출석, 수강권 결제 및 예약 앱 솔루션"
+  },
+  {
+    "id": 15,
+    "category": "ops",
+    "name": "SK렌탈",
+    "price": 63000,
+    "qty": 1,
+    "note": "정수기(1)+비데(2)  렌탈비"
+  },
+  {
+    "id": 16,
+    "category": "ops",
+    "name": "화재보험료",
+    "price": 130000,
+    "qty": 1,
+    "note": "체육시설업 화재 및 영업배상책임보험"
+  },
+  {
+    "id": 17,
+    "category": "ops",
+    "name": "통신료",
+    "price": 45000,
+    "qty": 1,
+    "note": "매장 인터넷, 와이파이 및 유무선 통신비"
+  },
+  {
+    "id": 18,
+    "category": "ops",
+    "name": "사업주공과세",
+    "price": 21040,
+    "qty": 230,
+    "isOwnerTax": true,
+    "note": "지방세법 제81조 주민세 사업소분 자동 산출 (기본세액 6.25만 + 230평 연면적분 19만 ÷ 12개월)"
+  },
+  {
+    "id": 19,
+    "category": "ops",
+    "name": "소모비품",
+    "price": 100000,
+    "qty": 1,
+    "note": "위생,소모비품,청소비품 등 실비"
+  },
+  {
+    "id": 20,
+    "category": "ops",
+    "name": "음악저작권료",
+    "price": 46400,
+    "qty": 1,
+    "note": "체육시설 매장 음악 공연권 저작권료 (230평)"
+  },
+  {
+    "id": 21,
+    "category": "ops",
+    "name": "유튜브음악",
+    "price": 8500,
+    "qty": 1,
+    "note": "매장 배경음악 스트리밍 정기구독"
+  }
+]

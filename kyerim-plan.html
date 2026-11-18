@@ -132,7 +132,7 @@ if (window.self !== window.top) {
         <div class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5">
           <div class="text-xs text-slate-400 font-medium">센터 월 순수익 (EBITDA)</div>
           <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="heroNetProfit">1,783만원</div>
-          <div class="text-xs text-slate-400 font-mono mt-1" id="heroNetSub">매출 2,550만 − 실운영비 767만</div>
+          <div class="text-xs text-slate-400 font-mono mt-1" id="heroNetSub">매출 3,060만 − 실운영비 1,584만</div>
         </div>
 
         <!-- Metric 4: Break-Even Safety Margin -->
@@ -226,12 +226,12 @@ if (window.self !== window.top) {
             </a>
           </div>
           <div class="flex items-baseline gap-1">
-            <input type="number" id="inputOpex" readonly value="767" class="w-20 text-right font-mono font-black text-xl text-slate-700 bg-slate-100/90 border border-slate-200 rounded-lg px-2 py-0.5 outline-none tabular-nums cursor-not-allowed select-none" title="월 고정 실운영비 명세서에서 자동 산출되는 고정값입니다 (수정은 명세서에서 가능)">
+            <input type="number" id="inputOpex" readonly value="1584" class="w-20 text-right font-mono font-black text-xl text-slate-700 bg-slate-100/90 border border-slate-200 rounded-lg px-2 py-0.5 outline-none tabular-nums cursor-not-allowed select-none" title="월 고정 실운영비 명세서에서 자동 산출되는 고정값입니다 (수정은 명세서에서 가능)">
             <span class="text-xs font-bold text-slate-500">만원</span>
           </div>
         </div>
         <div class="space-y-1">
-          <input type="range" id="rangeOpex" min="400" max="1500" step="5" value="767" disabled class="w-full h-1.5 bg-slate-200/80 rounded-lg appearance-none cursor-not-allowed opacity-60 accent-slate-400" title="명세서 연동 항목으로 슬라이더 조작이 잠겨 있습니다">
+          <input type="range" id="rangeOpex" min="500" max="2500" step="5" value="1584" disabled class="w-full h-1.5 bg-slate-200/80 rounded-lg appearance-none cursor-not-allowed opacity-60 accent-slate-400" title="명세서 연동 항목으로 슬라이더 조작이 잠겨 있습니다">
         </div>
         <div class="flex justify-between text-[11px] text-slate-500 font-mono pt-0.5" id="opexBreakdownText">
           <span id="opexLaborSubLabel">인건비 약 608만</span>
@@ -290,7 +290,7 @@ if (window.self !== window.top) {
             <span class="text-xs text-slate-500 font-semibold">월 고정 실운영비 (우선 공제)</span>
             <a href="kyerim-opex.html" class="text-[11px] text-slate-500 hover:text-slate-900 underline">내역 ↗</a>
           </div>
-          <div class="text-2xl sm:text-3xl font-black font-mono text-rose-600 tabular-nums mt-2" id="kpiOpex">−767만원</div>
+          <div class="text-2xl sm:text-3xl font-black font-mono text-rose-600 tabular-nums mt-2" id="kpiOpex">−1,584만원</div>
         </div>
 
         <!-- Net Profit (EBITDA) -->
@@ -345,7 +345,7 @@ if (window.self !== window.top) {
 
       <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600 pt-0.5">
         <div class="flex items-center gap-4 flex-wrap">
-          <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-xs bg-slate-500"></span>실운영비 <strong class="font-mono text-slate-800" id="wfOpexTxt">767만원</strong></span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-xs bg-slate-500"></span>실운영비 <strong class="font-mono text-slate-800" id="wfOpexTxt">1,584만원</strong></span>
           <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-xs bg-amber-500"></span>의장님 배당 <strong class="font-mono text-slate-900" id="wfBrotherTxt">1,070만원</strong></span>
           <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-xs bg-slate-800"></span>운영사 수익 <strong class="font-mono text-slate-800" id="wfOurTxt">713만원</strong> <span class="text-[11px] text-sky-700 font-mono" id="wfIncentiveTxt">(코치 인센티브 143만 포함)</span></span>
         </div>
@@ -363,7 +363,7 @@ if (window.self !== window.top) {
           <h2 class="text-xl font-bold text-slate-900 tracking-tight">인원별 수익 시나리오</h2>
         </div>
         <p class="text-xs sm:text-sm text-slate-500 mt-1" id="scenarioTableSubtitle">
-          현재 설정된 월단가(17.0만원) 및 실운영비(767만원)가 실시간 반영된 단계별 수익표입니다. 행을 클릭하면 시뮬레이터에 즉시 적용됩니다.
+          현재 설정된 월단가(17.0만원) 및 실운영비(1,584만원)가 실시간 반영된 단계별 수익표입니다. 행을 클릭하면 시뮬레이터에 즉시 적용됩니다.
         </p>
       </div>
       <span class="text-xs font-mono text-slate-400">단위: 만원</span>
@@ -668,7 +668,7 @@ const rngSharePct = document.getElementById("rangeSharePct");
 // Defaults
 const DEFAULT_MEMBERS = 180;
 const DEFAULT_PRICE = 17;
-const DEFAULT_OPEX = 767;
+const DEFAULT_OPEX = 1584;
 const DEFAULT_SHARE_PCT = 40;
 const DEFAULT_EQUIPMENT_TOTAL = 13323; // 1억 3,323만원 (1~4구역)
 const DEFAULT_INTERIOR_TOTAL = 26800; // 2억 6,800만원 (5~6구역)
@@ -678,7 +678,7 @@ function getSavedOpex() {
   if (opexFromTable && !isNaN(Number(opexFromTable))) {
     let val = Number(opexFromTable);
     if (val > 100000) val = Math.round(val / 10000);
-    return val;
+    if (val >= 1000) return val; // valid if updated
   }
   return DEFAULT_OPEX;
 }

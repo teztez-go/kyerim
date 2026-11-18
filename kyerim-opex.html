@@ -114,30 +114,30 @@ if (window.self !== window.top) {
         <div onclick="setFilter('all')" class="rounded-2xl bg-gradient-to-br from-amber-500/15 to-amber-500/5 border border-amber-400/30 p-4 sm:p-5 cursor-pointer hover:border-amber-400/60 transition group" title="클릭 시 전체 항목 보기">
           <div class="flex items-center justify-between">
             <span class="text-xs text-amber-300/90 font-medium">월 고정 실운영비 총합계</span>
-            <span class="text-[10px] px-2 py-0.5 rounded-md bg-amber-400/20 text-amber-300 font-mono font-bold" id="cardTotalBadge">21개 항목</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-amber-400/20 text-amber-300 font-mono font-bold" id="cardTotalBadge">23개 항목</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono tabular-nums mt-1.5" id="sumTotal">7,670,490원</div>
-          <div class="text-xs text-amber-200/70 font-mono mt-1" id="sumTotalSub">약 767만원 · 매출에서 우선 공제</div>
+          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono tabular-nums mt-1.5" id="sumTotal">15,836,850원</div>
+          <div class="text-xs text-amber-200/70 font-mono mt-1" id="sumTotalSub">약 1,584만원 · 매출에서 우선 공제</div>
         </div>
 
         <!-- Metric 2: Labor Cost -->
         <div onclick="setFilter('labor')" class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5 cursor-pointer hover:border-slate-500 transition group" title="클릭 시 코치진 인건비만 필터">
           <div class="flex items-center justify-between">
             <span class="text-xs text-slate-400 font-medium">1. 코치진 인건비</span>
-            <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-700 text-slate-300 font-mono font-bold" id="cardLaborBadge">8개 항목</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-700 text-slate-300 font-mono font-bold" id="cardLaborBadge">9개 항목</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumLabor">6,083,450원</div>
-          <div class="text-xs text-slate-400 font-mono mt-1" id="sumLaborSub">약 608.3만원 (79.3%)</div>
+          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumLabor">11,162,910원</div>
+          <div class="text-xs text-slate-400 font-mono mt-1" id="sumLaborSub">약 1,116.3만원 (70.5%)</div>
         </div>
 
         <!-- Metric 3: Operations & Utilities -->
         <div onclick="setFilter('ops')" class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5 cursor-pointer hover:border-slate-500 transition group" title="클릭 시 관리비·운영비만 필터">
           <div class="flex items-center justify-between">
             <span class="text-xs text-slate-400 font-medium">2. 관리비·공과금 & 운영비</span>
-            <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-700 text-slate-300 font-mono font-bold" id="cardOpsBadge">13개 항목</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-700 text-slate-300 font-mono font-bold" id="cardOpsBadge">14개 항목</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumOps">1,587,040원</div>
-          <div class="text-xs text-slate-400 font-mono mt-1" id="sumOpsSub">약 158.7만원 (20.7%)</div>
+          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumOps">4,673,940원</div>
+          <div class="text-xs text-slate-400 font-mono mt-1" id="sumOpsSub">약 467.4만원 (29.5%)</div>
         </div>
 
         <!-- Metric 4: Rent Saving -->
@@ -160,7 +160,7 @@ if (window.self !== window.top) {
         <div class="flex items-center gap-2">
           <span class="w-2 h-5 rounded-full bg-slate-900"></span>
           <h2 class="text-xl font-bold text-slate-900 tracking-tight">월 고정 실운영비 세부 항목 및 산출 근거</h2>
-          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200" id="tableHeaderBadge">2대 카테고리 (21개 항목)</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200" id="tableHeaderBadge">2대 카테고리 (23개 항목)</span>
         </div>
         <p class="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
           국세청 간이세액표 및 4대보험·퇴직금 공식이 자동 연동되며, 단가나 수량을 수정하면 즉시 재산출되어 수익 계산기에 실시간 반영됩니다.
@@ -186,13 +186,13 @@ if (window.self !== window.top) {
       <div class="flex items-center gap-2 flex-wrap">
         <span class="text-xs font-bold text-slate-400 mr-1">보기 필터:</span>
         <button type="button" id="btnFilterAll" onclick="setFilter('all')" class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white shadow-xs transition border border-transparent">
-          전체 항목 (<span id="btnFilterAllCount">21개</span> · <span id="btnFilterAllSum">767만</span>)
+          전체 항목 (<span id="btnFilterAllCount">23개</span> · <span id="btnFilterAllSum">1584만</span>)
         </button>
         <button type="button" id="btnFilterLabor" onclick="setFilter('labor')" class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition">
-          🧑‍🏫 1. 코치진 인건비 (<span id="btnFilterLaborCount">8개</span> · <span id="btnFilterLaborSum">608.3만</span>)
+          🧑‍🏫 1. 코치진 인건비 (<span id="btnFilterLaborCount">9개</span> · <span id="btnFilterLaborSum">1116.3만</span>)
         </button>
         <button type="button" id="btnFilterOps" onclick="setFilter('ops')" class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition">
-          🏢 2. 관리·공과금 & 운영비 (<span id="btnFilterOpsCount">13개</span> · <span id="btnFilterOpsSum">158.7만</span>)
+          🏢 2. 관리·공과금 & 운영비 (<span id="btnFilterOpsCount">14개</span> · <span id="btnFilterOpsSum">467.4만</span>)
         </button>
       </div>
       <div class="text-[11px] text-slate-400 font-mono hidden md:block">
@@ -223,13 +223,13 @@ if (window.self !== window.top) {
           <tr class="bg-slate-100/70 border-b border-slate-200 text-xs font-semibold text-slate-700">
             <td colspan="5" class="py-2.5 px-4 text-right">
               <span class="text-slate-500 mr-2">카테고리별 합산 검증:</span>
-              <span class="inline-flex items-center gap-1 text-slate-800 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono font-bold">인건비 <span id="footSummaryLabor">6,083,450원</span></span>
+              <span class="inline-flex items-center gap-1 text-slate-800 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono font-bold">인건비 <span id="footSummaryLabor">11,162,910원</span></span>
               <span class="mx-1 text-slate-400">+</span>
-              <span class="inline-flex items-center gap-1 text-slate-800 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono font-bold">운영비 <span id="footSummaryOps">1,587,040원</span></span>
+              <span class="inline-flex items-center gap-1 text-slate-800 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono font-bold">운영비 <span id="footSummaryOps">4,673,940원</span></span>
               <span class="mx-1 text-slate-400">=</span>
             </td>
             <td class="py-2.5 px-4 text-right font-mono font-bold text-slate-900 text-sm whitespace-nowrap tabular-nums" id="footSummarySum">
-              7,670,490원
+              15,836,850원
             </td>
             <td colspan="2" class="py-2.5 px-4 text-xs text-emerald-600 font-medium">
               ✓ 두 카테고리 합계와 총합계 100% 일치
@@ -239,10 +239,10 @@ if (window.self !== window.top) {
           <tr class="font-bold bg-white">
             <td colspan="5" class="py-3.5 px-4 text-base text-slate-900">월 고정 실운영비 총합계 (OPEX)</td>
             <td class="py-3.5 px-4 text-right font-mono text-xl text-slate-900 whitespace-nowrap tabular-nums" id="footTotal">
-              7,670,490원
+              15,836,850원
             </td>
             <td colspan="2" class="py-3.5 px-4 text-xs text-slate-500 font-normal" id="footTotalSub">
-              (약 767만원 · 계산기 및 대시보드에 실시간 자동 반영)
+              (약 1,584만원 · 계산기 및 대시보드에 실시간 자동 반영)
             </td>
           </tr>
         </tfoot>
@@ -259,33 +259,199 @@ if (window.self !== window.top) {
 <script>
 // 21 items configured with category grouping: 8 Labor + 13 Operations
 const DEFAULT_OPEX = [
-  // 1. 코치진 급여 및 수당 인건비 (8개 항목)
-  { id: 1, category: "labor", name: "기본급", price: 4200000, qty: 1, note: "코치진 기본급여 (상주 헤드코치 등)" },
-  { id: 2, category: "labor", name: "퇴직금(10%)", price: 420000, qty: 1, isAutoSeverance: true, note: "기본급의 10% 자동 연동 (법정 퇴직연금)" },
-  { id: 3, category: "labor", name: "4대보험(업장분)", price: 420000, qty: 1, isFourIns: true, note: "기본급의 10% 자동 연동 (사업주 법정 부담분: 국민연금·건강·고용·산재)" },
-  { id: 4, category: "labor", name: "근로소득세", price: 221320, qty: 1, isIncomeTax: true, note: "국세청 근로소득 간이세액표 공식 자동 산출 (소득세법 시행령 별표2)" },
-  { id: 5, category: "labor", name: "지방소득세", price: 22130, qty: 1, isLocalTax: true, note: "근로소득세의 10% 자동 산출 (지방세법 제87조)" },
-  { id: 6, category: "labor", name: "헤드직급수당", price: 400000, qty: 1, note: "수업 및 센터 총괄 책임 직급수당" },
-  { id: 7, category: "labor", name: "월차수당", price: 240000, qty: 1, note: "법정 월차 / 연차 정산 수당" },
-  { id: 8, category: "labor", name: "일요일 근무수당", price: 160000, qty: 1, note: "일요일/공휴일 오픈 클래스 코칭 수당" },
-
-  // 2. 관리비·공과금 & 센터 운영비 (13개 항목)
-  { id: 9, category: "ops", name: "임대료", price: 0, qty: 1, note: "의장님이 해당 층 소유자이므로 0원 확정" },
-  { id: 10, category: "ops", name: "전기요금", price: 800000, qty: 1, note: "지하 230평 공조·환기 및 냉난방 전기료" },
-  { id: 11, category: "ops", name: "수도요금", price: 100000, qty: 1, note: "남녀 샤워실 및 센터 위생 수도요금" },
-  { id: 12, category: "ops", name: "금융이자", price: 48000000, qty: 5.0, isLoan: true, note: "운영자금 대출이자 (대출금액 × 연금리 ÷ 12)" },
-  { id: 13, category: "ops", name: "세무기장료", price: 100000, qty: 1, note: "세무회계사무소 매월 장부 기장 수수료" },
-  { id: 14, category: "ops", name: "CRM사용료", price: 80000, qty: 1, note: "회원 출석, 수강권 결제 및 예약 앱 솔루션" },
-  { id: 15, category: "ops", name: "SK렌탈", price: 63000, qty: 1, note: "정수기 및 공기청정기 렌탈 관리비" },
-  { id: 16, category: "ops", name: "화재보험료", price: 57000, qty: 1, note: "체육시설업 화재 및 영업배상책임보험" },
-  { id: 17, category: "ops", name: "통신료", price: 40000, qty: 1, note: "매장 인터넷, 와이파이 및 유무선 통신비" },
-  { id: 18, category: "ops", name: "사업주공과세", price: 21040, qty: 230, isOwnerTax: true, note: "지방세법 제81조 주민세 사업소분 자동 산출 (기본세액 6.25만 + 230평 연면적분 19만 ÷ 12개월)" },
-  { id: 19, category: "ops", name: "소모비품", price: 100000, qty: 1, note: "탄막, 테이핑, 청소용품, 구급약품 등 실비" },
-  { id: 20, category: "ops", name: "음악저작권료", price: 18000, qty: 1, note: "체육시설 매장 음악 공연권 저작권료" },
-  { id: 21, category: "ops", name: "유튜브음악", price: 8000, qty: 1, note: "매장 배경음악 스트리밍 정기구독" }
+  {
+    "id": 1,
+    "category": "labor",
+    "name": "코치 기본급",
+    "price": 2400000,
+    "qty": 3,
+    "note": "코치 기본급여 (오후2명+오전1명)"
+  },
+  {
+    "id": 2,
+    "category": "labor",
+    "name": "퇴직금(10%)",
+    "price": 720000,
+    "qty": 1,
+    "isAutoSeverance": true,
+    "note": "기본급의 10% 자동 연동 (법정 퇴직연금)"
+  },
+  {
+    "id": 3,
+    "category": "labor",
+    "name": "4대보험(업장분)",
+    "price": 720000,
+    "qty": 1,
+    "isFourIns": true,
+    "note": "기본급의 10% 자동 연동 (사업주 법정 부담분: 국민연금·건강·고용·산재)"
+  },
+  {
+    "id": 4,
+    "category": "labor",
+    "name": "근로소득세",
+    "price": 766290,
+    "qty": 1,
+    "isIncomeTax": true,
+    "note": "국세청 근로소득 간이세액표 공식 자동 산출 (소득세법 시행령 별표2)"
+  },
+  {
+    "id": 5,
+    "category": "labor",
+    "name": "지방소득세",
+    "price": 76620,
+    "qty": 1,
+    "isLocalTax": true,
+    "note": "근로소득세의 10% 자동 산출 (지방세법 제87조)"
+  },
+  {
+    "id": 6,
+    "category": "labor",
+    "name": "헤드코치 직급수당",
+    "price": 400000,
+    "qty": 1,
+    "note": "센터/코치/수업 중간관리자 수당"
+  },
+  {
+    "id": 1794982523179,
+    "category": "labor",
+    "name": "데스크 매니저",
+    "price": 600000,
+    "qty": 1,
+    "note": "회원등록&상담 등 (주12시간)"
+  },
+  {
+    "id": 7,
+    "category": "labor",
+    "name": "월차수당",
+    "price": 120000,
+    "qty": 3,
+    "note": "법정 월차 / 연차 정산 수당"
+  },
+  {
+    "id": 8,
+    "category": "labor",
+    "name": "일요일 수업료",
+    "price": 40000,
+    "qty": 8,
+    "note": "일요일(2타임)x4주"
+  },
+  {
+    "id": 9,
+    "category": "ops",
+    "name": "임대료",
+    "price": 0,
+    "qty": 1,
+    "note": "의장님이 해당 층 소유자이므로 0원 확정"
+  },
+  {
+    "id": 1794981957415,
+    "category": "ops",
+    "name": "관리비 (모름)",
+    "price": 1800000,
+    "qty": 1,
+    "note": "해당 230평 건물 자체 관리비 (모름)"
+  },
+  {
+    "id": 10,
+    "category": "ops",
+    "name": "전기요금",
+    "price": 800000,
+    "qty": 1,
+    "note": "지하 230평 공조·환기 및 냉난방 전기료"
+  },
+  {
+    "id": 11,
+    "category": "ops",
+    "name": "수도요금",
+    "price": 100000,
+    "qty": 1,
+    "note": "남녀 샤워실 및 센터 위생 수도요금"
+  },
+  {
+    "id": 12,
+    "category": "ops",
+    "name": "금융이자(튼튼론)",
+    "price": 400000000,
+    "qty": 4.08,
+    "isLoan": true,
+    "note": "시설자금 대출이자 (대출금액 × 연금리 ÷ 12)"
+  },
+  {
+    "id": 13,
+    "category": "ops",
+    "name": "세무기장료",
+    "price": 100000,
+    "qty": 1,
+    "note": "세무회계사무소 매월 장부 기장 수수료"
+  },
+  {
+    "id": 14,
+    "category": "ops",
+    "name": "CRM사용료",
+    "price": 100000,
+    "qty": 1,
+    "note": "회원 출석, 수강권 결제 및 예약 앱 솔루션"
+  },
+  {
+    "id": 15,
+    "category": "ops",
+    "name": "SK렌탈",
+    "price": 63000,
+    "qty": 1,
+    "note": "정수기(1)+비데(2)  렌탈비"
+  },
+  {
+    "id": 16,
+    "category": "ops",
+    "name": "화재보험료",
+    "price": 130000,
+    "qty": 1,
+    "note": "체육시설업 화재 및 영업배상책임보험"
+  },
+  {
+    "id": 17,
+    "category": "ops",
+    "name": "통신료",
+    "price": 45000,
+    "qty": 1,
+    "note": "매장 인터넷, 와이파이 및 유무선 통신비"
+  },
+  {
+    "id": 18,
+    "category": "ops",
+    "name": "사업주공과세",
+    "price": 21040,
+    "qty": 230,
+    "isOwnerTax": true,
+    "note": "지방세법 제81조 주민세 사업소분 자동 산출 (기본세액 6.25만 + 230평 연면적분 19만 ÷ 12개월)"
+  },
+  {
+    "id": 19,
+    "category": "ops",
+    "name": "소모비품",
+    "price": 100000,
+    "qty": 1,
+    "note": "위생,소모비품,청소비품 등 실비"
+  },
+  {
+    "id": 20,
+    "category": "ops",
+    "name": "음악저작권료",
+    "price": 46400,
+    "qty": 1,
+    "note": "체육시설 매장 음악 공연권 저작권료 (230평)"
+  },
+  {
+    "id": 21,
+    "category": "ops",
+    "name": "유튜브음악",
+    "price": 8500,
+    "qty": 1,
+    "note": "매장 배경음악 스트리밍 정기구독"
+  }
 ];
 
-const STORAGE_KEY = "kyerim_opex_items_v7";
+const STORAGE_KEY = "kyerim_opex_items_v8";
 const TOTAL_STORAGE_KEY = "kyerim_opex_total_v2";
 
 let items = [];
@@ -477,23 +643,7 @@ function organizeItems() {
 }
 
 function loadData() {
-  const CANDIDATE_KEYS = [
-    STORAGE_KEY,
-    "kyerim_opex_items_v6",
-    "kyerim_opex_items_v5",
-    "kyerim_opex_items_v4",
-    "kyerim_opex_items_v3",
-    "kyerim_opex_items_v2"
-  ];
-
-  let saved = null;
-  for (const k of CANDIDATE_KEYS) {
-    const val = localStorage.getItem(k);
-    if (val) {
-      saved = val;
-      break;
-    }
-  }
+  const saved = localStorage.getItem(STORAGE_KEY);
 
   if (saved) {
     try {
@@ -1217,6 +1367,7 @@ document.querySelectorAll('a[href^="kyerim-"]').forEach(a => {
 
 loadData();
 render();
+
 </script>
 </body>
 </html>
