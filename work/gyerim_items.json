@@ -1,0 +1,335 @@
+[
+  {
+    "id": 101,
+    "supplier": "코모",
+    "category": "유산소 머신",
+    "name": "컨셉2 로잉머신 (RowErg PM5)",
+    "price": 1475000,
+    "qty": 10,
+    "note": "하이록스 공식 유산소 종목 (3호점 실단가)"
+  },
+  {
+    "id": 102,
+    "supplier": "코모",
+    "category": "유산소 머신",
+    "name": "컨셉2 바이크에르그 (BikeErg)",
+    "price": 1650000,
+    "qty": 5,
+    "note": "하이록스 및 인터벌 사이클 (3호점 실단가)"
+  },
+  {
+    "id": 103,
+    "supplier": "코모",
+    "category": "유산소 머신",
+    "name": "컨셉2 스키에르그 (SkiErg + 스탠드)",
+    "price": 1650000,
+    "qty": 6,
+    "note": "하이록스 공식 종목 대비 6대 증설 (3호점 실단가)"
+  },
+  {
+    "id": 104,
+    "supplier": "Xpodium",
+    "category": "유산소 머신",
+    "name": "포디움 무동력 곡면 트레드밀",
+    "price": 2500000,
+    "qty": 2,
+    "note": "자체 동력 러닝 테크닉 머신 (포디움 정가)"
+  },
+  {
+    "id": 105,
+    "supplier": "Xpodium",
+    "category": "썰매 & 트랙",
+    "name": "하이록스 공식 파워 썰매 (Sled)",
+    "price": 350000,
+    "qty": 4,
+    "note": "Sled Push & Pull 공식 규격 경기용 썰매"
+  },
+  {
+    "id": 106,
+    "supplier": "Xpodium",
+    "category": "썰매 & 트랙",
+    "name": "25m 2레인 썰매 전용 인조잔디 트랙 (Turf)",
+    "price": 49000,
+    "qty": 80,
+    "note": "25m 2레인 80m² 고밀도 매립 시공 (포디움 로고단가)"
+  },
+  {
+    "id": 107,
+    "supplier": "Xpodium",
+    "category": "바닥재",
+    "name": "고무매트 바닥재 (1m×1m×2.5cm)",
+    "price": 33000,
+    "qty": 600,
+    "note": "230평 전체 충격흡수 고무매트 바닥 (3호점 실단가)"
+  },
+  {
+    "id": 108,
+    "supplier": "Xpodium",
+    "category": "바닥재",
+    "name": "EPDM 50T 충격흡수 드랍존 고무블럭",
+    "price": 55000,
+    "qty": 100,
+    "note": "역도 드랍존 전용 고밀도 충격·소음 흡수 블럭"
+  },
+  {
+    "id": 109,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "맞춤형 25m 벽면 철골 리그 스테이션",
+    "price": 15000000,
+    "qty": 1,
+    "note": "25m 풀업 20베이 + 스쿼트 12베이 일체 커스텀"
+  },
+  {
+    "id": 110,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "대형 스토리지 랙 (2850*500*2000)",
+    "price": 1800000,
+    "qty": 2,
+    "note": "장비 및 메디신볼/소도구 전용 랙 (3호점 실단가)"
+  },
+  {
+    "id": 111,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "덤벨 정리대 (2000*750*800)",
+    "price": 490000,
+    "qty": 2,
+    "note": "3단 우레탄 덤벨 전용 거치대 (3호점 실단가)"
+  },
+  {
+    "id": 112,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "바벨 수평/수직 정리대",
+    "price": 110000,
+    "qty": 4,
+    "note": "바벨 40자루 거치대 (3호점 실단가)"
+  },
+  {
+    "id": 113,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "GHD (Glute Ham Developer)",
+    "price": 439000,
+    "qty": 2,
+    "note": "하체 및 코어 훈련 머신 (3호점 실단가)"
+  },
+  {
+    "id": 114,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "각도조절 벤치",
+    "price": 219000,
+    "qty": 2,
+    "note": "상체 및 프리웨이트 인클라인 벤치 (3호점 실단가)"
+  },
+  {
+    "id": 115,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "역도 블럭 (Drop Block)",
+    "price": 375000,
+    "qty": 2,
+    "note": "역도 클린/스내치 부분 훈련 블럭 (3호점 실단가)"
+  },
+  {
+    "id": 116,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "딥스 어태치먼트 바",
+    "price": 95000,
+    "qty": 2,
+    "note": "리그 장착형 딥스 바 (3호점 실단가)"
+  },
+  {
+    "id": 117,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "로프 클라임 로프",
+    "price": 59000,
+    "qty": 2,
+    "note": "천장 거치용 등반 로프 (3호점 실단가)"
+  },
+  {
+    "id": 118,
+    "supplier": "Xpodium",
+    "category": "바벨",
+    "name": "포디움 바벨 20KG (남성용)",
+    "price": 219000,
+    "qty": 15,
+    "note": "공식 규격 올림픽 바벨 (3호점 실단가)"
+  },
+  {
+    "id": 119,
+    "supplier": "Xpodium",
+    "category": "바벨",
+    "name": "포디움 바벨 15KG (여성용)",
+    "price": 201000,
+    "qty": 15,
+    "note": "공식 규격 올림픽 바벨 (3호점 실단가)"
+  },
+  {
+    "id": 120,
+    "supplier": "Xpodium",
+    "category": "바벨",
+    "name": "스킬바벨 10KG (초심자용)",
+    "price": 99000,
+    "qty": 10,
+    "note": "테크닉 훈련용 경량 바벨 (3호점 실단가)"
+  },
+  {
+    "id": 121,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "자석 마구리 (Collar)",
+    "price": 14500,
+    "qty": 40,
+    "note": "원판 고정용 마그네틱 락 (3호점 실단가)"
+  },
+  {
+    "id": 122,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "보급형 범퍼 플레이트 45lb",
+    "price": 73000,
+    "qty": 16,
+    "note": "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)"
+  },
+  {
+    "id": 123,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "보급형 범퍼 플레이트 35lb",
+    "price": 65000,
+    "qty": 12,
+    "note": "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)"
+  },
+  {
+    "id": 124,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "보급형 범퍼 플레이트 25lb",
+    "price": 46000,
+    "qty": 20,
+    "note": "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)"
+  },
+  {
+    "id": 125,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "보급형 범퍼 플레이트 15lb",
+    "price": 35000,
+    "qty": 16,
+    "note": "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)"
+  },
+  {
+    "id": 126,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "보급형 범퍼 플레이트 10lb",
+    "price": 29000,
+    "qty": 24,
+    "note": "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)"
+  },
+  {
+    "id": 127,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "보급형 플레이트 5lb",
+    "price": 16500,
+    "qty": 12,
+    "note": "저중량 플레이트 (3호점 실단가)"
+  },
+  {
+    "id": 128,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "보급형 플레이트 2.5lb",
+    "price": 13500,
+    "qty": 12,
+    "note": "미세 중량 조절용 플레이트 (3호점 실단가)"
+  },
+  {
+    "id": 129,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "포디움 덤벨 세트 (5lb~100lb 총 120개)",
+    "price": 5200000,
+    "qty": 1,
+    "note": "5, 10, 15, 20, 25, 30, 35, 40, 50, 70, 100lb 쌍 세트 (3호점 실단가 기준)"
+  },
+  {
+    "id": 130,
+    "supplier": "Xpodium",
+    "category": "케틀벨",
+    "name": "컴피티션 케틀벨 세트 (4KG~32KG 총 72개)",
+    "price": 3100000,
+    "qty": 1,
+    "note": "4, 8, 12, 16, 20, 24, 32KG 컴피티션 규격 (3호점 실단가 기준)"
+  },
+  {
+    "id": 131,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "소프트 점핑박스 (40*50*60)",
+    "price": 132000,
+    "qty": 12,
+    "note": "안전 고밀도 폼 소프트 플라이오 박스 (3호점 실단가)"
+  },
+  {
+    "id": 132,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "소프트 점핑박스 (50*60*70)",
+    "price": 149000,
+    "qty": 12,
+    "note": "대형 소프트 플라이오 박스 (3호점 실단가)"
+  },
+  {
+    "id": 133,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "나무 점핑박스 (40*50*60)",
+    "price": 58000,
+    "qty": 6,
+    "note": "우드 플라이오메트릭 박스 (3호점 실단가)"
+  },
+  {
+    "id": 134,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "하이록스/크로스핏 월볼 세트 (4~30lb 40개)",
+    "price": 1850000,
+    "qty": 1,
+    "note": "4lb, 6lb, 10lb, 16lb, 20lb, 30lb 세트 (3호점 실단가)"
+  },
+  {
+    "id": 135,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "풀업 저항 밴드 세트 (블루/그린/퍼플/블랙 60개)",
+    "price": 550000,
+    "qty": 1,
+    "note": "스트레칭 및 풀업 어시스트 밴드 (3호점 실단가)"
+  },
+  {
+    "id": 136,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "AB MAT (일반)",
+    "price": 12900,
+    "qty": 30,
+    "note": "복근 및 코어 훈련 매트 (3호점 실단가)"
+  },
+  {
+    "id": 137,
+    "supplier": "통합",
+    "category": "배송/설치",
+    "name": "Xpodium & 코모 화물 통합 운송 및 현장 조립·설치비",
+    "price": 1800000,
+    "qty": 1,
+    "note": "지하 1층 하역, 기구 랙 조립 및 잔디 매립 기술지원"
+  }
+]

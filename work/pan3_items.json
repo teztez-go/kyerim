@@ -1,0 +1,515 @@
+[
+  {
+    "id": 5,
+    "supplier": "Xpodium",
+    "category": "바벨",
+    "name": "포디움 바벨 20KG (남성용)",
+    "price": 219000,
+    "qty": 12,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 6,
+    "supplier": "Xpodium",
+    "category": "바벨",
+    "name": "포디움 바벨 15KG (여성용)",
+    "price": 201000,
+    "qty": 12,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 7,
+    "supplier": "Xpodium",
+    "category": "바벨",
+    "name": "스킬바벨(10키로)",
+    "price": 99000,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 13,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "2.5lb",
+    "price": 13500,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 14,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "5lb",
+    "price": 16500,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 15,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "10lb",
+    "price": 29000,
+    "qty": 20,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 16,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "15lb",
+    "price": 35000,
+    "qty": 13,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 17,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "25lb",
+    "price": 46000,
+    "qty": 15,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 18,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "35lb",
+    "price": 65000,
+    "qty": 7,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 19,
+    "supplier": "Xpodium",
+    "category": "플레이트",
+    "name": "45lb",
+    "price": 73000,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 84,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "5lb",
+    "price": 5300,
+    "qty": 4,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 85,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "10lb",
+    "price": 10600,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 86,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "15lb",
+    "price": 16000,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 87,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "20lb",
+    "price": 21300,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 88,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "25lb",
+    "price": 26700,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 89,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "30lb",
+    "price": 32000,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 90,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "35lb",
+    "price": 37300,
+    "qty": 18,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 91,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "40lb",
+    "price": 42700,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 93,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "50lb",
+    "price": 53999,
+    "qty": 14,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 95,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "70lb",
+    "price": 74700,
+    "qty": 4,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 96,
+    "supplier": "Xpodium",
+    "category": "덤벨",
+    "name": "100lb",
+    "price": 106800,
+    "qty": 6,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 122,
+    "supplier": "Xpodium",
+    "category": "케틀벨",
+    "name": "4KG",
+    "price": 10800,
+    "qty": 6,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 124,
+    "supplier": "Xpodium",
+    "category": "케틀벨",
+    "name": "8KG",
+    "price": 21600,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 126,
+    "supplier": "Xpodium",
+    "category": "케틀벨",
+    "name": "12KG",
+    "price": 32400,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 128,
+    "supplier": "Xpodium",
+    "category": "케틀벨",
+    "name": "16KG",
+    "price": 43200,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 129,
+    "supplier": "Xpodium",
+    "category": "케틀벨",
+    "name": "포디움 바벨 20KG (남성용)",
+    "price": 54000,
+    "qty": 8,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 130,
+    "supplier": "Xpodium",
+    "category": "케틀벨",
+    "name": "24KG",
+    "price": 64800,
+    "qty": 8,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 132,
+    "supplier": "Xpodium",
+    "category": "케틀벨",
+    "name": "32KG",
+    "price": 86400,
+    "qty": 6,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 134,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "4lb",
+    "price": 34000,
+    "qty": 3,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 135,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "6lb",
+    "price": 38000,
+    "qty": 14,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 137,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "10lb",
+    "price": 40500,
+    "qty": 16,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 140,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "16lb",
+    "price": 45000,
+    "qty": 16,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 142,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "20lb",
+    "price": 48000,
+    "qty": 16,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 143,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "30lb",
+    "price": 55000,
+    "qty": 4,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 178,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "블루",
+    "price": 15400,
+    "qty": 4,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 179,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "그린",
+    "price": 11280,
+    "qty": 20,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 180,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "퍼플",
+    "price": 7600,
+    "qty": 20,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 181,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "블랙",
+    "price": 5800,
+    "qty": 20,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 186,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "자석 마구리",
+    "price": 14500,
+    "qty": 30,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 199,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "40*50*60",
+    "price": 58000,
+    "qty": 6,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 202,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "40*50*60",
+    "price": 132000,
+    "qty": 20,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 203,
+    "supplier": "Xpodium",
+    "category": "소도구",
+    "name": "50*60*70",
+    "price": 149000,
+    "qty": 20,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 215,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "AB MAT(일반)",
+    "price": 12900,
+    "qty": 30,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 218,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "각도조절벤치",
+    "price": 219000,
+    "qty": 1,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 221,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "GHD",
+    "price": 439000,
+    "qty": 1,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 223,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "바벨 정리대",
+    "price": 110000,
+    "qty": 4,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 231,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "로프클라임",
+    "price": 59000,
+    "qty": 1,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 240,
+    "supplier": "Xpodium",
+    "category": "스테이션 & 랙",
+    "name": "역도 블럭",
+    "price": 375000,
+    "qty": 1,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 243,
+    "supplier": "Xpodium",
+    "category": "바닥재",
+    "name": "고무매트 바닥재 (1m×1m×2.5cm)",
+    "price": 33000,
+    "qty": 350,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 244,
+    "supplier": "Xpodium",
+    "category": "바닥재",
+    "name": "포디움 철골 리그 스테이션",
+    "price": 7000000,
+    "qty": 1,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 247,
+    "supplier": "Xpodium",
+    "category": "바닥재",
+    "name": "스토리지 2850*500*2000",
+    "price": 1800000,
+    "qty": 1,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 249,
+    "supplier": "Xpodium",
+    "category": "바닥재",
+    "name": "덤벨 정리대 2000*750*800",
+    "price": 490000,
+    "qty": 1,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 258,
+    "supplier": "Xpodium",
+    "category": "바닥재",
+    "name": "딥스",
+    "price": 95000,
+    "qty": 1,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 273,
+    "supplier": "코모",
+    "category": "유산소 머신",
+    "name": "컨셉2 로잉머신 (RowErg PM5)",
+    "price": 1475000,
+    "qty": 10,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 274,
+    "supplier": "코모",
+    "category": "유산소 머신",
+    "name": "컨셉2 바이크에르그 (BikeErg)",
+    "price": 1650000,
+    "qty": 5,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 275,
+    "supplier": "코모",
+    "category": "유산소 머신",
+    "name": "컨셉2 스키에르그 (SkiErg)",
+    "price": 1650000,
+    "qty": 1,
+    "note": "2023년 판 3호점 실제 납품 견적"
+  },
+  {
+    "id": 999,
+    "supplier": "Xpodium",
+    "category": "배송/설치",
+    "name": "화물 배송비 (포디움 본사 출고)",
+    "price": 400000,
+    "qty": 1,
+    "note": "2023년 판 3호점 견적서 포함 배송비"
+  }
+]

@@ -1,0 +1,746 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="150 268 240 132" font-family="Pretendard, -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Noto Sans KR, sans-serif">
+  <defs>
+    <!-- Dark Architectural Theme Gradients -->
+    <linearGradient id="bgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#090D16" />
+    </linearGradient>
+
+    <!-- Arena Floor: Matte Black High-density EPDM Rubber -->
+    <linearGradient id="arenaFloorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#141D2C" />
+    </linearGradient>
+
+    <!-- The Yard Gym Charcoal Turf -->
+    <linearGradient id="grayTurfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#3B485C" />
+      <stop offset="100%" stop-color="#2D3748" />
+    </linearGradient>
+
+    <!-- Open Community & Mobility Zone Gradient (y=278~308) -->
+    <linearGradient id="communityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#26211A" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#172033" />
+    </linearGradient>
+
+    <!-- Amenity Gradients -->
+    <linearGradient id="loungeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A241C" />
+      <stop offset="100%" stop-color="#1C1813" />
+    </linearGradient>
+    <linearGradient id="toiletGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#151E2E" />
+    </linearGradient>
+    <linearGradient id="recovBufferGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#132B2A" />
+      <stop offset="100%" stop-color="#0E201F" />
+    </linearGradient>
+    <linearGradient id="saunaWoodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#451A03" />
+      <stop offset="100%" stop-color="#2E1102" />
+    </linearGradient>
+    <linearGradient id="coldPlungeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+    <linearGradient id="menLockerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16253B" />
+      <stop offset="100%" stop-color="#0F1A2A" />
+    </linearGradient>
+    <linearGradient id="womenLockerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281A36" />
+      <stop offset="100%" stop-color="#1B1124" />
+    </linearGradient>
+
+    <!-- Panoramic Glass View Gradient -->
+    <linearGradient id="glassWallGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="rigGlow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#F59E0B" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <style>
+    .grid-line { stroke: #334155; stroke-width: 0.5; stroke-dasharray: 2 3; }
+    .dim-line { stroke: #94A3B8; stroke-width: 0.7; }
+    .dim-tick { stroke: #94A3B8; stroke-width: 1.0; }
+    .dim-text { font-size: 4.4px; font-weight: 700; fill: #CBD5E1; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .zone-title { font-size: 6.2px; font-weight: 800; fill: #F8FAFC; }
+    .zone-sub { font-size: 4.2px; font-weight: 600; fill: #94A3B8; font-family: ui-monospace, monospace; }
+    .outer-wall { fill: none; stroke: #F8FAFC; stroke-width: 2.2; }
+    .inner-wall { fill: none; stroke: #64748B; stroke-width: 1.4; }
+    .col-box { fill: #0F172A; stroke: #94A3B8; stroke-width: 1.2; }
+    .door-swing { fill: none; stroke-dasharray: 1.5 1.5; stroke-width: 0.8; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="540" height="400" fill="url(#bgDark)" />
+
+  <!-- ================= 1. COLUMN GRID SYSTEM (8.1m SPAN) ================= -->
+  <g id="grid-lines">
+    <!-- Vertical Column Grid (열3~열7) -->
+    <line x1="158" y1="20" x2="158" y2="385" class="grid-line" />
+    <line x1="239" y1="20" x2="239" y2="385" class="grid-line" />
+    <line x1="320" y1="20" x2="320" y2="385" class="grid-line" />
+    <line x1="401" y1="20" x2="401" y2="385" class="grid-line" />
+    <line x1="482" y1="20" x2="482" y2="385" class="grid-line" />
+
+    <!-- Horizontal Column Grid (행E~행I) -->
+    <line x1="10" y1="364" x2="525" y2="364" class="grid-line" />
+    <line x1="10" y1="274" x2="525" y2="274" class="grid-line" />
+    <line x1="10" y1="193" x2="525" y2="193" class="grid-line" />
+    <line x1="10" y1="112" x2="525" y2="112" class="grid-line" />
+    <line x1="10" y1="34" x2="525" y2="34" class="grid-line" />
+
+    <!-- Grid Header Badges -->
+    <text x="239" y="14" font-size="5.5" font-weight="700" fill="#64748B" text-anchor="middle" font-family="ui-monospace">열3</text>
+    <text x="320" y="14" font-size="5.5" font-weight="700" fill="#64748B" text-anchor="middle" font-family="ui-monospace">열4</text>
+    <text x="401" y="14" font-size="5.5" font-weight="700" fill="#64748B" text-anchor="middle" font-family="ui-monospace">열5</text>
+    <text x="482" y="14" font-size="5.5" font-weight="700" fill="#64748B" text-anchor="middle" font-family="ui-monospace">열6</text>
+
+    <text x="14" y="367" font-size="5.5" font-weight="700" fill="#64748B" font-family="ui-monospace">E</text>
+    <text x="14" y="277" font-size="5.5" font-weight="700" fill="#64748B" font-family="ui-monospace">F</text>
+    <text x="14" y="196" font-size="5.5" font-weight="700" fill="#64748B" font-family="ui-monospace">G</text>
+    <text x="14" y="115" font-size="5.5" font-weight="700" fill="#64748B" font-family="ui-monospace">H</text>
+  </g>
+
+  <!-- ================= 2. TITLE BAR ================= -->
+  <g id="title-block">
+    <text x="20" y="24" font-size="10" font-weight="900" fill="#F8FAFC" letter-spacing="0.5px">계림 지하1층 마스터플랜 (230평 V2.5)</text>
+    <text x="20" y="33" font-size="4.8" font-weight="700" fill="#94A3B8">공조실 라인(9.0m) 정렬 · 남녀탈의 4.5m 균등 · 조적벽 해바라기 샤워장 · 4.45m 대형 탈의실 확장</text>
+  </g>
+
+  <!-- ================= 3. BASE ZONES LAYER ================= -->
+  <g id="base-zones" filter="url(#softShadow)">
+    <!-- TOTAL ARENA MAIN FLOOR (95평: extends cleanly down to y=278 A.H.U line with NO protruding corridor!) -->
+    <polygon points="127.5,229.8 486,19.4 486,278 162,278" fill="url(#arenaFloorGrad)" stroke="#334155" stroke-width="0.8" />
+
+    <!-- 1. WELCOME LOUNGE & CAFE: x=162~226.5, y=278~368 (6.45m × 9.0m = 17.6평) -->
+    <rect x="162" y="278" width="64.5" height="90" fill="url(#loungeGrad)" stroke="#D97706" stroke-width="1.0" />
+
+    <!-- 2. OPEN COMMUNITY LOUNGE & MOBILITY/STRETCHING ZONE: x=226.5~377.5, y=278~308 (15.1m × 3.0m = 13.7평) -->
+    <rect x="226.5" y="278" width="151" height="30" fill="url(#communityGrad)" stroke="#F59E0B" stroke-width="0.8" />
+    <!-- Subtle open boundary line at y=278 facing Arena -->
+    <line x1="162" y1="278" x2="377.5" y2="278" stroke="#F59E0B" stroke-width="1.2" stroke-dasharray="4 2" />
+
+    <!-- 3. RESTROOMS (남녀 화장실): x=226.5~252.5, y=308~368 (2.6m × 6.0m = 4.7평) -->
+    <rect x="226.5" y="308" width="26" height="60" fill="url(#toiletGrad)" stroke="#64748B" stroke-width="1.0" />
+
+    <!-- 4. RECOVERY SUITE (리커버리 스위트): x=252.5~287.5, y=308~368 (3.5m × 6.0m = 6.4평) -->
+    <!-- North half: Entrance Buffer & Cold Plunge (x=252.5~287.5, y=308~338, 3.0m deep) -->
+    <rect x="252.5" y="308" width="35" height="30" fill="url(#recovBufferGrad)" stroke="#14B8A6" stroke-width="1.0" />
+    <!-- South half: Finnish Cedar Dry Sauna (x=252.5~287.5, y=338~368, 3.0m deep) -->
+    <rect x="252.5" y="338" width="35" height="30" fill="url(#saunaWoodGrad)" stroke="#D97706" stroke-width="1.0" />
+
+    <!-- 5. MEN LOCKER & SHOWER: x=287.5~332.5, y=308~368 (4.5m × 6.0m = 8.2평, 조적벽+해바라기 4수전) -->
+    <rect x="287.5" y="308" width="45" height="60" fill="url(#menLockerGrad)" stroke="#0284C7" stroke-width="1.0" />
+
+    <!-- 6. WOMEN LOCKER & SHOWER: x=332.5~377.5, y=308~368 (4.5m × 6.0m = 8.2평, 조적벽+해바라기 5수전) -->
+    <rect x="332.5" y="308" width="45" height="60" fill="url(#womenLockerGrad)" stroke="#A855F7" stroke-width="1.0" />
+  </g>
+
+  <!-- ================= 4. "THE YARD GYM" 6M WIDE GRAY TURF ZONE ================= -->
+  <g id="yard-wide-turf">
+    <g transform="translate(142, 216) rotate(-30.42)">
+      <!-- 6m Wide Gray Turf Carpet (width=46 in SVG scale = 6.0m on site, length=290 = 38.0m) -->
+      <rect x="0" y="0" width="290" height="46" fill="url(#grayTurfGrad)" stroke="#475569" stroke-width="0.8" rx="1.5" />
+
+      <!-- Center Track Line -->
+      <line x1="0" y1="23" x2="288" y2="23" stroke="#64748B" stroke-width="0.8" stroke-dasharray="6 4" />
+
+      <!-- Distance Meter Markers -->
+      <line x1="0" y1="0" x2="0" y2="46" stroke="#F8FAFC" stroke-width="1.4" />
+      <text x="4" y="10" font-size="5" font-weight="900" fill="#F8FAFC" font-family="ui-monospace">0m START</text>
+
+      <line x1="76" y1="0" x2="76" y2="46" stroke="#64748B" stroke-width="0.7" stroke-dasharray="2 2" />
+      <text x="76" y="10" font-size="4.8" font-weight="700" fill="#CBD5E1" text-anchor="middle" font-family="ui-monospace">10m</text>
+
+      <line x1="152" y1="0" x2="152" y2="46" stroke="#64748B" stroke-width="0.7" stroke-dasharray="2 2" />
+      <text x="152" y="10" font-size="4.8" font-weight="700" fill="#CBD5E1" text-anchor="middle" font-family="ui-monospace">20m</text>
+
+      <line x1="228" y1="0" x2="228" y2="46" stroke="#64748B" stroke-width="0.7" stroke-dasharray="2 2" />
+      <text x="228" y="10" font-size="4.8" font-weight="700" fill="#CBD5E1" text-anchor="middle" font-family="ui-monospace">30m</text>
+
+      <line x1="288" y1="0" x2="288" y2="46" stroke="#F8FAFC" stroke-width="1.4" />
+      <text x="284" y="10" font-size="5" font-weight="900" fill="#F8FAFC" text-anchor="end" font-family="ui-monospace">38m FINISH</text>
+
+      <!-- Turf Zone Label (Clean) -->
+      <text x="145" y="27" font-size="7.5" font-weight="900" fill="#F8FAFC" letter-spacing="0.5px" text-anchor="middle">THE YARD TURF (폭 6.0m × 길이 38.0m · 75평)</text>
+    </g>
+  </g>
+
+  <!-- ================= 5. CENTRAL OPEN ARENA FLOOR (95평) ================= -->
+  <g id="central-open-arena">
+    <!-- Clean Arena Hero Title -->
+    <text x="355" y="212" font-size="9.5" font-weight="900" fill="#F8FAFC" text-anchor="middle" letter-spacing="0.6px">OPEN ARENA (95평 완전 개방 플로어)</text>
+    <text x="355" y="223" font-size="5.2" font-weight="700" fill="#38BDF8" text-anchor="middle" font-family="ui-monospace">WOD &amp; BARBELL ZONE · 가변형 무장애 구역 (25인 수용)</text>
+  </g>
+
+  <!-- ================= 6. 24M MONOLITHIC CUSTOM RIG (y=265) ================= -->
+  <g id="corridor-long-rig">
+    <!-- Rig Main Steel Tube Line in Open Arena (y=265, 1.3m north of y=278 line) -->
+    <line x1="235" y1="265" x2="475" y2="265" stroke="#F8FAFC" stroke-width="3.2" stroke-linecap="round" />
+
+    <!-- 8 Squat Cells (SQ1~SQ8, 3.0m intervals) -->
+    <!-- SQ1 (x=245) -->
+    <circle cx="235" cy="265" r="2.4" fill="#F59E0B" />
+    <circle cx="245" cy="265" r="2.0" fill="#F8FAFC" /><line x1="245" y1="265" x2="245" y2="257" stroke="#F59E0B" stroke-width="1.2" /><text x="245" y="254" font-size="3.2" font-weight="800" fill="#FBBF24" text-anchor="middle">SQ1</text>
+    <circle cx="255" cy="265" r="1.8" fill="#F8FAFC" />
+    <circle cx="265" cy="265" r="2.2" fill="#F59E0B" />
+
+    <!-- SQ2 (x=275) -->
+    <circle cx="275" cy="265" r="2.0" fill="#F8FAFC" /><line x1="275" y1="265" x2="275" y2="257" stroke="#F59E0B" stroke-width="1.2" /><text x="275" y="254" font-size="3.2" font-weight="800" fill="#FBBF24" text-anchor="middle">SQ2</text>
+    <circle cx="285" cy="265" r="1.8" fill="#F8FAFC" />
+    <circle cx="295" cy="265" r="2.2" fill="#F59E0B" />
+
+    <!-- SQ3 (x=305) -->
+    <circle cx="305" cy="265" r="2.0" fill="#F8FAFC" /><line x1="305" y1="265" x2="305" y2="257" stroke="#F59E0B" stroke-width="1.2" /><text x="305" y="254" font-size="3.2" font-weight="800" fill="#FBBF24" text-anchor="middle">SQ3</text>
+    <circle cx="315" cy="265" r="1.8" fill="#F8FAFC" />
+    <circle cx="325" cy="265" r="2.2" fill="#F59E0B" />
+
+    <!-- SQ4 (x=335) -->
+    <circle cx="335" cy="265" r="2.0" fill="#F8FAFC" /><line x1="335" y1="265" x2="335" y2="257" stroke="#F59E0B" stroke-width="1.2" /><text x="335" y="254" font-size="3.2" font-weight="800" fill="#FBBF24" text-anchor="middle">SQ4</text>
+    <circle cx="345" cy="265" r="1.8" fill="#F8FAFC" />
+    <circle cx="355" cy="265" r="2.2" fill="#F59E0B" />
+
+    <!-- SQ5 (x=365) -->
+    <circle cx="365" cy="265" r="2.0" fill="#F8FAFC" /><line x1="365" y1="265" x2="365" y2="257" stroke="#F59E0B" stroke-width="1.2" /><text x="365" y="254" font-size="3.2" font-weight="800" fill="#FBBF24" text-anchor="middle">SQ5</text>
+    <circle cx="375" cy="265" r="1.8" fill="#F8FAFC" />
+    <circle cx="385" cy="265" r="2.2" fill="#F59E0B" />
+
+    <!-- SQ6 (x=395) -->
+    <circle cx="395" cy="265" r="2.0" fill="#F8FAFC" /><line x1="395" y1="265" x2="395" y2="257" stroke="#F59E0B" stroke-width="1.2" /><text x="395" y="254" font-size="3.2" font-weight="800" fill="#FBBF24" text-anchor="middle">SQ6</text>
+    <circle cx="405" cy="265" r="1.8" fill="#F8FAFC" />
+    <circle cx="415" cy="265" r="2.2" fill="#F59E0B" />
+
+    <!-- SQ7 (x=425) -->
+    <circle cx="425" cy="265" r="2.0" fill="#F8FAFC" /><line x1="425" y1="265" x2="425" y2="257" stroke="#F59E0B" stroke-width="1.2" /><text x="425" y="254" font-size="3.2" font-weight="800" fill="#FBBF24" text-anchor="middle">SQ7</text>
+    <circle cx="435" cy="265" r="1.8" fill="#F8FAFC" />
+    <circle cx="445" cy="265" r="2.2" fill="#F59E0B" />
+
+    <!-- SQ8 (x=455) -->
+    <circle cx="455" cy="265" r="2.0" fill="#F8FAFC" /><line x1="455" y1="265" x2="455" y2="257" stroke="#F59E0B" stroke-width="1.2" /><text x="455" y="254" font-size="3.2" font-weight="800" fill="#FBBF24" text-anchor="middle">SQ8</text>
+    <circle cx="465" cy="265" r="1.8" fill="#F8FAFC" />
+    <circle cx="475" cy="265" r="2.4" fill="#F59E0B" />
+
+    <!-- Rings Indicators -->
+    <circle cx="275" cy="252" r="1.4" fill="none" stroke="#F59E0B" stroke-width="0.7" />
+    <circle cx="335" cy="252" r="1.4" fill="none" stroke="#F59E0B" stroke-width="0.7" />
+    <circle cx="395" cy="252" r="1.4" fill="none" stroke="#F59E0B" stroke-width="0.7" />
+    <circle cx="455" cy="252" r="1.4" fill="none" stroke="#F59E0B" stroke-width="0.7" />
+
+    <!-- Clean Rig Title -->
+    <text x="355" y="246" font-size="6.0" font-weight="900" fill="#FBBF24" text-anchor="middle" letter-spacing="0.4px">24m 일체형 롱 커스텀 리그 (8 BAYS)</text>
+  </g>
+
+  <!-- ================= 7. EAST WALL (18m 거울 & 16m 수납랙) ================= -->
+  <g id="east-wall-amenities">
+    <!-- 18m Mirror & HSPU Wall (x=482~486, y=50 to 230) -->
+    <line x1="484.5" y1="50" x2="484.5" y2="230" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" />
+    <text x="477" y="140" font-size="4.6" font-weight="800" fill="#38BDF8" text-anchor="middle" transform="rotate(-90 477 140)">18.0m 전면 거울 &amp; HSPU 체조 벽면</text>
+
+    <!-- 16m Built-in Storage Rack (x=468~476, y=60 to 220) -->
+    <rect x="468" y="60" width="8" height="160" fill="#1E293B" stroke="#64748B" stroke-width="0.7" rx="1.5" />
+    <text x="472" y="140" font-size="4.0" font-weight="700" fill="#94A3B8" text-anchor="middle" transform="rotate(-90 472 140)">16.0m 장비 수납랙 (원판·덤벨)</text>
+
+  </g>
+
+  <!-- ================= 8. SOUTH AMENITY CORE (3.0m COMMUNITY + 6.0m COMPACT ROOMS) ================= -->
+  <g id="amenities-layer">
+    <!-- ZONE 1: WELCOME LOUNGE & CAFE (x=162~228, y=278~368, 6.6m × 9.0m = 18.0평) -->
+    <!-- Open Center Title (Clean, unobstructed arrival hall) -->
+    <text x="194.2" y="312" font-size="5.6" font-weight="900" fill="#FBBF24" text-anchor="middle">웰컴 라운지</text>
+    <text x="194.2" y="318.5" font-size="3.8" font-weight="700" fill="#FDE68A" text-anchor="middle" font-family="ui-monospace">(17.6평 · 6.45×9.0m)</text>
+
+    <!-- West Wall Shoe Bench (above entrance door: x=163.8~168.3, y=284~314, 0.45m × 3.0m) -->
+    <rect x="163.8" y="284" width="4.5" height="30" fill="#1F1A14" stroke="#64748B" stroke-width="0.6" rx="0.8" />
+    <text x="166.1" y="299" font-size="3.0" font-weight="700" fill="#94A3B8" text-anchor="middle" transform="rotate(90 166.1 299)">신발장 벤치</text>
+
+    <!-- South Wall Info Desk & InBody (Anchored on South Wall: x=166~195, y=356.5~365.8, 2.9m × 0.93m) -->
+    <rect x="166" y="356.5" width="29" height="9.3" fill="#2A241C" stroke="#D97706" stroke-width="0.8" rx="1.2" />
+    <text x="180.5" y="362.5" font-size="3.5" font-weight="800" fill="#FBBF24" text-anchor="middle">인포데스크 · 인바디</text>
+
+    <!-- Realistic Compact Unmanned Protein Bar (Built-in along South Wall: x=197~222, y=359.3~365.8, 2.5m × 0.65m) -->
+    <rect x="197" y="359.3" width="25" height="6.5" fill="#2A241C" stroke="#F59E0B" stroke-width="0.7" rx="1.0" />
+    <text x="209.5" y="363.7" font-size="3.1" font-weight="800" fill="#FDE68A" text-anchor="middle">무인 프로틴 바</text>
+
+
+    <!-- ZONE 1-B: OPEN COMMUNITY LOUNGE & MOBILITY/STRETCHING ZONE (x=226.5~377.5, y=278~308, 폭 3.0m × 길이 15.1m = 13.7평) -->
+    <!-- West Half (x=229~285): Community Social Tables & Lounge Seating -->
+    <rect x="230" y="281" width="24" height="11" fill="#2A241C" stroke="#F59E0B" stroke-width="0.7" rx="1.5" />
+    <circle cx="236" cy="286.5" r="2.0" fill="#451A03" stroke="#FBBF24" stroke-width="0.5"/>
+    <circle cx="242" cy="286.5" r="2.0" fill="#451A03" stroke="#FBBF24" stroke-width="0.5"/>
+    <circle cx="248" cy="286.5" r="2.0" fill="#451A03" stroke="#FBBF24" stroke-width="0.5"/>
+    <text x="242" y="296.5" font-size="3.3" font-weight="800" fill="#FDE68A" text-anchor="middle">커뮤니티 테이블</text>
+
+    <rect x="257" y="281" width="28" height="11" fill="#1E293B" stroke="#38BDF8" stroke-width="0.6" rx="1.5" />
+    <text x="271" y="288" font-size="3.3" font-weight="800" fill="#BAE6FD" text-anchor="middle">리커버리 휴게 소파</text>
+
+    <!-- East Half (x=288~375): Mobility & Foam Roller Stretching Mat Zone -->
+    <rect x="288" y="280.5" width="86" height="13" fill="#0F172A" stroke="#10B981" stroke-width="0.7" rx="1.5" />
+    <!-- Individual Stretching Mats -->
+    <rect x="291" y="282.5" width="13" height="9" fill="#064E3B" stroke="#34D399" stroke-width="0.5" rx="0.8" />
+    <rect x="307" y="282.5" width="13" height="9" fill="#064E3B" stroke="#34D399" stroke-width="0.5" rx="0.8" />
+    <rect x="323" y="282.5" width="13" height="9" fill="#064E3B" stroke="#34D399" stroke-width="0.5" rx="0.8" />
+    <rect x="339" y="282.5" width="13" height="9" fill="#064E3B" stroke="#34D399" stroke-width="0.5" rx="0.8" />
+    <rect x="355" y="282.5" width="13" height="9" fill="#064E3B" stroke="#34D399" stroke-width="0.5" rx="0.8" />
+    <text x="331" y="288.5" font-size="3.7" font-weight="900" fill="#A7F3D0" text-anchor="middle">모빌리티 · 폼롤러 스트레칭 매트 존 (웜업/쿨다운)</text>
+
+    <!-- Circulation & Community Banner Text (y=303) -->
+    <text x="302" y="303" font-size="4.2" font-weight="900" fill="#FBBF24" text-anchor="middle">오픈 커뮤니티 라운지 &amp; 스트레칭 존 (폭 3.0m × 15.1m · 13.7평 · 복도 겸용)</text>
+
+
+    <!-- ZONE 2: RESTROOMS (남녀 화장실: x=226.5~252.5, y=308~368, 2.6m × 6.0m = 4.7평, 출입문 위치 동일) -->
+    <!-- Divider between Men & Women (y=338) -->
+    <line x1="226.5" y1="338" x2="252.5" y2="338" stroke="#475569" stroke-width="1.2" />
+
+    <!-- Men's Restroom (North: x=226.5~252.5, y=308~338, 2.6m × 3.0m = 2.35평) -->
+    <rect x="228.0" y="309.5" width="23.5" height="27" fill="#1E293B" stroke="#64748B" stroke-width="0.6" rx="1.2" />
+
+    <!-- Washbasin on North Wall (Spacious Handwashing Area: width 1.0m, depth 0.5m: x=234.5~244.5, y=308.5~313.5) -->
+    <rect x="234.5" y="308.5" width="10.0" height="5.0" fill="#0F172A" stroke="#64748B" stroke-width="0.5" rx="0.6"/>
+    <circle cx="239.5" cy="311.0" r="1.5" fill="#334155" stroke="#94A3B8" stroke-width="0.4" />
+    <line x1="235.5" y1="308.5" x2="243.5" y2="308.5" stroke="#BAE6FD" stroke-width="0.8" />
+    <text x="239.5" y="316.5" font-size="1.9" font-weight="700" fill="#7DD3FC" text-anchor="middle">세면대 (여유 공간 1.2m)</text>
+
+    <!-- 2 Private Toilet Cubicles along East wall (x=241.5~252.0, depth 1.05m, starting at y=320.5 with zero sink conflict!) -->
+    <rect x="241.5" y="320.5" width="10.5" height="8.2" fill="#334155" stroke="#94A3B8" stroke-width="0.5" rx="0.6" />
+    <circle cx="247.0" cy="324.6" r="1.3" fill="#1E293B" stroke="#94A3B8" stroke-width="0.4"/>
+    <rect x="241.5" y="329.2" width="10.5" height="8.2" fill="#334155" stroke="#94A3B8" stroke-width="0.5" rx="0.6" />
+    <circle cx="247.0" cy="333.3" r="1.3" fill="#1E293B" stroke="#94A3B8" stroke-width="0.4"/>
+
+    <!-- 2 Urinals along West wall (x=228.0~232.0, naturally shielded behind inward door swing!) -->
+    <rect x="228.0" y="323.5" width="4.0" height="5.0" fill="#475569" stroke="#94A3B8" stroke-width="0.5" rx="0.6" />
+    <line x1="228.0" y1="329.7" x2="233.0" y2="329.7" stroke="#64748B" stroke-width="0.6" />
+    <rect x="228.0" y="331.0" width="4.0" height="5.0" fill="#475569" stroke="#94A3B8" stroke-width="0.5" rx="0.6" />
+
+    <text x="236.0" y="326.5" font-size="2.7" font-weight="800" fill="#F8FAFC" text-anchor="middle">남성 화장실</text>
+    <text x="236.0" y="330.2" font-size="2.0" font-weight="700" fill="#94A3B8" text-anchor="middle">대변2 · 소변2 · 세면1</text>
+    <text x="236.0" y="333.8" font-size="2.0" font-weight="700" fill="#7DD3FC" text-anchor="middle" font-family="ui-monospace">(2.35평 · 개방형 동선)</text>
+
+
+    <!-- Women's Restroom (South: x=226.5~252.5, y=338~368, 2.6m × 3.0m = 2.35평, 동일 상대위치 출입문) -->
+    <rect x="228.0" y="339.5" width="23.5" height="27" fill="#261A35" stroke="#A855F7" stroke-width="0.6" rx="1.2" />
+
+    <!-- 3 Private Toilet Cubicles along East wall (x=240.5~252.0, depth 1.15m) -->
+    <rect x="240.5" y="339.2" width="11.5" height="8.6" fill="#3B1C54" stroke="#A855F7" stroke-width="0.5" rx="0.6" />
+    <circle cx="247.0" cy="343.5" r="1.3" fill="#1E1B4B" stroke="#C084FC" stroke-width="0.4"/>
+    <rect x="240.5" y="348.8" width="11.5" height="8.6" fill="#3B1C54" stroke="#A855F7" stroke-width="0.5" rx="0.6" />
+    <circle cx="247.0" cy="353.1" r="1.3" fill="#1E1B4B" stroke="#C084FC" stroke-width="0.4"/>
+    <rect x="240.5" y="358.4" width="11.5" height="8.6" fill="#3B1C54" stroke="#A855F7" stroke-width="0.5" rx="0.6" />
+    <circle cx="247.0" cy="362.7" r="1.3" fill="#1E1B4B" stroke="#C084FC" stroke-width="0.4"/>
+
+    <!-- Washbasin on South-West corner (x=228.0~235.0, y=357.5~365.5) -->
+    <rect x="228.0" y="357.5" width="7.0" height="8.0" fill="#1E293B" stroke="#A855F7" stroke-width="0.5" rx="0.6" />
+    <circle cx="231.5" cy="361.5" r="1.5" fill="#A855F7" stroke="#C084FC" stroke-width="0.4" />
+    <line x1="228.0" y1="365.5" x2="235.0" y2="365.5" stroke="#F5D0FE" stroke-width="0.8" />
+
+    <text x="234.0" y="347.5" font-size="2.8" font-weight="800" fill="#E9D5FF" text-anchor="middle">여성 화장실</text>
+    <text x="234.0" y="351.5" font-size="2.1" font-weight="700" fill="#F0ABFC" text-anchor="middle">대변 3칸 · 세면 1</text>
+    <text x="234.0" y="355.2" font-size="2.1" font-weight="700" fill="#C084FC" text-anchor="middle" font-family="ui-monospace">(2.35평)</text>
+
+
+    <!-- ZONE 3: RECOVERY SUITE (x=252.5~287.5, y=308~368, 3.5m × 6.0m = 6.4평) -->
+    <!-- North Wall (y=308): Panoramic Insulated Tempered Glass Wall -->
+    <line x1="252.5" y1="308" x2="287.5" y2="308" stroke="#38BDF8" stroke-width="2.4" stroke-linecap="round" />
+    <rect x="252.5" y="306.5" width="35" height="3.0" fill="url(#glassWallGrad)" />
+
+    <!-- NORTH PART: Entrance Buffer & Cold Plunge Pool (x=252.5~287.5, y=308~338, 3.0m deep) -->
+    <!-- 1. Left: Entrance Door & Pre-rinse Buffer -->
+    <rect x="254.5" y="312" width="12.5" height="23" fill="#132B2A" stroke="#14B8A6" stroke-width="0.5" rx="1" />
+    <text x="260.7" y="322" font-size="3.3" font-weight="700" fill="#5EEAD4" text-anchor="middle">전실 벤치</text>
+    <text x="260.7" y="328" font-size="3.0" font-weight="600" fill="#2DD4BF" text-anchor="middle">사전 샤워</text>
+
+    <!-- 2. Right: Cold Plunge Tub -->
+    <rect x="268.5" y="311" width="17" height="24" fill="url(#coldPlungeGrad)" stroke="#38BDF8" stroke-width="0.9" rx="1.5" />
+    <rect x="270.3" y="313" width="13.4" height="20" fill="#0369A1" stroke="#BAE6FD" stroke-width="0.5" rx="1" />
+    <text x="277.0" y="321" font-size="3.8" font-weight="900" fill="#FFFFFF" text-anchor="middle">콜드플런지</text>
+    <text x="277.0" y="327.5" font-size="3.1" font-weight="800" fill="#E0F2FE" text-anchor="middle" font-family="ui-monospace">3~5℃ 냉탕</text>
+
+    <!-- Glass Partition between Cold Plunge/Buffer and Sauna (y=338) -->
+    <line x1="252.5" y1="338" x2="287.5" y2="338" stroke="#D97706" stroke-width="1.4" />
+    <line x1="256.5" y1="338" x2="265.5" y2="338" stroke="#38BDF8" stroke-width="2.2" />
+    <path d="M 265.5 338 A 9 9 0 0 1 256.5 347" class="door-swing" stroke="#38BDF8" />
+    <line x1="256.5" y1="338" x2="256.5" y2="347" stroke="#38BDF8" stroke-width="1.0" />
+
+    <!-- SOUTH PART: Finnish Cedar Dry Sauna (x=252.5~287.5, y=338~368, 3.0m deep) -->
+    <!-- 2-Tier Stepped Benches ATTACHED DIRECTLY TO SOUTH WALL (남쪽 벽면 밀착 2단 계단식 구조) -->
+    <!-- 1) Lower Tier / Step Bench (1단 하부 발받침/착석: y=353.5~360.5, depth 0.7m, width 3.2m) -->
+    <rect x="254.0" y="353.5" width="32" height="7.0" fill="#92400E" stroke="#FBBF24" stroke-width="0.6" rx="0.8"/>
+    <line x1="254.5" y1="357.0" x2="285.5" y2="357.0" stroke="#F59E0B" stroke-width="0.4" stroke-dasharray="3 2" />
+    <text x="270.0" y="358.5" font-size="2.4" font-weight="800" fill="#FEF3C7" text-anchor="middle">1단 계단 벤치 (발받침 · 착석)</text>
+
+    <!-- 2) Upper Tier / High Bench (2단 상부 착석 벤치: y=360.5~367.0, depth 0.65m, width 3.2m ATTACHED TO SOUTH WALL) -->
+    <rect x="254.0" y="360.5" width="32" height="6.5" fill="#78350F" stroke="#F59E0B" stroke-width="0.7" rx="0.8"/>
+    <line x1="254.5" y1="363.8" x2="285.5" y2="363.8" stroke="#D97706" stroke-width="0.4" stroke-dasharray="3 2" />
+    <text x="270.0" y="365.2" font-size="2.5" font-weight="900" fill="#FDE68A" text-anchor="middle">2단 상부 벤치 (착석 메인)</text>
+
+    <!-- Sauna Stove Heater RELOCATED TO RIGHT (EAST) WALL: x=280.0~286.5, y=340.5~348.0 (Zero door conflict!) -->
+    <rect x="280.0" y="340.5" width="6.5" height="7.5" fill="#B45309" stroke="#FBBF24" stroke-width="0.6" rx="0.8"/>
+    <rect x="279.0" y="339.5" width="8.5" height="9.5" fill="none" stroke="#EF4444" stroke-width="0.5" stroke-dasharray="1.5 1.5"/>
+    <text x="283.25" y="345.5" font-size="2.2" font-weight="800" fill="#FEF3C7" text-anchor="middle">히터</text>
+
+    <!-- Sauna Room Title (In open wooden floor area: y=344.0 & 348.5) -->
+    <text x="266.5" y="344.0" font-size="3.0" font-weight="900" fill="#FDE68A" text-anchor="middle">편백 건식사우나</text>
+    <text x="266.5" y="348.5" font-size="1.9" font-weight="800" fill="#2DD4BF" text-anchor="middle">2단 벤치 · 안전 히터</text>
+    <text x="266.5" y="352.0" font-size="1.8" font-weight="700" fill="#5EEAD4" text-anchor="middle" font-family="ui-monospace">(6.4평)</text>
+
+
+    <!-- ZONE 4: MEN POWDER & SHOWER (x=287.5~332.5, y=308~368, 4.5m × 6.0m = 8.2평) -->
+    <!-- 1) Internal Corridor along West wall (탈의실 내부 복도: x=287.5~296.5, width 0.9m) -->
+    <rect x="287.5" y="308" width="9.0" height="44" fill="#F59E0B" fill-opacity="0.08" stroke="#F59E0B" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <text x="292.0" y="330" font-size="2.6" font-weight="800" fill="#FBBF24" text-anchor="middle" transform="rotate(-90 292.0 330)">내부 복도 (0.9m)</text>
+
+    <!-- 2) Wardrobe Locker Screen Wall (시선차단 2단 옷장 락카벽: x=296.5~301.5, y=308.5~341.5, depth 0.5m, 11 cols × 2단 = 22칸) -->
+    <!-- Solid back casing facing corridor to block all sightlines from door -->
+    <line x1="296.5" y1="308.5" x2="296.5" y2="341.5" stroke="#0284C7" stroke-width="1.4" />
+    <g fill="#1E293B" stroke="#38BDF8" stroke-width="0.45">
+      <rect x="296.5" y="308.5" width="5.0" height="3.0" /><rect x="296.5" y="311.5" width="5.0" height="3.0" />
+      <rect x="296.5" y="314.5" width="5.0" height="3.0" /><rect x="296.5" y="317.5" width="5.0" height="3.0" />
+      <rect x="296.5" y="320.5" width="5.0" height="3.0" /><rect x="296.5" y="323.5" width="5.0" height="3.0" />
+      <rect x="296.5" y="326.5" width="5.0" height="3.0" /><rect x="296.5" y="329.5" width="5.0" height="3.0" />
+      <rect x="296.5" y="332.5" width="5.0" height="3.0" /><rect x="296.5" y="335.5" width="5.0" height="3.0" />
+      <rect x="296.5" y="338.5" width="5.0" height="3.0" />
+    </g>
+    <text x="299.0" y="325.0" font-size="2.0" font-weight="800" fill="#38BDF8" text-anchor="middle" transform="rotate(-90 299.0 325.0)">옷장 락카 22칸 (시선차단벽)</text>
+    <!-- Passage opening at south end of locker wall: y=341.5~352 (width 1.05m) -->
+    <path d="M 292.0 344 Q 292.0 347 296.5 347" fill="none" stroke="#FBBF24" stroke-width="0.8" stroke-dasharray="1.5 1.5"/>
+
+    <!-- 3) Center Standing Powder & Washbasin Counter (attached to center party wall x=332.5 on the left: x=327.3~332.2, y=310.5~345.5) -->
+    <rect x="327.3" y="310.5" width="4.9" height="35.0" fill="#0F172A" stroke="#7DD3FC" stroke-width="0.6" rx="0.8" />
+    <!-- 5 Wall Mirrors along center dividing wall -->
+    <line x1="332.1" y1="311.5" x2="332.1" y2="317.5" stroke="#BAE6FD" stroke-width="1.1" stroke-linecap="round" />
+    <line x1="332.1" y1="318.5" x2="332.1" y2="324.5" stroke="#BAE6FD" stroke-width="1.1" stroke-linecap="round" />
+    <line x1="332.1" y1="325.5" x2="332.1" y2="331.5" stroke="#BAE6FD" stroke-width="1.1" stroke-linecap="round" />
+    <line x1="332.1" y1="332.5" x2="332.1" y2="338.5" stroke="#BAE6FD" stroke-width="1.1" stroke-linecap="round" />
+    <line x1="332.1" y1="339.5" x2="332.1" y2="344.5" stroke="#BAE6FD" stroke-width="1.1" stroke-linecap="round" />
+    <!-- Top 3 Stations: Standing Hairdryer / Vanity Counter -->
+    <rect x="328.0" y="312.5" width="2.8" height="4.0" fill="#1E293B" stroke="#38BDF8" stroke-width="0.4" rx="0.5" />
+    <rect x="328.0" y="319.5" width="2.8" height="4.0" fill="#1E293B" stroke="#38BDF8" stroke-width="0.4" rx="0.5" />
+    <rect x="328.0" y="326.5" width="2.8" height="4.0" fill="#1E293B" stroke="#38BDF8" stroke-width="0.4" rx="0.5" />
+    <!-- Bottom 2 Stations: Countertop Washbasins (세면대 2구) -->
+    <circle cx="329.5" cy="335.5" r="1.6" fill="#0C4A6E" stroke="#BAE6FD" stroke-width="0.5" />
+    <circle cx="329.5" cy="342.0" r="1.6" fill="#0C4A6E" stroke="#BAE6FD" stroke-width="0.5" />
+    <text x="325.2" y="328.0" font-size="1.8" font-weight="700" fill="#7DD3FC" text-anchor="middle" transform="rotate(-90 325.2 328.0)">스탠딩 파우더(3석) · 세면대(2구)</text>
+
+    <!-- 4) Changing Area Bench & Center Floor Info Label (대폭 확장된 4.45m 깊이 탈의실) -->
+    <rect x="306.0" y="312.0" width="16.0" height="4.2" fill="#1E293B" stroke="#0284C7" stroke-width="0.5" rx="0.8" />
+    <text x="314.0" y="315.0" font-size="2.0" font-weight="700" fill="#94A3B8" text-anchor="middle">탈의 벤치</text>
+    <text x="314.0" y="325.5" font-size="2.7" font-weight="800" fill="#38BDF8" text-anchor="middle">남성 탈의실 (확장)</text>
+    <text x="314.0" y="330.0" font-size="2.0" font-weight="700" fill="#7DD3FC" text-anchor="middle" font-family="ui-monospace">(8.2평 · 4.5×6.0m)</text>
+
+    <!-- 5) Masonry Dividing Wall (조적벽: y=351.4~353.0) -->
+    <rect x="296.5" y="351.4" width="36.0" height="1.6" fill="#1E293B" stroke="#0284C7" stroke-width="0.8" rx="0.3" />
+    <text x="314.5" y="350.5" font-size="2.0" font-weight="800" fill="#7DD3FC" text-anchor="middle">▲ 조적벽 (타일 마감 분할벽)</text>
+    <!-- Walk-in Entry Step Mat -->
+    <rect x="288.5" y="344.5" width="7.0" height="6.0" fill="#0C4A6E" stroke="#38BDF8" stroke-width="0.4" rx="0.5" />
+    <text x="292.0" y="348.2" font-size="1.8" font-weight="700" fill="#BAE6FD" text-anchor="middle">발매트</text>
+
+    <!-- 6) Open Walk-In Shower Zone with 4 Rain Showers & Glass Partitions (y=353.2~367.0, depth 1.4m) -->
+    <rect x="288.0" y="353.2" width="44.0" height="13.8" fill="#0A2540" fill-opacity="0.85" stroke="#0284C7" stroke-width="0.6" rx="0.8" />
+    <!-- Linear Floor Trench -->
+    <line x1="289.0" y1="366.0" x2="331.0" y2="366.0" stroke="#38BDF8" stroke-width="0.8" stroke-dasharray="2 2" />
+    <!-- 4 Rain Shower Heads mounted on South wall (간격 1.1m) -->
+    <line x1="293.0" y1="367.0" x2="293.0" y2="363.5" stroke="#F8FAFC" stroke-width="0.8" />
+    <circle cx="293.0" cy="363.0" r="1.6" fill="#0284C7" stroke="#F8FAFC" stroke-width="0.5" />
+    <circle cx="293.0" cy="363.0" r="0.6" fill="#FFFFFF" />
+    <rect x="292.0" y="365.2" width="2.0" height="1.2" fill="#64748B" stroke="#F8FAFC" stroke-width="0.3" rx="0.2" />
+    <text x="293.0" y="357.5" font-size="2.0" font-weight="700" fill="#BAE6FD" text-anchor="middle">1.1m</text>
+
+    <line x1="304.0" y1="367.0" x2="304.0" y2="363.5" stroke="#F8FAFC" stroke-width="0.8" />
+    <circle cx="304.0" cy="363.0" r="1.6" fill="#0284C7" stroke="#F8FAFC" stroke-width="0.5" />
+    <circle cx="304.0" cy="363.0" r="0.6" fill="#FFFFFF" />
+    <rect x="303.0" y="365.2" width="2.0" height="1.2" fill="#64748B" stroke="#F8FAFC" stroke-width="0.3" rx="0.2" />
+    <text x="304.0" y="357.5" font-size="2.0" font-weight="700" fill="#BAE6FD" text-anchor="middle">1.1m</text>
+
+    <line x1="315.0" y1="367.0" x2="315.0" y2="363.5" stroke="#F8FAFC" stroke-width="0.8" />
+    <circle cx="315.0" cy="363.0" r="1.6" fill="#0284C7" stroke="#F8FAFC" stroke-width="0.5" />
+    <circle cx="315.0" cy="363.0" r="0.6" fill="#FFFFFF" />
+    <rect x="314.0" y="365.2" width="2.0" height="1.2" fill="#64748B" stroke="#F8FAFC" stroke-width="0.3" rx="0.2" />
+    <text x="315.0" y="357.5" font-size="2.0" font-weight="700" fill="#BAE6FD" text-anchor="middle">1.1m</text>
+
+    <line x1="326.0" y1="367.0" x2="326.0" y2="363.5" stroke="#F8FAFC" stroke-width="0.8" />
+    <circle cx="326.0" cy="363.0" r="1.6" fill="#0284C7" stroke="#F8FAFC" stroke-width="0.5" />
+    <circle cx="326.0" cy="363.0" r="0.6" fill="#FFFFFF" />
+    <rect x="325.0" y="365.2" width="2.0" height="1.2" fill="#64748B" stroke="#F8FAFC" stroke-width="0.3" rx="0.2" />
+    <text x="326.0" y="357.5" font-size="2.0" font-weight="700" fill="#BAE6FD" text-anchor="middle">1.1m</text>
+
+    <!-- 3 Tempered Glass Partitions between shower stations (길이 1.25m) -->
+    <line x1="298.5" y1="354.5" x2="298.5" y2="367.0" stroke="#38BDF8" stroke-width="1.3" stroke-linecap="round" />
+    <line x1="309.5" y1="354.5" x2="309.5" y2="367.0" stroke="#38BDF8" stroke-width="1.3" stroke-linecap="round" />
+    <line x1="320.5" y1="354.5" x2="320.5" y2="367.0" stroke="#38BDF8" stroke-width="1.3" stroke-linecap="round" />
+    <text x="310.0" y="360.5" font-size="2.3" font-weight="800" fill="#7DD3FC" text-anchor="middle">해바라기 4수전 · 강화유리 파티션</text>
+
+
+    <!-- ZONE 5: WOMEN POWDER & SHOWER (x=332.5~377.5, y=308~368, 4.5m × 6.0m = 8.2평) -->
+    <!-- 1) Center Standing Powder & Washbasin Counter (attached to center party wall x=332.5 on the right: x=332.8~337.7, y=310.5~345.5) -->
+    <rect x="332.8" y="310.5" width="4.9" height="35.0" fill="#1E1B4B" stroke="#F0ABFC" stroke-width="0.6" rx="0.8" />
+    <!-- 5 Wall Mirrors along center dividing wall -->
+    <line x1="332.9" y1="311.5" x2="332.9" y2="317.5" stroke="#F5D0FE" stroke-width="1.1" stroke-linecap="round" />
+    <line x1="332.9" y1="318.5" x2="332.9" y2="324.5" stroke="#F5D0FE" stroke-width="1.1" stroke-linecap="round" />
+    <line x1="332.9" y1="325.5" x2="332.9" y2="331.5" stroke="#F5D0FE" stroke-width="1.1" stroke-linecap="round" />
+    <line x1="332.9" y1="332.5" x2="332.9" y2="338.5" stroke="#F5D0FE" stroke-width="1.1" stroke-linecap="round" />
+    <line x1="332.9" y1="339.5" x2="332.9" y2="344.5" stroke="#F5D0FE" stroke-width="1.1" stroke-linecap="round" />
+    <!-- Top 3 Stations: Standing Hairdryer / Vanity Counter (No chairs) -->
+    <rect x="334.0" y="312.5" width="2.8" height="4.0" fill="#2E1065" stroke="#C084FC" stroke-width="0.4" rx="0.5" />
+    <rect x="334.0" y="319.5" width="2.8" height="4.0" fill="#2E1065" stroke="#C084FC" stroke-width="0.4" rx="0.5" />
+    <rect x="334.0" y="326.5" width="2.8" height="4.0" fill="#2E1065" stroke="#C084FC" stroke-width="0.4" rx="0.5" />
+    <!-- Bottom 2 Stations: Countertop Washbasins (세면대 2구) -->
+    <circle cx="335.5" cy="335.5" r="1.6" fill="#4A044E" stroke="#F5D0FE" stroke-width="0.5" />
+    <circle cx="335.5" cy="342.0" r="1.6" fill="#4A044E" stroke="#F5D0FE" stroke-width="0.5" />
+    <text x="339.8" y="328.0" font-size="1.8" font-weight="700" fill="#F0ABFC" text-anchor="middle" transform="rotate(90 339.8 328.0)">스탠딩 파우더(3석) · 세면대(2구)</text>
+
+    <!-- 2) Wardrobe Locker Screen Wall (시선차단 2단 옷장 락카벽: x=363.5~368.5, y=308.5~341.5, depth 0.5m, 11 cols × 2단 = 22칸) -->
+    <!-- Solid back casing facing East corridor to block all sightlines from door -->
+    <line x1="368.5" y1="308.5" x2="368.5" y2="341.5" stroke="#A855F7" stroke-width="1.4" />
+    <g fill="#2E1065" stroke="#C084FC" stroke-width="0.45">
+      <rect x="363.5" y="308.5" width="5.0" height="3.0" /><rect x="363.5" y="311.5" width="5.0" height="3.0" />
+      <rect x="363.5" y="314.5" width="5.0" height="3.0" /><rect x="363.5" y="317.5" width="5.0" height="3.0" />
+      <rect x="363.5" y="320.5" width="5.0" height="3.0" /><rect x="363.5" y="323.5" width="5.0" height="3.0" />
+      <rect x="363.5" y="326.5" width="5.0" height="3.0" /><rect x="363.5" y="329.5" width="5.0" height="3.0" />
+      <rect x="363.5" y="332.5" width="5.0" height="3.0" /><rect x="363.5" y="335.5" width="5.0" height="3.0" />
+      <rect x="363.5" y="338.5" width="5.0" height="3.0" />
+    </g>
+    <text x="366.0" y="325.0" font-size="2.0" font-weight="800" fill="#C084FC" text-anchor="middle" transform="rotate(90 366.0 325.0)">옷장 락카 22칸 (시선차단벽)</text>
+    <!-- Passage opening at south end of locker wall: y=341.5~352 (width 1.05m) -->
+    <path d="M 373.0 344 Q 373.0 347 368.5 347" fill="none" stroke="#FBBF24" stroke-width="0.8" stroke-dasharray="1.5 1.5"/>
+
+    <!-- 3) Internal Corridor along East wall (탈의실 내부 복도: x=368.5~377.5, width 0.9m) -->
+    <rect x="368.5" y="308" width="9.0" height="44" fill="#F59E0B" fill-opacity="0.08" stroke="#F59E0B" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <text x="373.0" y="330" font-size="2.6" font-weight="800" fill="#FBBF24" text-anchor="middle" transform="rotate(90 373.0 330)">내부 복도 (0.9m)</text>
+
+    <!-- 4) Changing Area Bench & Center Floor Info Label (대폭 확장된 4.45m 깊이 탈의실) -->
+    <rect x="343.0" y="312.0" width="16.0" height="4.2" fill="#2E1065" stroke="#A855F7" stroke-width="0.5" rx="0.8" />
+    <text x="351.0" y="315.0" font-size="2.0" font-weight="700" fill="#CBD5E1" text-anchor="middle">탈의 벤치</text>
+    <text x="351.0" y="325.5" font-size="2.7" font-weight="800" fill="#C084FC" text-anchor="middle">여성 탈의실 (확장)</text>
+    <text x="351.0" y="330.0" font-size="2.0" font-weight="700" fill="#E9D5FF" text-anchor="middle" font-family="ui-monospace">(8.2평 · 4.5×6.0m)</text>
+
+    <!-- 5) Masonry Dividing Wall (조적벽: y=351.4~353.0) -->
+    <rect x="332.5" y="351.4" width="36.0" height="1.6" fill="#2E1065" stroke="#A855F7" stroke-width="0.8" rx="0.3" />
+    <text x="350.5" y="350.5" font-size="2.0" font-weight="800" fill="#F0ABFC" text-anchor="middle">▲ 조적벽 (타일 마감 분할벽)</text>
+    <!-- Walk-in Entry Step Mat -->
+    <rect x="369.5" y="344.5" width="7.0" height="6.0" fill="#4A044E" stroke="#C084FC" stroke-width="0.4" rx="0.5" />
+    <text x="373.0" y="348.2" font-size="1.8" font-weight="700" fill="#F5D0FE" text-anchor="middle">발매트</text>
+
+    <!-- 6) Open Walk-In Shower Zone with 5 Rain Showers & Glass Partitions (y=353.2~367.0, depth 1.4m) -->
+    <rect x="333.0" y="353.2" width="44.0" height="13.8" fill="#2A0845" fill-opacity="0.85" stroke="#A855F7" stroke-width="0.6" rx="0.8" />
+    <!-- Linear Floor Trench -->
+    <line x1="334.0" y1="366.0" x2="376.0" y2="366.0" stroke="#F0ABFC" stroke-width="0.8" stroke-dasharray="2 2" />
+    <!-- 5 Rain Shower Heads mounted on South wall (간격 0.9m) -->
+    <line x1="337.0" y1="367.0" x2="337.0" y2="363.5" stroke="#F8FAFC" stroke-width="0.8" />
+    <circle cx="337.0" cy="363.0" r="1.5" fill="#A855F7" stroke="#F8FAFC" stroke-width="0.5" />
+    <circle cx="337.0" cy="363.0" r="0.5" fill="#FFFFFF" />
+    <rect x="336.1" y="365.2" width="1.8" height="1.2" fill="#64748B" stroke="#F8FAFC" stroke-width="0.3" rx="0.2" />
+    <text x="337.0" y="357.5" font-size="1.9" font-weight="700" fill="#F5D0FE" text-anchor="middle">0.9m</text>
+
+    <line x1="346.0" y1="367.0" x2="346.0" y2="363.5" stroke="#F8FAFC" stroke-width="0.8" />
+    <circle cx="346.0" cy="363.0" r="1.5" fill="#A855F7" stroke="#F8FAFC" stroke-width="0.5" />
+    <circle cx="346.0" cy="363.0" r="0.5" fill="#FFFFFF" />
+    <rect x="345.1" y="365.2" width="1.8" height="1.2" fill="#64748B" stroke="#F8FAFC" stroke-width="0.3" rx="0.2" />
+    <text x="346.0" y="357.5" font-size="1.9" font-weight="700" fill="#F5D0FE" text-anchor="middle">0.9m</text>
+
+    <line x1="355.0" y1="367.0" x2="355.0" y2="363.5" stroke="#F8FAFC" stroke-width="0.8" />
+    <circle cx="355.0" cy="363.0" r="1.5" fill="#A855F7" stroke="#F8FAFC" stroke-width="0.5" />
+    <circle cx="355.0" cy="363.0" r="0.5" fill="#FFFFFF" />
+    <rect x="354.1" y="365.2" width="1.8" height="1.2" fill="#64748B" stroke="#F8FAFC" stroke-width="0.3" rx="0.2" />
+    <text x="355.0" y="357.5" font-size="1.9" font-weight="700" fill="#F5D0FE" text-anchor="middle">0.9m</text>
+
+    <line x1="364.0" y1="367.0" x2="364.0" y2="363.5" stroke="#F8FAFC" stroke-width="0.8" />
+    <circle cx="364.0" cy="363.0" r="1.5" fill="#A855F7" stroke="#F8FAFC" stroke-width="0.5" />
+    <circle cx="364.0" cy="363.0" r="0.5" fill="#FFFFFF" />
+    <rect x="363.1" y="365.2" width="1.8" height="1.2" fill="#64748B" stroke="#F8FAFC" stroke-width="0.3" rx="0.2" />
+    <text x="364.0" y="357.5" font-size="1.9" font-weight="700" fill="#F5D0FE" text-anchor="middle">0.9m</text>
+
+    <line x1="373.0" y1="367.0" x2="373.0" y2="363.5" stroke="#F8FAFC" stroke-width="0.8" />
+    <circle cx="373.0" cy="363.0" r="1.5" fill="#A855F7" stroke="#F8FAFC" stroke-width="0.5" />
+    <circle cx="373.0" cy="363.0" r="0.5" fill="#FFFFFF" />
+    <rect x="372.1" y="365.2" width="1.8" height="1.2" fill="#64748B" stroke="#F8FAFC" stroke-width="0.3" rx="0.2" />
+    <text x="373.0" y="357.5" font-size="1.9" font-weight="700" fill="#F5D0FE" text-anchor="middle">0.9m</text>
+
+    <!-- 4 Tempered Glass Partitions between shower stations (길이 1.25m) -->
+    <line x1="341.5" y1="354.5" x2="341.5" y2="367.0" stroke="#A855F7" stroke-width="1.3" stroke-linecap="round" />
+    <line x1="350.5" y1="354.5" x2="350.5" y2="367.0" stroke="#A855F7" stroke-width="1.3" stroke-linecap="round" />
+    <line x1="359.5" y1="354.5" x2="359.5" y2="367.0" stroke="#A855F7" stroke-width="1.3" stroke-linecap="round" />
+    <line x1="368.5" y1="354.5" x2="368.5" y2="367.0" stroke="#A855F7" stroke-width="1.3" stroke-linecap="round" />
+    <text x="355.0" y="360.5" font-size="2.3" font-weight="800" fill="#F0ABFC" text-anchor="middle">해바라기 5수전 · 강화유리 파티션</text>
+
+
+    <!-- ZONE 6: A.H.U CORE (공조실: x=377.5~486, y=278~368) -->
+    <rect x="377.5" y="278" width="108.5" height="90" fill="#0B132B" stroke="#334155" stroke-width="1.0" />
+    <text x="444" y="322" font-size="7.5" font-weight="900" fill="#475569" text-anchor="middle">공조실 (A.H.U)</text>
+    <text x="444" y="330" font-size="4.0" font-weight="700" fill="#334155" text-anchor="middle">건물 설비 코어 (원형 보존)</text>
+  </g>
+
+  <!-- ================= 9. WALLS, COLUMNS & DOORS ================= -->
+  <g id="walls-structure">
+    <!-- Perimeter Outer Building Walls -->
+    <polygon points="162,368 486,368 486,19.4 127.5,229.8 162,278" class="outer-wall" />
+
+    <!-- Interior Structural Partitions between South Amenities (y=308~368 for compact 6.0m rooms) -->
+    <line x1="162" y1="278" x2="162" y2="368" class="inner-wall" />
+    <line x1="226.5" y1="308" x2="226.5" y2="368" class="inner-wall" />
+    <line x1="252.5" y1="308" x2="252.5" y2="368" class="inner-wall" />
+    <line x1="287.5" y1="308" x2="287.5" y2="368" class="inner-wall" />
+    <line x1="332.5" y1="308" x2="332.5" y2="368" class="inner-wall" />
+    <line x1="377.5" y1="278" x2="377.5" y2="368" class="inner-wall" />
+    <line x1="226.5" y1="308" x2="377.5" y2="308" class="inner-wall" />
+
+    <!-- Structural Columns (8.1m Grid) -->
+    <rect x="158" y="274" width="8" height="8" class="col-box" />
+    <rect x="239" y="274" width="8" height="8" class="col-box" />
+    <rect x="320" y="274" width="8" height="8" class="col-box" />
+    <rect x="401" y="274" width="8" height="8" class="col-box" />
+    <rect x="482" y="274" width="8" height="8" class="col-box" />
+
+    <rect x="159" y="366.5" width="6" height="4" class="col-box" />
+    <rect x="236" y="366.5" width="6" height="4" class="col-box" />
+    <rect x="328" y="366.5" width="6" height="4" class="col-box" />
+    
+    <rect x="239" y="193" width="8" height="8" class="col-box" />
+    <rect x="320" y="193" width="8" height="8" class="col-box" />
+    <rect x="401" y="193" width="8" height="8" class="col-box" />
+    <rect x="482" y="193" width="8" height="8" class="col-box" />
+
+    <rect x="320" y="112" width="8" height="8" class="col-box" />
+    <rect x="401" y="112" width="8" height="8" class="col-box" />
+    <rect x="482" y="112" width="8" height="8" class="col-box" />
+    <rect x="482" y="34" width="8" height="8" class="col-box" />
+
+    <!-- DOORS & OPENINGS -->
+    <!-- Main Entrance Door (x=162, y=322 to 342) -->
+    <line x1="162" y1="322" x2="162" y2="342" stroke="#F8FAFC" stroke-width="3.0" />
+    <path d="M162 322 A20 20 0 0 1 182 342" class="door-swing" stroke="#F59E0B" />
+    <line x1="162" y1="342" x2="182" y2="342" stroke="#F59E0B" stroke-width="1.2" />
+    <text x="146" y="321" font-size="5.5" font-weight="800" fill="#F59E0B" text-anchor="middle">메인 출입문</text>
+
+    <!-- Men Restroom Door from Welcome Lounge (x=226.5, y=310.5 to 318.5) -->
+    <line x1="226.5" y1="310.5" x2="226.5" y2="318.5" stroke="#F8FAFC" stroke-width="2.5" />
+    <path d="M226.5 310.5 A8 8 0 0 1 234.5 318.5" class="door-swing" stroke="#64748B" />
+
+    <!-- Women Restroom Door from Welcome Lounge (x=226.5, y=340.5 to 348.5 - identical relative position!) -->
+    <line x1="226.5" y1="340.5" x2="226.5" y2="348.5" stroke="#F8FAFC" stroke-width="2.5" />
+    <path d="M226.5 340.5 A8 8 0 0 1 234.5 348.5" class="door-swing" stroke="#A855F7" />
+
+    <!-- Recovery Suite Glass Entrance Door (x=254.5 to 263.5, y=308) -->
+    <line x1="254.5" y1="308" x2="263.5" y2="308" stroke="#F8FAFC" stroke-width="2.5" />
+    <path d="M254.5 308 A9 9 0 0 0 263.5 317" class="door-swing" stroke="#14B8A6" />
+
+    <!-- Men Locker Door from Community Zone (x=288.0 to 296.0, y=308, opening into 0.9m outer corridor) -->
+    <line x1="288.0" y1="308" x2="296.0" y2="308" stroke="#F8FAFC" stroke-width="2.5" />
+    <path d="M296.0 308 A8 8 0 0 1 288.0 316" class="door-swing" stroke="#0284C7" />
+    <line x1="288.0" y1="308" x2="288.0" y2="316" stroke="#0284C7" stroke-width="1.0" />
+
+    <!-- Women Locker Door from Community Zone (x=369.0 to 377.0, y=308, opening into 0.9m outer corridor) -->
+    <line x1="369.0" y1="308" x2="377.0" y2="308" stroke="#F8FAFC" stroke-width="2.5" />
+    <path d="M369.0 308 A8 8 0 0 0 377.0 316" class="door-swing" stroke="#A855F7" />
+    <line x1="377.0" y1="308" x2="377.0" y2="316" stroke="#A855F7" stroke-width="1.0" />
+  </g>
+
+  <!-- ================= 10. EXACT ARCHITECTURAL DIMENSIONS (치수선 체계) ================= -->
+  <g id="dimension-lines">
+    <!-- Top Dimension Line for 1 SPAN (8.1m Column Grid) -->
+    <g transform="translate(320, 24)">
+      <line x1="0" y1="0" x2="81" y2="0" class="dim-line" stroke="#E2E8F0" stroke-width="1.2" />
+      <line x1="0" y1="-3" x2="0" y2="3" class="dim-tick" stroke="#E2E8F0" stroke-width="1.4" />
+      <line x1="81" y1="-3" x2="81" y2="3" class="dim-tick" stroke="#E2E8F0" stroke-width="1.4" />
+      <text x="40.5" y="-4" class="dim-text" fill="#E2E8F0" text-anchor="middle">1 SPAN = 8.1m (기둥 간격)</text>
+    </g>
+
+    <!-- South Core Width Dimensions Chain (at y=377) -->
+    <!-- 1. Lounge Width = 6.45m (x=162 to 226.5) -->
+    <line x1="162" y1="376" x2="226.5" y2="376" class="dim-line" />
+    <line x1="162" y1="373" x2="162" y2="379" class="dim-tick" />
+    <line x1="226.5" y1="373" x2="226.5" y2="379" class="dim-tick" />
+    <text x="194.25" y="383" class="dim-text" text-anchor="middle">6.45m</text>
+
+    <!-- 2. Restrooms Width = 2.6m (x=226.5 to 252.5) -->
+    <line x1="226.5" y1="376" x2="252.5" y2="376" class="dim-line" />
+    <line x1="252.5" y1="373" x2="252.5" y2="379" class="dim-tick" />
+    <text x="239.5" y="383" class="dim-text" text-anchor="middle">2.6m</text>
+
+    <!-- 3. Recovery Suite Width = 3.5m (x=252.5 to 287.5) -->
+    <line x1="252.5" y1="376" x2="287.5" y2="376" class="dim-line" stroke="#2DD4BF" />
+    <line x1="287.5" y1="373" x2="287.5" y2="379" class="dim-tick" stroke="#2DD4BF" />
+    <text x="270" y="383" class="dim-text" fill="#2DD4BF" text-anchor="middle">3.5m</text>
+
+    <!-- 4. Men Locker Width = 4.5m (x=287.5 to 332.5) -->
+    <line x1="287.5" y1="376" x2="332.5" y2="376" class="dim-line" stroke="#38BDF8" />
+    <line x1="332.5" y1="373" x2="332.5" y2="379" class="dim-tick" stroke="#38BDF8" />
+    <text x="310" y="383" class="dim-text" fill="#38BDF8" text-anchor="middle">4.5m (동일)</text>
+
+    <!-- 5. Women Locker Width = 4.5m (x=332.5 to 377.5) -->
+    <line x1="332.5" y1="376" x2="377.5" y2="376" class="dim-line" stroke="#C084FC" />
+    <line x1="377.5" y1="373" x2="377.5" y2="379" class="dim-tick" stroke="#C084FC" />
+    <text x="355" y="383" class="dim-text" fill="#C084FC" text-anchor="middle">4.5m (동일)</text>
+
+    <!-- Total South Amenity Width = 21.55m (at y=390) -->
+    <line x1="162" y1="389" x2="377.5" y2="389" class="dim-line" stroke="#FBBF24" stroke-width="1.0" />
+    <line x1="162" y1="386" x2="162" y2="392" class="dim-tick" stroke="#FBBF24" stroke-width="1.2" />
+    <line x1="377.5" y1="386" x2="377.5" y2="392" class="dim-tick" stroke="#FBBF24" stroke-width="1.2" />
+    <text x="270" y="396" class="dim-text" fill="#FBBF24" font-weight="800" text-anchor="middle">남측 편의 시설군 총 폭 = 21.55m (커뮤니티 3.0m + 룸 6.0m = 깊이 9.0m)</text>
+
+    <!-- South Core Vertical Depth Split Dimension = 3.0m + 6.0m (at x=383, inside A.H.U left margin for zero entrance overlap!) -->
+    <line x1="383" y1="278" x2="383" y2="308" class="dim-line" stroke="#FBBF24" />
+    <line x1="380" y1="278" x2="386" y2="278" class="dim-tick" stroke="#FBBF24" />
+    <line x1="380" y1="308" x2="386" y2="308" class="dim-tick" stroke="#FBBF24" />
+    <text x="389" y="294.5" class="dim-text" fill="#FBBF24" text-anchor="start">커뮤니티 3.0m</text>
+
+    <line x1="383" y1="308" x2="383" y2="368" class="dim-line" stroke="#C084FC" />
+    <line x1="380" y1="308" x2="386" y2="308" class="dim-tick" stroke="#C084FC" />
+    <line x1="380" y1="352.5" x2="385" y2="352.5" class="dim-tick" stroke="#C084FC" />
+    <line x1="380" y1="368" x2="386" y2="368" class="dim-tick" stroke="#C084FC" />
+    <text x="389" y="330" class="dim-text" fill="#E9D5FF" text-anchor="start">탈의실 4.45m (확장)</text>
+    <text x="389" y="361" class="dim-text" fill="#E9D5FF" text-anchor="start">샤워 1.45m (조적·수전)</text>
+
+    <!-- 24m Rig Length Dimension Line (at y=240, x=235 to 475) -->
+    <line x1="235" y1="240" x2="475" y2="240" class="dim-line" stroke="#FBBF24" stroke-width="1.0" />
+    <line x1="235" y1="237" x2="235" y2="243" class="dim-tick" stroke="#FBBF24" stroke-width="1.2" />
+    <line x1="475" y1="237" x2="475" y2="243" class="dim-tick" stroke="#FBBF24" stroke-width="1.2" />
+    <text x="355" y="237" class="dim-text" fill="#FBBF24" font-weight="900" text-anchor="middle">리그 전장 길이 = 24.0m (스쿼트 셀 3.0m 간격 × 8개 베이)</text>
+
+    <!-- Turf Dimensions (along diagonal) -->
+    <g transform="translate(142, 216) rotate(-30.42)">
+      <line x1="-8" y1="0" x2="-8" y2="46" class="dim-line" stroke="#38BDF8" stroke-width="1.0" />
+      <line x1="-11" y1="0" x2="-5" y2="0" class="dim-tick" stroke="#38BDF8" stroke-width="1.2" />
+      <line x1="-11" y1="46" x2="-5" y2="46" class="dim-tick" stroke="#38BDF8" stroke-width="1.2" />
+      <text x="-12" y="25" class="dim-text" fill="#38BDF8" font-weight="800" text-anchor="middle" transform="rotate(-90 -12 25)">폭 6.0m</text>
+
+      <!-- Turf Total Length = 38.0m -->
+      <line x1="0" y1="-8" x2="290" y2="-8" class="dim-line" stroke="#CBD5E1" stroke-width="1.0" />
+      <line x1="0" y1="-11" x2="0" y2="-5" class="dim-tick" stroke="#CBD5E1" stroke-width="1.2" />
+      <line x1="290" y1="-11" x2="290" y2="-5" class="dim-tick" stroke="#CBD5E1" stroke-width="1.2" />
+      <text x="145" y="-12" class="dim-text" fill="#F8FAFC" font-weight="800" text-anchor="middle">터프 트랙 전장 = 38.0m</text>
+    </g>
+
+    <!-- West Parking Direct Passage Dimension = 3.0m (at x=125, y=320~350) -->
+    <line x1="125" y1="320" x2="125" y2="350" class="dim-line" stroke="#F59E0B" />
+    <polygon points="125,320 123.5,323 126.5,323" fill="#F59E0B" />
+    <polygon points="125,350 123.5,347 126.5,347" fill="#F59E0B" />
+    <text x="125" y="316" class="dim-text" fill="#F59E0B" font-weight="800" text-anchor="middle">통로 3.0m</text>
+  </g>
+
+  <!-- ================= 11. WEST ENTRANCE & STORAGE ================= -->
+  <g id="west-entry">
+    <rect x="20" y="310" width="90" height="58" fill="#1E293B" stroke="#475569" stroke-width="1.0" rx="3" />
+    <text x="65" y="336" font-size="6.0" font-weight="800" fill="#F8FAFC" text-anchor="middle">창고 · 코치실</text>
+    <text x="65" y="345" font-size="4.2" font-weight="600" fill="#94A3B8" text-anchor="middle">(9평 · 비품/코치)</text>
+
+    <!-- Flow Arrow from Parking -->
+    <line x1="120" y1="334" x2="158" y2="334" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" />
+    <polygon points="160,334 152,330 152,338" fill="#F59E0B" />
+    <text x="140" y="344" font-size="4.5" font-weight="800" fill="#F59E0B" text-anchor="middle">회원 입장 동선 ▶</text>
+    <text x="65" y="380" font-size="4.2" font-weight="700" fill="#94A3B8">▼ 하역장 (중장비·리그 직결 반입)</text>
+  </g>
+</svg>

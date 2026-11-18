@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" width="100%" height="100%" style="background:#0B0F17; font-family:'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1E293B" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Title Header -->
+  <rect x="0" y="0" width="1200" height="70" fill="#0F172A" />
+  <line x1="0" y1="70" x2="1200" y2="70" stroke="#334155" stroke-width="2" />
+  <text x="30" y="34" font-size="22" font-weight="900" fill="#F8FAFC">사각 스테이션 RIG (폭 1.8m) 배치 해법 시각 비교 (슬레드 3레인 반영)</text>
+  <text x="30" y="56" font-size="13" font-weight="600" fill="#94A3B8">핵심 과제: ① 동측 벽면(G6) 바벨 간섭 해결  ② G4·G5 콘크리트 기둥(0.8×0.8m)으로 인해 죽는 철봉·스쿼트 공간 해결</text>
+
+  <!-- ==================== PANEL 0: 현재 상태 (문제점) ==================== -->
+  <g transform="translate(25, 90)">
+    <rect x="0" y="0" width="560" height="390" rx="14" fill="#111827" stroke="#EF4444" stroke-width="2" />
+    <rect x="0" y="0" width="560" height="44" rx="14" fill="#450A0A" />
+    <text x="18" y="28" font-size="16" font-weight="900" fill="#FCA5A5">[현재 상태] 기둥(G4~G6)을 끼고 동측 벽에 붙은 구조 (문제점)</text>
+
+    <!-- Floor Map Area (x=20..520, y=55..325) -->
+    <rect x="20" y="55" width="500" height="265" fill="url(#grid)" stroke="#334155" stroke-width="1" />
+    <!-- East Wall -->
+    <line x1="500" y1="55" x2="500" y2="320" stroke="#F8FAFC" stroke-width="6" />
+    <text x="512" y="185" font-size="12" font-weight="800" fill="#94A3B8" transform="rotate(90 512 185)">동측 벽면 (열6)</text>
+
+    <!-- Whiteboards on East Wall -->
+    <rect x="492" y="75" width="6" height="42" fill="#38BDF8" rx="2" />
+    <text x="485" y="98" font-size="11" font-weight="800" fill="#38BDF8" text-anchor="end">◀ 크로스핏 칠판·타이머(H6)</text>
+    <rect x="492" y="205" width="6" height="42" fill="#E879F9" rx="2" />
+    <text x="485" y="232" font-size="11" font-weight="800" fill="#E879F9" text-anchor="end">◀ 하이록스 칠판·타이머(G6)</text>
+
+    <!-- G-Row Line (y=170) -->
+    <line x1="20" y1="170" x2="500" y2="170" stroke="#475569" stroke-width="1.2" stroke-dasharray="5 5" />
+    <text x="35" y="164" font-size="11" font-weight="700" fill="#64748B">행G 기둥선</text>
+
+    <!-- 3-Lane Turf at bottom (y=250..310) -->
+    <rect x="20" y="250" width="480" height="60" fill="#064E3B" fill-opacity="0.45" stroke="#10B981" stroke-width="1.5" />
+    <line x1="20" y1="270" x2="500" y2="270" stroke="#10B981" stroke-width="0.8" stroke-dasharray="6 4" />
+    <line x1="20" y1="290" x2="500" y2="290" stroke="#10B981" stroke-width="0.8" stroke-dasharray="6 4" />
+    <text x="260" y="284" font-size="13" font-weight="900" fill="#A7F3D0" text-anchor="middle">슬레드 3레인 TURF (폭 3.0m · 좌 3대 / 우 3대 출발)</text>
+
+    <!-- Current RIG straddling G4, G5, G6 (x=140..500, y=158..194) -->
+    <rect x="140" y="158" width="360" height="36" fill="#EC4899" fill-opacity="0.18" stroke="#EC4899" stroke-width="3" rx="3" />
+
+    <!-- Columns G4(140), G5(320), G6(500) -->
+    <rect x="128" y="158" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="140" y="174" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G4</text>
+
+    <rect x="308" y="158" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="320" y="174" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G5</text>
+
+    <rect x="488" y="158" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="500" y="174" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G6</text>
+
+    <!-- Red X Dead Zones over G4, G5, G6 -->
+    <rect x="122" y="150" width="46" height="50" fill="#EF4444" fill-opacity="0.35" stroke="#EF4444" stroke-width="2" stroke-dasharray="3 2" rx="4" />
+    <text x="145" y="143" font-size="11" font-weight="900" fill="#FCA5A5" text-anchor="middle">❌기둥간섭</text>
+
+    <rect x="297" y="150" width="46" height="50" fill="#EF4444" fill-opacity="0.35" stroke="#EF4444" stroke-width="2" stroke-dasharray="3 2" rx="4" />
+    <text x="320" y="143" font-size="11" font-weight="900" fill="#FCA5A5" text-anchor="middle">❌기둥간섭(철봉불가)</text>
+
+    <rect x="458" y="150" width="46" height="50" fill="#EF4444" fill-opacity="0.35" stroke="#EF4444" stroke-width="2" stroke-dasharray="3 2" rx="4" />
+    <text x="450" y="143" font-size="11" font-weight="900" fill="#FCA5A5" text-anchor="middle">❌벽에 바벨 걸림</text>
+
+    <!-- Explanation Footer -->
+    <text x="20" y="345" font-size="12.5" font-weight="700" fill="#FCA5A5">• G4·G5 기둥이 리그 한가운데를 막아 주변 철봉(풀업)과 바벨 베이 사용 불가</text>
+    <text x="20" y="366" font-size="12.5" font-weight="700" fill="#FCA5A5">• 우측 끝이 동측 벽(G6)에 막혀 가장자리 스쿼트 셀 사용 불가 &amp; 통행 단절</text>
+  </g>
+
+  <!-- ==================== PANEL 1: 해법 1 (기둥 남측 오프셋 아일랜드 RIG) ==================== -->
+  <g transform="translate(615, 90)">
+    <rect x="0" y="0" width="560" height="390" rx="14" fill="#111827" stroke="#22C55E" stroke-width="2.5" />
+    <rect x="0" y="0" width="560" height="44" rx="14" fill="#052E16" />
+    <text x="18" y="28" font-size="16" font-weight="900" fill="#86EFAC">[해법 1 ⭐추천] 기둥을 피해 살짝 내린(또는 올린) '단일 독립 사각 RIG'</text>
+
+    <!-- Floor Map Area -->
+    <rect x="20" y="55" width="500" height="265" fill="url(#grid)" stroke="#334155" stroke-width="1" />
+    <line x1="500" y1="55" x2="500" y2="320" stroke="#F8FAFC" stroke-width="6" />
+
+    <!-- Whiteboards on East Wall -->
+    <rect x="492" y="75" width="6" height="42" fill="#38BDF8" rx="2" />
+    <text x="485" y="98" font-size="11" font-weight="800" fill="#38BDF8" text-anchor="end">◀ 크로스핏 칠판(H6)</text>
+    <rect x="492" y="205" width="6" height="42" fill="#E879F9" rx="2" />
+    <text x="485" y="232" font-size="11" font-weight="800" fill="#E879F9" text-anchor="end">◀ 하이록스 칠판(G6)</text>
+
+    <!-- G-Row Line (y=145) -->
+    <line x1="20" y1="145" x2="500" y2="145" stroke="#475569" stroke-width="1.2" stroke-dasharray="5 5" />
+
+    <!-- Columns G4, G5, G6 sitting FREE outside the RIG! -->
+    <rect x="128" y="133" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="140" y="149" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G4</text>
+    <rect x="308" y="133" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="320" y="149" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G5</text>
+    <rect x="488" y="133" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="500" y="149" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G6</text>
+
+    <text x="230" y="125" font-size="11" font-weight="800" fill="#A3E635" text-anchor="middle">✔ 기둥(G4·G5)이 리그 밖에 위치 → 기둥 간섭 0%!</text>
+
+    <!-- Independent Island RIG (x=140..445, y=172..208) - 2.5m away from East Wall! -->
+    <rect x="140" y="172" width="305" height="36" fill="#EC4899" fill-opacity="0.25" stroke="#F472B6" stroke-width="3" rx="3" />
+    <!-- 6 Top & 6 Bottom Squat Cells cleanly spaced -->
+    <g stroke="#38BDF8" stroke-width="2.5">
+      <line x1="150" y1="160" x2="150" y2="172" /><line x1="205" y1="160" x2="205" y2="172" /><line x1="260" y1="160" x2="260" y2="172" />
+      <line x1="320" y1="160" x2="320" y2="172" /><line x1="375" y1="160" x2="375" y2="172" /><line x1="435" y1="160" x2="435" y2="172" />
+    </g>
+    <g stroke="#C084FC" stroke-width="2.5">
+      <line x1="150" y1="208" x2="150" y2="220" /><line x1="205" y1="208" x2="205" y2="220" /><line x1="260" y1="208" x2="260" y2="220" />
+      <line x1="320" y1="208" x2="320" y2="220" /><line x1="375" y1="208" x2="375" y2="220" /><line x1="435" y1="208" x2="435" y2="220" />
+    </g>
+    <text x="292" y="195" font-size="13" font-weight="900" fill="#FFF" text-anchor="middle">독립 사각 RIG (전 구간 철봉·스쿼트 100% 사용)</text>
+
+    <!-- East Wall 2.5m Clearance Badge -->
+    <line x1="445" y1="190" x2="495" y2="190" stroke="#4ADE80" stroke-width="2.5" stroke-dasharray="4 2" />
+    <text x="470" y="182" font-size="11" font-weight="900" fill="#4ADE80" text-anchor="middle">2.5m 이격</text>
+    <text x="470" y="204" font-size="10" font-weight="800" fill="#86EFAC" text-anchor="middle">(스쿼트+통로)</text>
+
+    <!-- 3-Lane Turf at bottom (y=250..310) -->
+    <rect x="20" y="250" width="480" height="60" fill="#064E3B" fill-opacity="0.45" stroke="#10B981" stroke-width="1.5" />
+    <line x1="20" y1="270" x2="500" y2="270" stroke="#10B981" stroke-width="0.8" stroke-dasharray="6 4" />
+    <line x1="20" y1="290" x2="500" y2="290" stroke="#10B981" stroke-width="0.8" stroke-dasharray="6 4" />
+    <text x="260" y="284" font-size="13" font-weight="900" fill="#A7F3D0" text-anchor="middle">슬레드 3레인 TURF (1레인 축소로 웨이트존 폭 1.0m 추가 확보!)</text>
+
+    <!-- Explanation Footer -->
+    <text x="20" y="345" font-size="12.5" font-weight="700" fill="#86EFAC">• 슬레드 트랙이 3레인(3m)으로 줄면서 생긴 여유 공간 덕분에 기둥을 완전히 피함</text>
+    <text x="20" y="366" font-size="12.5" font-weight="700" fill="#86EFAC">• 동측 벽에서 2.5m 띄워 가장자리 스쿼트 셀 100% 활용 + 칠판 앞 통로 확보</text>
+  </g>
+
+  <!-- ==================== PANEL 2: 해법 2 (기둥 사이 트윈 사각 RIG) ==================== -->
+  <g transform="translate(25, 505)">
+    <rect x="0" y="0" width="560" height="390" rx="14" fill="#111827" stroke="#38BDF8" stroke-width="2" />
+    <rect x="0" y="0" width="560" height="44" rx="14" fill="#082F49" />
+    <text x="18" y="28" font-size="16" font-weight="900" fill="#7DD3FC">[해법 2] 기둥과 기둥 사이 빈 공간에만 놓는 '트윈(2분할) 사각 RIG'</text>
+
+    <!-- Floor Map Area -->
+    <rect x="20" y="55" width="500" height="265" fill="url(#grid)" stroke="#334155" stroke-width="1" />
+    <line x1="500" y1="55" x2="500" y2="320" stroke="#F8FAFC" stroke-width="6" />
+
+    <!-- Whiteboards on East Wall -->
+    <rect x="492" y="75" width="6" height="42" fill="#38BDF8" rx="2" />
+    <rect x="492" y="205" width="6" height="42" fill="#E879F9" rx="2" />
+
+    <!-- G-Row Line (y=170) -->
+    <line x1="20" y1="170" x2="500" y2="170" stroke="#475569" stroke-width="1.2" stroke-dasharray="5 5" />
+
+    <!-- Columns G4(140), G5(320), G6(500) -->
+    <rect x="128" y="158" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="140" y="174" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G4</text>
+    <rect x="308" y="158" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="320" y="174" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G5</text>
+    <rect x="488" y="158" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="500" y="174" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G6</text>
+
+    <!-- Twin Rig 1 (Between G4 and G5: x=170..290) -->
+    <rect x="168" y="155" width="124" height="36" fill="#EC4899" fill-opacity="0.25" stroke="#F472B6" stroke-width="3" rx="3" />
+    <text x="230" y="177" font-size="11.5" font-weight="900" fill="#FFF" text-anchor="middle">사각 RIG ① (6셀)</text>
+    <g stroke="#38BDF8" stroke-width="2.5">
+      <line x1="175" y1="143" x2="175" y2="155" /><line x1="230" y1="143" x2="230" y2="155" /><line x1="285" y1="143" x2="285" y2="155" />
+    </g>
+    <g stroke="#C084FC" stroke-width="2.5">
+      <line x1="175" y1="191" x2="175" y2="203" /><line x1="230" y1="191" x2="230" y2="203" /><line x1="285" y1="191" x2="285" y2="203" />
+    </g>
+
+    <!-- Twin Rig 2 (Between G5 and G6: x=348..462) -->
+    <rect x="348" y="155" width="114" height="36" fill="#EC4899" fill-opacity="0.25" stroke="#F472B6" stroke-width="3" rx="3" />
+    <text x="405" y="177" font-size="11.5" font-weight="900" fill="#FFF" text-anchor="middle">사각 RIG ② (6셀)</text>
+    <g stroke="#38BDF8" stroke-width="2.5">
+      <line x1="355" y1="143" x2="355" y2="155" /><line x1="405" y1="143" x2="405" y2="155" /><line x1="455" y1="143" x2="455" y2="155" />
+    </g>
+    <g stroke="#C084FC" stroke-width="2.5">
+      <line x1="355" y1="191" x2="355" y2="203" /><line x1="405" y1="191" x2="405" y2="203" /><line x1="455" y1="191" x2="455" y2="203" />
+    </g>
+
+    <!-- Passage indicators -->
+    <text x="320" y="135" font-size="11" font-weight="800" fill="#7DD3FC" text-anchor="middle">↕ 기둥 양옆 통로 &amp; 바벨 여유</text>
+    <text x="475" y="148" font-size="10.5" font-weight="800" fill="#4ADE80" text-anchor="middle">벽 2m 이격</text>
+
+    <!-- 3-Lane Turf at bottom -->
+    <rect x="20" y="250" width="480" height="60" fill="#064E3B" fill-opacity="0.45" stroke="#10B981" stroke-width="1.5" />
+    <line x1="20" y1="270" x2="500" y2="270" stroke="#10B981" stroke-width="0.8" stroke-dasharray="6 4" />
+    <line x1="20" y1="290" x2="500" y2="290" stroke="#10B981" stroke-width="0.8" stroke-dasharray="6 4" />
+    <text x="260" y="284" font-size="13" font-weight="900" fill="#A7F3D0" text-anchor="middle">슬레드 3레인 TURF (폭 3.0m)</text>
+
+    <!-- Explanation Footer -->
+    <text x="20" y="345" font-size="12.5" font-weight="700" fill="#7DD3FC">• 행G 경계선 위치는 그대로 유지하면서 G4·G5·G6 기둥에서 모두 1.5~2m씩 띄움</text>
+    <text x="20" y="366" font-size="12.5" font-weight="700" fill="#7DD3FC">• 2개의 사각 스테이션 양끝(총 8개 코너 포스트) 모두 완벽한 스쿼트 셀로 활용 가능</text>
+  </g>
+
+  <!-- ==================== PANEL 3: 해법 3 (기둥 남측면 밀착 + 동측 벽 이격) ==================== -->
+  <g transform="translate(615, 505)">
+    <rect x="0" y="0" width="560" height="390" rx="14" fill="#111827" stroke="#F59E0B" stroke-width="2" />
+    <rect x="0" y="0" width="560" height="44" rx="14" fill="#451A03" />
+    <text x="18" y="28" font-size="16" font-weight="900" fill="#FCD34D">[해법 3] 기둥 남측면에 윗줄을 붙이고 동측 벽에서 2.5m 띄운 구조</text>
+
+    <!-- Floor Map Area -->
+    <rect x="20" y="55" width="500" height="265" fill="url(#grid)" stroke="#334155" stroke-width="1" />
+    <line x1="500" y1="55" x2="500" y2="320" stroke="#F8FAFC" stroke-width="6" />
+
+    <!-- Whiteboards on East Wall -->
+    <rect x="492" y="75" width="6" height="42" fill="#38BDF8" rx="2" />
+    <rect x="492" y="205" width="6" height="42" fill="#E879F9" rx="2" />
+
+    <!-- G-Row Line (y=152) -->
+    <line x1="20" y1="152" x2="500" y2="152" stroke="#475569" stroke-width="1.2" stroke-dasharray="5 5" />
+
+    <!-- Columns G4, G5, G6 touching ONLY the top edge of the RIG -->
+    <rect x="128" y="140" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="140" y="156" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G4</text>
+    <rect x="308" y="140" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="320" y="156" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G5</text>
+    <rect x="488" y="140" width="24" height="24" fill="#1E293B" stroke="#94A3B8" stroke-width="2.5" />
+    <text x="500" y="156" font-size="10" font-weight="900" fill="#FFF" text-anchor="middle">G6</text>
+
+    <!-- RIG touching south face of G4/G5 (x=140..445, y=164..200) -->
+    <rect x="140" y="164" width="305" height="36" fill="#EC4899" fill-opacity="0.22" stroke="#F472B6" stroke-width="3" rx="3" />
+    <text x="292" y="187" font-size="12.5" font-weight="900" fill="#FFF" text-anchor="middle">사각 RIG (기둥에 윗면만 고정 · 아랫줄은 100% 개방)</text>
+
+    <line x1="445" y1="182" x2="495" y2="182" stroke="#FBBF24" stroke-width="2.5" stroke-dasharray="4 2" />
+    <text x="470" y="174" font-size="11" font-weight="900" fill="#FBBF24" text-anchor="middle">2.5m 이격</text>
+
+    <!-- 3-Lane Turf at bottom -->
+    <rect x="20" y="250" width="480" height="60" fill="#064E3B" fill-opacity="0.45" stroke="#10B981" stroke-width="1.5" />
+    <line x1="20" y1="270" x2="500" y2="270" stroke="#10B981" stroke-width="0.8" stroke-dasharray="6 4" />
+    <line x1="20" y1="290" x2="500" y2="290" stroke="#10B981" stroke-width="0.8" stroke-dasharray="6 4" />
+    <text x="260" y="284" font-size="13" font-weight="900" fill="#A7F3D0" text-anchor="middle">슬레드 3레인 TURF (폭 3.0m)</text>
+
+    <!-- Explanation Footer -->
+    <text x="20" y="345" font-size="12.5" font-weight="700" fill="#FCD34D">• 사각 RIG가 기둥을 품지 않고 기둥 남측면에 살짝 기대어 내려온 형태</text>
+    <text x="20" y="366" font-size="12.5" font-weight="700" fill="#FCD34D">• 해법 1보다는 기둥 바로 옆 윗줄 2칸이 좁아지지만, 기둥에 브라켓 고정 가능</text>
+  </g>
+</svg>

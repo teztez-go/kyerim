@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>회복실 동선 비교</title>
+<style>
+:root{--paper:#F4F5F3;--panel:#fff;--ink:#1E2227;--ink2:#47505A;--ink3:#77808A;--rule:#D6DADE;--accent:#B9530A;--wet:#1F7FC2;--stop:#A93434;
+--z-rig:#DCE6EE;--z-turf:#D5E8C8;--z-lobby:#F3D6B3;--z-lock:#E1E7EB;--z-rec:#C9E6E8;--z-dry:#EEF1F3;--z-ctx:#ECEEF0;--z-ctxline:#AAB2BA;
+--sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;--mono:"SF Mono",Menlo,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);word-break:keep-all}
+.wrap{width:1400px;padding:36px 40px 40px;display:grid;gap:22px}
+h1{margin:0;font-size:30px;font-weight:800;letter-spacing:-.02em}
+.lead{margin:0;font-size:17px;color:var(--ink2)}
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.p{background:var(--panel);border:1px solid var(--rule);padding:16px 18px 18px;display:grid;gap:10px}
+.p h2{margin:0;font-size:20px;display:flex;gap:10px;align-items:center}
+.tag{font:700 12px var(--sans);padding:4px 10px;border-radius:999px}
+.tag.now{background:#F7E2E2;color:var(--stop)} .tag.new{background:#E3F1E8;color:#256E44}
+svg{width:100%;height:auto;display:block}
+.z{stroke:var(--ink);stroke-width:.6}.wall{fill:none;stroke:var(--ink);stroke-width:1.6}
+.rig{fill:var(--z-rig)}.turf{fill:var(--z-turf)}.lobby{fill:var(--z-lobby)}.lock{fill:var(--z-lock)}.rec{fill:var(--z-rec)}.dry{fill:var(--z-dry)}.ctx{fill:var(--z-ctx);stroke:var(--z-ctxline);stroke-width:.6}
+.col{fill:var(--ink)}.eq{fill:#fff;stroke:var(--ink);stroke-width:.5}
+.lab{font:700 7px var(--sans);fill:var(--ink);text-anchor:middle}.sub{font:600 5.4px var(--sans);fill:var(--ink2);text-anchor:middle}
+.door{fill:none;stroke:var(--ink);stroke-width:.5}.gap{stroke:#fff;stroke-width:2}
+.wetpath{fill:none;stroke:var(--wet);stroke-width:1.6;stroke-dasharray:3 2}.wetbad{fill:none;stroke:var(--stop);stroke-width:1.6;stroke-dasharray:3 2}
+.drypath{fill:none;stroke:var(--accent);stroke-width:1.4}
+.wetlab{font:700 5.6px var(--sans);fill:var(--wet)}.badlab{font:700 5.6px var(--sans);fill:var(--stop)}.drylab{font:700 5.6px var(--sans);fill:var(--accent)}
+.note{margin:0;font-size:15px;color:var(--ink2)}
+table{border-collapse:collapse;width:100%;background:var(--panel);border:1px solid var(--rule);font-size:16px}
+th,td{padding:12px 16px;border-bottom:1px solid #E8EBED;text-align:left;vertical-align:top}
+thead th{background:var(--paper);font-size:14px;color:var(--ink3)}
+td.good{background:#E3F1E8} td.bad{background:#F7E2E2}
+.legend{display:flex;gap:22px;font-size:14px;color:var(--ink2)}
+.legend i{display:inline-block;width:22px;height:0;border-top:3px dashed;vertical-align:middle;margin-right:6px}
+</style></head><body><div class="wrap">
+<h1>냉탕에서 나온 젖은 몸이 어디로 가나 — 회복실 위치 비교</h1>
+<p class="lead">회복실을 남녀 탈의실 <b>사이</b>로 옮기면, 샤워실에서 바로 들어가고 바로 나옵니다. 운동 바닥에는 물이 한 방울도 떨어지지 않습니다.</p>
+<div class="panels">
+ <div class="p">
+  <h2><span class="tag now">지금 안</span>회복실이 맨 끝에 따로</h2>
+  <svg viewBox="150 232 240 152">
+   <rect class="ctx" x="150" y="278" width="12" height="90"/>
+   <polygon class="z turf" points="162,278 243,278 243,240 162,240"/>
+   <polygon class="z rig" points="243,278 390,278 390,240 243,240"/>
+   <rect class="ctx" x="377.5" y="278" width="12.5" height="90"/>
+   <rect class="z lobby" x="162" y="278" width="81" height="90"/>
+   <rect class="z lock" x="243" y="278" width="81" height="90"/>
+   <rect class="z rec" x="324" y="278" width="53.5" height="90"/>
+   <polyline class="wall" points="162,368 377.5,368 377.5,278"/><line class="wall" x1="162" y1="278" x2="162" y2="368"/>
+   <line x1="283.5" y1="300" x2="283.5" y2="368" stroke="#1E2227" stroke-width=".6"/>
+   <rect class="eq" x="327" y="284" width="25" height="40"/><rect class="eq" x="356" y="288" width="18" height="30" rx="4"/>
+   <text class="sub" x="339.5" y="306">사우나</text><text class="sub" x="365" y="305">냉탕</text>
+   <g class="col"><rect x="239" y="274" width="8" height="8"/><rect x="320" y="274" width="8" height="8"/><rect x="158" y="274" width="8" height="8"/><rect x="239" y="364" width="8" height="8"/><rect x="320" y="364" width="8" height="8"/></g>
+   <text class="lab" x="202" y="330">로비·라운지</text>
+   <text class="lab" x="283.5" y="292">탈의·샤워</text><text class="sub" x="263" y="340">남</text><text class="sub" x="304" y="340">여</text>
+   <text class="lab" x="350.7" y="345">회복실</text>
+   <text class="lab" x="300" y="256">RIG 존 (운동 바닥)</text><text class="lab" x="202" y="256">TURF 존</text>
+   <path class="wetbad" d="M365 318 C 365 330, 360 270, 345 268 L 275 268 C 265 268, 262 274, 262 285"/>
+   <polygon points="259,282 262,289 265,282" fill="#A93434"/>
+   <text class="badlab" x="290" y="264">젖은 몸으로 운동 바닥을 지나감</text>
+  </svg>
+  <p class="note">문을 어디에 내든, 냉탕 → 탈의실 사이에 운동 바닥이 끼어 있습니다. 물이 떨어지고 미끄럽고, 운동하는 회원 사이로 수건 두른 사람이 지나갑니다.</p>
+ </div>
+ <div class="p">
+  <h2><span class="tag new">바꾼 안</span>남 · 회복실 · 여 — 회복실이 가운데</h2>
+  <svg viewBox="150 232 240 152">
+   <rect class="ctx" x="150" y="278" width="12" height="90"/>
+   <polygon class="z turf" points="162,278 243,278 243,240 162,240"/>
+   <polygon class="z rig" points="243,278 390,278 390,240 243,240"/>
+   <rect class="ctx" x="377.5" y="278" width="12.5" height="90"/>
+   <rect class="z lobby" x="162" y="278" width="81" height="90"/>
+   <rect class="z dry" x="243" y="278" width="45" height="44"/><rect class="z lock" x="243" y="322" width="45" height="46"/>
+   <rect class="z rec" x="288" y="278" width="45" height="90"/>
+   <rect class="z dry" x="333" y="278" width="44.5" height="44"/><rect class="z lock" x="333" y="322" width="44.5" height="46"/>
+   <polyline class="wall" points="162,368 377.5,368 377.5,278"/><line class="wall" x1="162" y1="278" x2="162" y2="368"/>
+   <line class="wall" x1="288" y1="278" x2="288" y2="368"/><line class="wall" x1="333" y1="278" x2="333" y2="368"/><line class="wall" x1="288" y1="278" x2="333" y2="278"/>
+   <line class="gap" x1="252" y1="278" x2="266" y2="278"/><path class="door" d="M252 278 A14 14 0 0 0 266 292"/>
+   <line class="gap" x1="345" y1="278" x2="359" y2="278"/><path class="door" d="M359 278 A14 14 0 0 1 345 292"/>
+   <line class="gap" x1="288" y1="328" x2="288" y2="342"/><path class="door" d="M288 328 A14 14 0 0 1 302 342"/>
+   <line class="gap" x1="333" y1="328" x2="333" y2="342"/><path class="door" d="M333 328 A14 14 0 0 0 319 342"/>
+   <rect class="eq" x="291" y="282" width="22" height="34"/><rect class="eq" x="316" y="282" width="15" height="24" rx="4"/>
+   <rect class="eq" x="292" y="361" width="38" height="5"/>
+   <text class="sub" x="302" y="301">사우나</text><text class="sub" x="323.5" y="296">냉탕</text><text class="sub" x="311" y="358">수건·벤치</text>
+   <g class="col"><rect x="239" y="274" width="8" height="8"/><rect x="320" y="274" width="8" height="8"/><rect x="158" y="274" width="8" height="8"/><rect x="239" y="364" width="8" height="8"/><rect x="320" y="364" width="8" height="8"/></g>
+   <text class="lab" x="202" y="330">로비·라운지</text>
+   <text class="lab" x="265.5" y="306">남 탈의</text><text class="sub" x="265.5" y="355">남 샤워</text>
+   <text class="lab" x="355" y="306">여 탈의</text><text class="sub" x="355" y="355">여 샤워</text>
+   <text class="lab" x="311" y="324">공용 회복실</text>
+   <text class="lab" x="300" y="256">RIG 존 (운동 바닥)</text><text class="lab" x="202" y="256">TURF 존</text>
+   <path class="drypath" d="M259 262 L259 276"/><polygon points="256,273 259,280 262,273" fill="#B9530A"/>
+   <path class="drypath" d="M352 262 L352 276"/><polygon points="349,273 352,280 355,273" fill="#B9530A"/>
+   <text class="drylab" x="268" y="266">마른 몸으로 들어감</text>
+   <path class="wetpath" d="M270 335 L296 335"/><polygon points="294,332 300,335 294,338" fill="#1F7FC2"/>
+   <path class="wetpath" d="M352 335 L326 335"/><polygon points="328,332 322,335 328,338" fill="#1F7FC2"/>
+   <text class="wetlab" x="311" y="380" text-anchor="middle">샤워실 ↔ 회복실만 오감 · 운동 바닥 0m</text>
+  </svg>
+  <p class="note">탈의실에서 옷 갈아입고 샤워 → 회복실(수영복·운동복 차림, 남녀 공용) → 다시 자기 샤워실. 회복실은 운동 바닥 쪽 문이 없어 씻고 나서만 들어가게 됩니다.</p>
+ </div>
+</div>
+<div class="legend"><span><i style="border-color:#A93434"></i>젖은 몸이 운동 바닥을 지나는 길</span><span><i style="border-color:#1F7FC2"></i>젖은 몸이 다니는 길(샤워실 안쪽만)</span><span><i style="border-color:#B9530A;border-top-style:solid"></i>마른 몸 동선</span></div>
+<table>
+ <thead><tr><th style="width:24%"></th><th>지금 안</th><th>바꾼 안</th></tr></thead>
+ <tbody>
+  <tr><td><b>냉탕 → 탈의실까지 운동 바닥을 밟는 거리</b></td><td class="bad">약 10m</td><td class="good">0m</td></tr>
+  <tr><td><b>회복실에 들어가는 길</b></td><td>운동 바닥에서 바로 (땀 흘린 채로 들어갈 수 있음)</td><td class="good">탈의·샤워를 거쳐서만 (씻고 들어가게 됨)</td></tr>
+  <tr><td><b>면적</b></td><td>탈의·샤워 22평 + 회복실 15평</td><td>남 약 12평 · 회복실 약 12평 · 여 약 12평 (합계 같음)</td></tr>
+  <tr><td><b>배관</b></td><td>샤워·회복실 모두 옛 화장실 근처</td><td>남 샤워·냉탕은 옛 화장실 근처, <b>여 샤워는 배수관을 새로</b> 뽑아야 함 (아래층 천장으로 뺄 수 있는지 확인)</td></tr>
+  <tr><td><b>회복실 크기</b></td><td>사우나 6~8인 + 냉탕 + 쉴 자리</td><td>사우나 4~6인 + 냉탕 + 수건·벤치 (조금 작아짐)</td></tr>
+ </tbody>
+</table>
+</div></body></html>

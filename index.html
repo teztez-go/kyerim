@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>계림동 그룹피트니스 센터 위탁운영 프로젝트 허브</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: { 50: '#fff7ed', 100: '#ffedd5', 500: '#f97316', 600: '#ea580c', 700: '#c2410c' }
+      },
+      fontFamily: {
+        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'Apple SD Gothic Neo', 'Noto Sans KR', 'sans-serif'],
+        mono: ['SF Mono', 'ui-monospace', 'Menlo', 'Consolas', 'monospace']
+      }
+    }
+  }
+}
+</script>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+body { font-feature-settings: "cv02", "cv03", "cv04", "cv11"; }
+.tab-btn.active {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  font-weight: 700;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+</style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased flex flex-col h-screen overflow-hidden selection:bg-slate-900 selection:text-white">
+
+<!-- Main Navbar -->
+<header class="bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 lg:px-6 py-2.5 flex items-center justify-between gap-4 flex-shrink-0 z-50 shadow-xs">
+  <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2.5">
+      <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center font-black text-amber-400 text-sm shadow-xs">
+        P
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="font-extrabold text-sm sm:text-base text-slate-900 tracking-tight">계림 운동공간 위탁운영 프로젝트</span>
+          <span class="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200">의장님 보고용</span>
+        </div>
+        <div class="text-[11px] text-slate-400 font-mono -mt-0.5">광주 동구 중앙로 358 지하1층 230평</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document Tabs -->
+  <nav class="flex items-center gap-1.5 overflow-x-auto scrollbar-none py-1">
+    <button class="tab-btn active px-3.5 py-1.5 rounded-xl border border-transparent text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-1.5 whitespace-nowrap" data-src="kyerim-plan.html">
+      <span>📊</span> 사업계획 & 수익 시뮬레이터
+    </button>
+    <button class="tab-btn px-3.5 py-1.5 rounded-xl border border-transparent text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-1.5 whitespace-nowrap" data-src="kyerim-opex.html">
+      <span>💰</span> 월 고정 실운영비 명세서
+    </button>
+    <button class="tab-btn px-3.5 py-1.5 rounded-xl border border-transparent text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-1.5 whitespace-nowrap" data-src="kyerim-equipment.html">
+      <span>🏗️</span> 시설 초기투자비 명세서
+    </button>
+    <button class="tab-btn px-3.5 py-1.5 rounded-xl border border-transparent text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-1.5 whitespace-nowrap" data-src="kyerim-pitch.html">
+      <span>📑</span> 공간 기획 제안서
+    </button>
+    <button class="tab-btn px-3.5 py-1.5 rounded-xl border border-transparent text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition flex items-center gap-1.5 whitespace-nowrap" data-src="plan-viewer.html">
+      <span>📐</span> 230평 평면 뷰어
+    </button>
+  </nav>
+
+  <!-- External Actions -->
+  <div class="flex items-center gap-2 flex-shrink-0">
+    <a href="kyerim-plan.html" target="_blank" id="openTab" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition flex items-center gap-1 shadow-xs">
+      <span>↗</span> 새 탭으로 열기
+    </a>
+  </div>
+</header>
+
+<!-- Main Iframe Viewer -->
+<main class="flex-1 relative bg-slate-100">
+  <iframe id="viewer" src="kyerim-plan.html" class="w-full h-full border-0 bg-slate-50" title="프로젝트 문서 뷰어"></iframe>
+</main>
+
+<script>
+const tabs = document.querySelectorAll('.tab-btn');
+const viewer = document.getElementById('viewer');
+const openTab = document.getElementById('openTab');
+const TAB_STORAGE_KEY = 'kyerim_active_hub_tab_v2';
+
+function setTab(src, btn) {
+  tabs.forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  viewer.src = src;
+  openTab.href = src;
+  localStorage.setItem(TAB_STORAGE_KEY, src);
+}
+
+tabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const src = btn.getAttribute('data-src');
+    setTab(src, btn);
+  });
+});
+
+window.addEventListener('message', e => {
+  if (e.data && e.data.type === 'switchTab' && e.data.src) {
+    const targetBtn = Array.from(tabs).find(b => b.getAttribute('data-src') === e.data.src);
+    if (targetBtn) {
+      setTab(e.data.src, targetBtn);
+    }
+  }
+});
+
+// Check URL param or hash or localStorage
+const urlParams = new URLSearchParams(window.location.search);
+const tabParam = urlParams.get('tab') || window.location.hash.replace('#', '');
+const savedTab = tabParam || localStorage.getItem(TAB_STORAGE_KEY);
+if (savedTab) {
+  const matchBtn = Array.from(tabs).find(b => b.getAttribute('data-src') === savedTab || b.getAttribute('data-src').includes(savedTab));
+  if (matchBtn) {
+    setTab(matchBtn.getAttribute('data-src'), matchBtn);
+  }
+}
+</script>
+
+</body>
+</html>

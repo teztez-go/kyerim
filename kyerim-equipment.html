@@ -1,0 +1,1421 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>계림점 초기 시설 투자비 명세서 (CAPEX) — 운영대표 × 의장님</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: { 50: '#fff7ed', 100: '#ffedd5', 500: '#f97316', 600: '#ea580c', 700: '#c2410c' },
+        navy: { 800: '#1e293b', 900: '#0f172a', 950: '#090d16' },
+        gold: { 50: '#fffbeb', 100: '#fef3c7', 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309' }
+      },
+      fontFamily: {
+        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'Apple SD Gothic Neo', 'Noto Sans KR', 'sans-serif'],
+        mono: ['SF Mono', 'ui-monospace', 'Menlo', 'Consolas', 'monospace']
+      }
+    }
+  }
+}
+</script>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  background-color: #f8fafc;
+}
+.tabular-nums { font-variant-numeric: tabular-nums; }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.report-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgb(15 23 42 / 0.03), 0 4px 12px -2px rgb(15 23 42 / 0.04);
+}
+.is-embedded header { display: none !important; }
+.is-embedded main { padding-top: 1.5rem !important; }
+.drag-handle { cursor: grab; user-select: none; }
+.drag-handle:active { cursor: grabbing; }
+tr.dragging { opacity: 0.45; background-color: #f1f5f9 !important; }
+tr.drag-over-top { border-top: 2.5px solid #0f172a !important; }
+tr.drag-over-bottom { border-bottom: 2.5px solid #0f172a !important; }
+.zone-pill.active {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+</style>
+<script>
+if (window.self !== window.top) {
+  document.documentElement.classList.add('is-embedded');
+}
+</script>
+</head>
+<body class="text-slate-800 font-sans antialiased selection:bg-slate-900 selection:text-white min-h-screen">
+
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-slate-200 px-4 lg:px-8 py-3 shadow-xs">
+  <div class="max-w-[1520px] mx-auto flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <span class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center font-black text-amber-400 text-sm shadow-xs">P</span>
+        <div>
+          <span class="font-bold text-sm sm:text-base tracking-tight text-slate-900">계림 운동공간 위탁운영 프로젝트</span>
+          <span class="text-[11px] text-slate-400 block -mt-0.5 font-mono">초기 시설 투자비 명세서 (CAPEX)</span>
+        </div>
+      </a>
+      <span class="hidden xl:inline-block px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">의장님 100% 투자·자산 소유</span>
+    </div>
+
+    <nav class="flex items-center gap-1.5 text-xs sm:text-sm font-medium">
+      <a href="kyerim-plan.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">사업계획 & 수익 계산기</a>
+      <a href="kyerim-opex.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">월 운영비 명세서</a>
+      <a href="kyerim-equipment.html" class="px-3 py-1.5 rounded-lg bg-slate-900 text-white font-semibold transition">시설 초기투자비 명세서</a>
+      <a href="kyerim-pitch.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">공간 기획 제안서</a>
+      <a href="index.html" class="ml-1 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200 transition">허브 ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-[1520px] mx-auto px-4 lg:px-8 py-7 space-y-7">
+
+  <!-- ① EXECUTIVE SUMMARY HEADER (PB Investment Report Style) -->
+  <section class="rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 text-white p-6 sm:p-9 shadow-lg relative overflow-hidden border border-slate-800">
+    <div class="absolute -top-32 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="relative z-10 space-y-6">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-slate-800/90 pb-6">
+        <div class="space-y-2 max-w-4xl">
+          <div class="inline-flex items-center gap-2 text-amber-400 text-xs font-mono uppercase tracking-widest font-semibold">
+            <span>EXECUTIVE CAPEX REPORT</span>
+            <span class="text-slate-600">·</span>
+            <span>계림점 230평 초기 시설·장비·설비 통합 명세서</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-snug">
+            초기 시설 투자비 명세서 — 운동기구·인테리어·냉난방 설비
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal pt-0.5">
+            1~4구역(METCON·ROX·ERG·LOUNGE) 공인 운동기구 및 라운지 집기와 5~6구역(인테리어·건축 시공 및 냉난방·공조·음향·설비) 초기 시설 투자비를 통합 관리합니다. 수정된 금액은 사업계획서 및 원금 회수 시뮬레이터에 실시간 자동 연동됩니다.
+          </p>
+        </div>
+        <div class="flex-shrink-0 text-left lg:text-right">
+          <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>사업계획서 CAPEX 100% 실시간 연동</span>
+          </div>
+          <div class="text-[11px] text-slate-400 font-mono mt-1" id="headerItemCountText">6개 구역 · 57개 핵심 품목</div>
+        </div>
+      </div>
+
+      <!-- 4 Key Executive Metrics (Seamlessly bound to JavaScript updateSummaries) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+        <!-- Metric 1: Total CAPEX -->
+        <div class="rounded-2xl bg-gradient-to-br from-amber-500/15 to-amber-500/5 border border-amber-400/30 p-4 sm:p-5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-amber-300/90 font-medium">초기 시설 투자비 총합계 (CAPEX)</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-amber-400/20 text-amber-300 font-mono font-bold" id="headerTotalText">4억 123만원</span>
+          </div>
+          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono tabular-nums mt-1.5" id="sumTotal">4억 123만원</div>
+          <div class="text-xs text-amber-200/70 font-mono mt-1" id="sumTotalWon">401,228,000원 (1~6구역 전체)</div>
+        </div>
+
+        <!-- Metric 2: Equipment & Lounge (Zones 1~4) -->
+        <div class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-medium">운동기구 · 장비 · 라운지 (1~4구역)</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-mono font-bold">사업계획서 B 연동</span>
+          </div>
+          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumCardio">1억 3,323만원</div>
+          <div class="text-xs text-slate-400 font-mono mt-1" id="sumCardioWon">METCON · ROX · 에르그 26대 · 라운지</div>
+        </div>
+
+        <!-- Metric 3: Interior & HVAC/MEP (Zones 5~6) -->
+        <div class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-medium">인테리어 · 냉난방 · 설비 (5~6구역)</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 font-mono font-bold">사업계획서 A 연동</span>
+          </div>
+          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumXpodium">2억 6,800만원</div>
+          <div class="text-xs text-slate-400 font-mono mt-1" id="sumXpodiumWon">인테리어·건축 2억 1,900만 · 냉난방·설비 4,900만</div>
+        </div>
+
+        <!-- Metric 4: Real Asset Preservation & Direct Construction -->
+        <div class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-medium">직영 원가 시공 & 실물 자산 보존</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 font-bold">100% 소유</span>
+          </div>
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tabular-nums mt-1.5">감가 방어 75%+</div>
+          <div class="text-xs text-slate-400 mt-1">의장님 건설사 직영 시공 · 공인 장비 높은 중고 가치</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② MAIN EDITABLE TABLE CARD -->
+  <section class="report-card rounded-3xl p-6 sm:p-8 space-y-6">
+    
+    <!-- Table Header Toolbar -->
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-5 rounded-full bg-slate-900"></span>
+          <h2 class="text-xl font-bold text-slate-900 tracking-tight">구역별 초기 시설 투자비 세부 단가 및 수량 명세</h2>
+          <span class="text-xs px-2.5 py-0.5 rounded-full font-bold bg-slate-100 text-slate-600 border border-slate-200" id="itemCountBadge">총 57개 품목</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">
+          1~4구역(운동기구·라운지)과 5~6구역(인테리어·냉난방·설비)의 단가와 수량을 수정하면 사업계획서(A·B 투자비 및 원금 회수 기간)에 실시간 자동 반영됩니다.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="relative w-52">
+          <input type="text" id="searchInput" placeholder="품목 검색 (로잉, 냉난방, 샤워실 등)..." class="w-full pl-8 pr-3 py-1.5 rounded-xl text-xs bg-slate-50 border border-slate-200 focus:bg-white focus:border-slate-900 outline-none transition">
+          <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">🔍</span>
+        </div>
+
+        <div id="saveStatusBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200 transition-all">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span id="saveStatusText">실시간 자동 저장 중</span>
+        </div>
+
+        <button type="button" id="copyJsonBtn" class="px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-900 text-xs font-bold transition flex items-center gap-1 shadow-2xs" title="현재 브라우저에 수정한 전체 명세 JSON 클립보드 복사">
+          <span>💾</span> 현재 상태 JSON 복사
+        </button>
+        <button type="button" id="copyClipboardBtn" class="px-3.5 py-1.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold border border-slate-200 transition flex items-center gap-1" title="엑셀 붙여넣기용 클립보드 복사">
+          <span>📋</span> 엑셀 복사
+        </button>
+        <button type="button" id="resetCurrentBtn" class="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-medium border border-slate-200 transition">
+          기본값 복원
+        </button>
+      </div>
+    </div>
+
+    <!-- Zone Filter Pills -->
+    <div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs font-medium" id="zoneFilterBar">
+      <button type="button" class="zone-pill active px-3.5 py-1.5 rounded-xl border border-slate-200 transition whitespace-nowrap font-bold" data-zone="ALL">전체 구역 (6개)</button>
+      <button type="button" class="zone-pill px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 transition whitespace-nowrap" data-zone="METCON">1. METCON ZONE</button>
+      <button type="button" class="zone-pill px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 transition whitespace-nowrap" data-zone="ROX">2. ROX ZONE</button>
+      <button type="button" class="zone-pill px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 transition whitespace-nowrap" data-zone="ERG">3. ERG MACHINES</button>
+      <button type="button" class="zone-pill px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 transition whitespace-nowrap" data-zone="LOUNGE">4. LOUNGE</button>
+      <button type="button" class="zone-pill px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 transition whitespace-nowrap" data-zone="INTERIOR">5. 인테리어·건축 시공</button>
+      <button type="button" class="zone-pill px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 transition whitespace-nowrap" data-zone="MEP">6. 냉난방·공조·설비·가전</button>
+    </div>
+
+    <!-- Zone Tables Container -->
+    <div id="zoneTablesContainer" class="space-y-6">
+      <!-- Zone tables injected by JavaScript -->
+    </div>
+
+    <!-- Grand Total & Cross Verification Footer Card -->
+    <div class="border-2 border-slate-300 rounded-2xl overflow-hidden bg-white shadow-xs">
+      <div class="bg-slate-100/80 border-b border-slate-200 px-4 py-3 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-700">
+        <div class="flex flex-wrap items-center gap-1.5">
+          <span class="text-slate-500 font-semibold mr-1">6개 구역 합산 검증:</span>
+          <span class="inline-flex items-center gap-1 bg-sky-50 px-2.5 py-1 rounded-lg border border-sky-200 font-mono font-bold text-sky-900">1. METCON <span id="footVerifyMetcon">0원</span></span>
+          <span class="text-slate-400">+</span>
+          <span class="inline-flex items-center gap-1 bg-purple-50 px-2.5 py-1 rounded-lg border border-purple-200 font-mono font-bold text-purple-900">2. ROX <span id="footVerifyRox">0원</span></span>
+          <span class="text-slate-400">+</span>
+          <span class="inline-flex items-center gap-1 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 font-mono font-bold text-emerald-900">3. ERG <span id="footVerifyErg">0원</span></span>
+          <span class="text-slate-400">+</span>
+          <span class="inline-flex items-center gap-1 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200 font-mono font-bold text-amber-900">4. LOUNGE <span id="footVerifyLounge">0원</span></span>
+          <span class="text-slate-400">+</span>
+          <span class="inline-flex items-center gap-1 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-200 font-mono font-bold text-indigo-900">5. 인테리어·건축 <span id="footVerifyInterior">0원</span></span>
+          <span class="text-slate-400">+</span>
+          <span class="inline-flex items-center gap-1 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200 font-mono font-bold text-rose-900">6. 냉난방·설비 <span id="footVerifyMep">0원</span></span>
+        </div>
+        <div class="flex items-center gap-2 font-mono font-bold text-slate-900">
+          <span class="text-emerald-600 font-sans font-semibold">✓ 합계 일치</span>
+          <span id="footVerifySum">0원</span>
+        </div>
+      </div>
+      <div class="px-5 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white">
+        <div>
+          <div class="text-base font-bold text-slate-900">초기 시설 투자비 총합계 (CAPEX · 1~6구역 전체)</div>
+          <div class="text-xs text-slate-500 mt-0.5" id="footSplitSub">운동기구·라운지(1~4구역) 1억 3,323만원 + 인테리어·냉난방·설비(5~6구역) 2억 6,800만원 · 사업계획서 실시간 연동</div>
+        </div>
+        <div class="text-left sm:text-right font-mono text-xl sm:text-2xl font-black text-slate-900 tabular-nums" id="footTotal">
+          4억 123만원 (401,228,000원)
+        </div>
+      </div>
+    </div>
+
+    <!-- Guidance Note Box -->
+    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2 text-xs text-slate-600">
+      <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-slate-900"></span>
+        초기 시설 투자비(CAPEX) 산출 기준 및 자산 관리 원칙
+      </div>
+      <p>• <b>1~4구역 공인 장비 실단가 준용</b>: 운동기구 단가는 판 3호점(신창점) 오픈 당시 <b>Xpodium 본사 및 Concept2 공식 수입원(코모 엔터프라이즈)</b>의 최종 발주 견적서 실거래 단가를 기준으로 책정되었으며, 웰컴 라운지(The Yard Gym 모티프) 집기를 포함합니다.</p>
+      <p>• <b>5~6구역 인테리어·냉난방·설비 공사</b>: <b>⑤ 인테리어·건축 시공</b>(웰컴라운지·복도·화장실·남녀 탈의실·샤워실 약 50평 직영 일괄 시공 [평당 150만원], 운동공간 180평 일괄 [평당 80만원, 약식 기재·의장님 자문 요망])과 <b>⑥ 냉난방·공조·설비·가전</b>(40평형 천장형 시스템 냉난방기 6대 [대당 290만원], 지하 급·배기 환기 덕트, 순간 가스온수기 3대, 제습기, 프로 음향·대형 타이머·키오스크)을 의장님 건설사 직영 원가 시공 기준으로 책정했습니다.</p>
+      <p>• <b>사업계획서 &amp; 수익 계산기 실시간 연동</b>: 1~4구역 소계는 사업계획서의 <b>[B. 공인 운동기구·장비]</b>에, 5~6구역 소계는 <b>[A. 인테리어·설비 공사]</b>에 각각 실시간 반영되어 연차별 투자원금 회수 시뮬레이션을 즉시 갱신합니다.</p>
+      <p>• <b>의장님 100% 자산 귀속 &amp; 무상환</b>: 모든 시설과 장비는 의장님이 100% 투자·소유하며, 운영대표의 부채나 상환 의무는 일체 없습니다.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-slate-200/80 bg-white mt-8 py-6 px-4 text-center text-xs text-slate-400 font-mono">
+  계림 운동공간 위탁운영 프로젝트 · 초기 시설 투자비 명세서 (CAPEX)
+</footer>
+
+<script>
+const ZONES = [
+  {
+    id: 'METCON',
+    title: '1. METCON ZONE',
+    subtitle: '크로스핏 WOD & 프리웨이트 메인 아레나 · 75평 + 트윈 사각 RIG',
+    dotClass: 'bg-sky-500',
+    badgeClass: 'bg-sky-100 text-sky-900 border-sky-300',
+    cardClass: 'border-sky-300 bg-sky-50/40',
+    headerBg: 'bg-sky-100/80 border-sky-200',
+    theadBg: 'bg-sky-50/90 text-sky-900 border-sky-200',
+    tbodyClass: 'bg-sky-50/30 divide-sky-100',
+    tfootClass: 'bg-sky-100/70 border-sky-200'
+  },
+  {
+    id: 'ROX',
+    title: '2. ROX ZONE',
+    subtitle: '하이록스 스트렝스 3.8m & 29m 3레인 직선 터프 구역',
+    dotClass: 'bg-purple-500',
+    badgeClass: 'bg-purple-100 text-purple-900 border-purple-300',
+    cardClass: 'border-purple-300 bg-purple-50/40',
+    headerBg: 'bg-purple-100/80 border-purple-200',
+    theadBg: 'bg-purple-50/90 text-purple-900 border-purple-200',
+    tbodyClass: 'bg-purple-50/30 divide-purple-100',
+    tfootClass: 'bg-purple-100/70 border-purple-200'
+  },
+  {
+    id: 'ERG',
+    title: '3. ERG MACHINES',
+    subtitle: '남측 에르그존 · 북서 사선벽 ROWs · G4 좌측 바이크 총 26대',
+    dotClass: 'bg-emerald-500',
+    badgeClass: 'bg-emerald-100 text-emerald-900 border-emerald-300',
+    cardClass: 'border-emerald-300 bg-emerald-50/40',
+    headerBg: 'bg-emerald-100/80 border-emerald-200',
+    theadBg: 'bg-emerald-50/90 text-emerald-900 border-emerald-200',
+    tbodyClass: 'bg-emerald-50/30 divide-emerald-100',
+    tfootClass: 'bg-emerald-100/70 border-emerald-200'
+  },
+  {
+    id: 'LOUNGE',
+    title: '4. LOUNGE',
+    subtitle: '웰컴 라운지 17.85평 · The Yard Gym 모티프 가구 및 커뮤니티 집기',
+    dotClass: 'bg-amber-500',
+    badgeClass: 'bg-amber-100 text-amber-900 border-amber-300',
+    cardClass: 'border-amber-300 bg-amber-50/40',
+    headerBg: 'bg-amber-100/80 border-amber-200',
+    theadBg: 'bg-amber-50/90 text-amber-900 border-amber-200',
+    tbodyClass: 'bg-amber-50/30 divide-amber-100',
+    tfootClass: 'bg-amber-100/70 border-amber-200'
+  },
+  {
+    id: 'INTERIOR',
+    title: '5. 인테리어·건축 시공',
+    subtitle: '약식으로 기재, 전문가이신 의장님 자문 요망',
+    dotClass: 'bg-indigo-500',
+    badgeClass: 'bg-indigo-100 text-indigo-900 border-indigo-300',
+    cardClass: 'border-indigo-300 bg-indigo-50/40',
+    headerBg: 'bg-indigo-100/80 border-indigo-200',
+    theadBg: 'bg-indigo-50/90 text-indigo-900 border-indigo-200',
+    tbodyClass: 'bg-indigo-50/30 divide-indigo-100',
+    tfootClass: 'bg-indigo-100/70 border-indigo-200'
+  },
+  {
+    id: 'MEP',
+    title: '6. 냉난방·공조·설비·가전',
+    subtitle: '천장형 시스템 냉난방기 · 지하 급배기 환기 · 순간 가스온수기 3대 · 제습 · 음향 · 타이머 · 전산',
+    dotClass: 'bg-rose-500',
+    badgeClass: 'bg-rose-100 text-rose-900 border-rose-300',
+    cardClass: 'border-rose-300 bg-rose-50/40',
+    headerBg: 'bg-rose-100/80 border-rose-200',
+    theadBg: 'bg-rose-50/90 text-rose-900 border-rose-200',
+    tbodyClass: 'bg-rose-50/30 divide-rose-100',
+    tfootClass: 'bg-rose-100/70 border-rose-200'
+  }
+];
+
+const PRESET_GYERIM = [
+  // 1. METCON ZONE
+  { id: 107, zone: "METCON", name: "고무매트 바닥재 (1m×1m×2.5cm)", price: 33000, qty: 600, note: "230평 전체 충격흡수 고무매트 바닥 (3호점 실단가)" },
+  { id: 108, zone: "METCON", name: "EPDM 50T 충격흡수 드랍존 고무블럭", price: 55000, qty: 72, note: "바벨 드랍존 충격·소음 흡수 블럭" },
+  { id: 109, zone: "METCON", name: "맞춤형 트윈 사각 스테이션 RIG (각 7.2m×1.8m 2세트)", price: 15000000, qty: 1, note: "G4~G5, G5~G6 사이 2세트 배치 · [셀1.2m+긴바1.8m+셀1.2m+긴바1.8m+셀1.2m] · 총 6스쿼트셀 (기둥간섭 0%)" },
+  { id: 110, zone: "METCON", name: "대형 스토리지 랙 (2850*500*2000)", price: 1800000, qty: 2, note: "장비 및 메디신볼/소도구 전용 랙 (3호점 실단가)" },
+  { id: 111, zone: "METCON", name: "덤벨 정리대 (2000*750*800)", price: 490000, qty: 2, note: "3단 우레탄 덤벨 전용 거치대 (3호점 실단가)" },
+  { id: 112, zone: "METCON", name: "바벨 수평/수직 정리대", price: 110000, qty: 4, note: "바벨 40자루 거치대 (3호점 실단가)" },
+  { id: 113, zone: "METCON", name: "GHD (Glute Ham Developer)", price: 439000, qty: 2, note: "하체 및 코어 훈련 머신 (3호점 실단가)" },
+  { id: 114, zone: "METCON", name: "각도조절 벤치", price: 219000, qty: 2, note: "상체 및 프리웨이트 인클라인 벤치 (3호점 실단가)" },
+  { id: 115, zone: "METCON", name: "역도 블럭 (Drop Block)", price: 375000, qty: 2, note: "역도 클린/스내치 부분 훈련 블럭 (3호점 실단가)" },
+  { id: 116, zone: "METCON", name: "딥스 어태치먼트 바", price: 95000, qty: 2, note: "리그 장착형 딥스 바 (3호점 실단가)" },
+  { id: 117, zone: "METCON", name: "로프 클라임 로프", price: 59000, qty: 2, note: "천장 거치용 등반 로프 (3호점 실단가)" },
+  { id: 118, zone: "METCON", name: "포디움 바벨 20KG (남성용)", price: 219000, qty: 15, note: "공식 규격 올림픽 바벨 (3호점 실단가)" },
+  { id: 119, zone: "METCON", name: "포디움 바벨 15KG (여성용)", price: 201000, qty: 15, note: "공식 규격 올림픽 바벨 (3호점 실단가)" },
+  { id: 120, zone: "METCON", name: "스킬바벨 10KG (초심자용)", price: 99000, qty: 10, note: "테크닉 훈련용 경량 바벨 (3호점 실단가)" },
+  { id: 121, zone: "METCON", name: "자석 마구리 (Collar)", price: 14500, qty: 40, note: "원판 고정용 마그네틱 락 (3호점 실단가)" },
+  { id: 122, zone: "METCON", name: "보급형 범퍼 플레이트 45lb", price: 73000, qty: 16, note: "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)" },
+  { id: 123, zone: "METCON", name: "보급형 범퍼 플레이트 35lb", price: 65000, qty: 12, note: "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)" },
+  { id: 124, zone: "METCON", name: "보급형 범퍼 플레이트 25lb", price: 46000, qty: 20, note: "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)" },
+  { id: 125, zone: "METCON", name: "보급형 범퍼 플레이트 15lb", price: 35000, qty: 16, note: "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)" },
+  { id: 126, zone: "METCON", name: "보급형 범퍼 플레이트 10lb", price: 29000, qty: 24, note: "Xpodium 우레탄/고무 범퍼 플레이트 (3호점 실단가)" },
+  { id: 127, zone: "METCON", name: "보급형 플레이트 5lb", price: 16500, qty: 12, note: "저중량 플레이트 (3호점 실단가)" },
+  { id: 128, zone: "METCON", name: "보급형 플레이트 2.5lb", price: 13500, qty: 12, note: "미세 중량 조절용 플레이트 (3호점 실단가)" },
+  { id: 135, zone: "METCON", name: "풀업 저항 밴드 세트 (블루/그린/퍼플/블랙 60개)", price: 550000, qty: 1, note: "스트레칭 및 풀업 어시스트 밴드 (3호점 실단가)" },
+  { id: 136, zone: "METCON", name: "AB MAT (일반)", price: 12900, qty: 30, note: "복근 및 코어 훈련 매트 (3호점 실단가)" },
+  { id: 137, zone: "METCON", name: "화물 통합 운송 및 현장 조립·설치비", price: 1800000, qty: 1, note: "지하 1층 하역, 기구 랙 조립 및 잔디 매립 기술지원" },
+
+  // 2. ROX ZONE
+  { id: 105, zone: "ROX", name: "하이록스 공식 파워 썰매 (Sled)", price: 350000, qty: 6, note: "좌측 3대 + 우측 3대 동시 출발 (12.5m 편도 × 2구간 6대 동시 운영)" },
+  { id: 106, zone: "ROX", name: "29m 3레인 직선 썰매 전용 인조잔디 트랙 (Turf)", price: 49000, qty: 87, note: "폭 3.0m × 길이 29.0m (87m² · 좌우 터닝 1m + 12.5m×2 + 중앙 터닝 2m)" },
+  { id: 129, zone: "ROX", name: "포디움 덤벨 세트 (5lb~100lb 총 120개)", price: 5200000, qty: 1, note: "5, 10, 15, 20, 25, 30, 35, 40, 50, 70, 100lb 쌍 세트 (3호점 실단가 기준)" },
+  { id: 130, zone: "ROX", name: "컴피티션 케틀벨 세트 (4KG~32KG 총 72개)", price: 3100000, qty: 1, note: "4, 8, 12, 16, 20, 24, 32KG 컴피티션 규격 (3호점 실단가 기준)" },
+  { id: 134, zone: "ROX", name: "하이록스/크로스핏 월볼 세트 (4~30lb 40개)", price: 1850000, qty: 1, note: "4lb, 6lb, 10lb, 16lb, 20lb, 30lb 세트 (3호점 실단가)" },
+  { id: 131, zone: "ROX", name: "소프트 점핑박스 (40*50*60)", price: 132000, qty: 12, note: "안전 고밀도 폼 소프트 플라이오 박스 (3호점 실단가)" },
+  { id: 132, zone: "ROX", name: "소프트 점핑박스 (50*60*70)", price: 149000, qty: 12, note: "대형 소프트 플라이오 박스 (3호점 실단가)" },
+  { id: 133, zone: "ROX", name: "나무 점핑박스 (40*50*60)", price: 58000, qty: 6, note: "우드 플라이오메트릭 박스 (3호점 실단가)" },
+
+  // 3. ERG MACHINES
+  { id: 104, zone: "ERG", name: "포디움 무동력 곡면 트레드밀", price: 2500000, qty: 6, note: "남측 에르그 라인 우측 6대(길이 175cm) 북측 운동구역 향 배치" },
+  { id: 101, zone: "ERG", name: "컨셉2 로잉머신 (RowErg PM5)", price: 1475000, qty: 10, note: "북서 사선벽 수납랙 우측 끝 10대 직립 보관 (3호점 실단가)" },
+  { id: 103, zone: "ERG", name: "컨셉2 스키에르그 (SkiErg + 스탠드)", price: 1650000, qty: 6, note: "남측 에르그 라인 좌측 6대 북측 운동구역 향 배치 (3호점 실단가)" },
+  { id: 102, zone: "ERG", name: "컨셉2 바이크에르그 (BikeErg)", price: 1650000, qty: 4, note: "기둥 G4 좌측 4대 배치 (남측 ROX·터프 조망 · 3호점 실단가)" },
+
+  // 4. LOUNGE
+  { id: 201, zone: "LOUNGE", name: "오픈 가방 큐비클랙 (2.0m · 서측 상단 소지품 수납장)", price: 450000, qty: 1, note: "탈의실 미이용 회원 가방·소지품 오픈 수납장 (깊이 0.45m × 길이 2.0m)" },
+  { id: 202, zone: "LOUNGE", name: "회원 신발장 & 40cm 돌출 플린스 착석 벤치 일체형 (2.0m)", price: 650000, qty: 1, note: "서측 벽 일일 오픈형 신발장 및 40cm 돌출 착석 벤치 일체형" },
+  { id: 203, zone: "LOUNGE", name: "셀프 프로틴바 카운터 & 언더싱크 수전·제빙기·쇼케이스 (1.7m)", price: 1200000, qty: 1, note: "동측 상단 화장실 배관 직결 · 정수기·제빙기·싱크·냉장 쇼케이스" },
+  { id: 204, zone: "LOUNGE", name: "모놀리식 콘크리트 아일랜드 리셉션 데스크 (1.8×0.75m) & 출석 태블릿·스툴", price: 950000, qty: 1, note: "동측 중단 아일랜드 데스크 · 출석 태블릿·방문객 스툴 2석·스태프 체어" },
+  { id: 205, zone: "LOUNGE", name: "오픈 MD 리테일 진열장 (1.8m) & 남측 코너 미니멀 전신거울", price: 550000, qty: 1, note: "동측 하단 전면 개방형 의류·보충제 진열장 및 남측 코너 전신거울" },
+  { id: 206, zone: "LOUNGE", name: "ㄱ자 일체형 빌트인 플린스 벤치 소파 (서측 2.6m + 남측 4.2m)", price: 1100000, qty: 1, note: "8~10인 수용 가능한 연속 빌트인 플린스 벤치 소파 (등받이 쿠션 포함)" },
+  { id: 207, zone: "LOUNGE", name: "카페 사각 테이블 (2세트·체어 4석) & 로우 원형 라운지 테이블 세트", price: 600000, qty: 1, note: "남측 카페 사각 테이블 2세트·체어 4석 + 서측 로우 원형탁자·스툴" },
+  { id: 208, zone: "LOUNGE", name: "스트레칭 & 모빌리티 세트 (매트 4장)", price: 280000, qty: 1, note: "에르그 좌측 스트레칭존(2.1평 · 3.5×2.0m) 전용 고밀도 충격흡수 모빌리티 매트 4장" },
+
+  // 5. 인테리어·건축 시공 (약식 기재, 의장님 자문 요망)
+  { id: 302, zone: "INTERIOR", name: "웰컴라운지·복도·화장실·남녀 탈의실·샤워실 일괄 시공 (직영)", price: 1500000, qty: 50, note: "라운지(17.85평)+복도(6.8평)+화장실(8.3평)+남·여 탈의·샤워(각 8.3평) = 실면적 49.6평(약 50평) × 평당 150만원" },
+  { id: 305, zone: "INTERIOR", name: "운동공간 180평 (도장·전기·배선·조명·간판·사인물·소방 등 일괄)", price: 800000, qty: 180, note: "도장, 전기, 배선, 조명, 간판, 사인물, 소방 등 일괄 (평당 80만원 · 약식으로 기재, 전문가이신 의장님 자문 요망)" },
+
+  // 6. 냉난방·공조·설비·가전
+  { id: 401, zone: "MEP", name: "40평형 천장형 시스템 냉난방기 (인버터 4-Way)", price: 2900000, qty: 6, note: "운동공간 5대(G~F열 3대 + H~G열 2대) 및 웰컴라운지 1대 · 배관 자재 및 지상 1층 실외기 포함 (대당 290만원)" },
+  { id: 402, zone: "MEP", name: "지하 230평 대용량 급·배기 환기 덕트 및 전열교환 공조 설비", price: 16000000, qty: 1, note: "지하 공간 신선 외기 유입 및 CO2·습기·열기 강제 배기 스파이럴 덕트 라인" },
+  { id: 403, zone: "MEP", name: "고효율 벽걸이형 순간 가스온수기 (린나이 상업용 병렬 시스템)", price: 1600000, qty: 3, note: "남·여 총 10수전 동시 샤워 시 온수 끊김 방지 3대 병렬 직결 및 가스 배관" },
+  { id: 404, zone: "MEP", name: "지하 전용 대용량 업소용 제습기 & 대형 에어서큘레이터 세트", price: 700000, qty: 4, note: "하절기 지하 결로·습도 제어용 대용량 제습기 4대 및 공기순환 팬" },
+  { id: 405, zone: "MEP", name: "프로 사운드 앰프·서브우퍼·아레나 스피커 음향 시스템", price: 4500000, qty: 1, note: "METCON·ROX 듀얼 클래스 고출력 앰프, 스피커 8채널 및 코치용 무선 마이크" },
+  { id: 406, zone: "MEP", name: "크로스핏(H6) & ROX(G6) 구역별 전용 대형 디지털 타이머·칠판", price: 850000, qty: 2, note: "동측 H6 기둥 벽면(METCON용) 및 G6 벽면(ROX용) 독립 WOD 화이트보드 & LED 타이머" },
+  { id: 407, zone: "MEP", name: "운영 데스크 PC·출석 체크 태블릿 키오스크 및 오픈 초도 비품", price: 1800000, qty: 1, note: "CRM 연동 출석 태블릿, 운영 PC, 인바디/상담 집기, 구급함·초도 운영 물품" }
+];
+
+const STORAGE_KEY = "kyerim_equipment_items_v43";
+const TOTAL_STORAGE_KEY = "kyerim_equipment_total_v2";
+const INTERIOR_STORAGE_KEY = "kyerim_interior_total_v2";
+const CAPEX_STORAGE_KEY = "kyerim_capex_total_v2";
+const MODE_STORAGE_KEY = "kyerim_equipment_mode_v2";
+const V1_TOTAL_KEY = "kyerim_equipment_total_v1";
+
+const VALID_ZONES = new Set(ZONES.map(z => z.id));
+const EQUIP_ZONES = new Set(['METCON', 'ROX', 'ERG', 'LOUNGE']);
+const INTERIOR_ZONES = new Set(['INTERIOR', 'MEP']);
+
+const ITEM_GROUPS = [
+  {
+    id: 'grp_barbells',
+    name: '공식 올림픽 바벨 시리즈 (20KG / 15KG / 10KG 3종)',
+    badge: '3종 규격',
+    note: '공식 규격 올림픽 바벨(남20kg·여15kg) 및 초심자 테크닉 훈련용 스킬바벨(10kg)',
+    matchItem: (it) => {
+      const id = Number(it.id);
+      const nm = String(it.name || '');
+      return [118, 119, 120].includes(id) || (nm.includes('바벨') && (nm.includes('20KG') || nm.includes('15KG') || nm.includes('스킬') || nm.includes('10KG')));
+    }
+  },
+  {
+    id: 'grp_plates',
+    name: '보급형 범퍼 플레이트 세트 (45lb~2.5lb 7종 규격)',
+    badge: '7종 규격',
+    note: 'Xpodium 우레탄/고무 범퍼 플레이트 45, 35, 25, 15, 10, 5, 2.5lb 규격별 세트',
+    matchItem: (it) => {
+      const id = Number(it.id);
+      const nm = String(it.name || '');
+      return [122, 123, 124, 125, 126, 127, 128].includes(id) || (nm.includes('플레이트') && (nm.includes('45lb') || nm.includes('35lb') || nm.includes('25lb') || nm.includes('15lb') || nm.includes('10lb') || nm.includes('5lb') || nm.includes('2.5lb')));
+    }
+  },
+  {
+    id: 'grp_pullup_bands',
+    name: '풀업 저항 밴드 세트 (5종 장력·컬러별)',
+    badge: '5종 규격',
+    note: '스트레칭 및 풀업 어시스트 저항 밴드 (레드·블루·그린·퍼플·블랙 등 5종)',
+    matchItem: (it) => {
+      const id = Number(it.id);
+      const nm = String(it.name || '');
+      return id === 135 || nm.includes('풀업 밴드') || nm.includes('풀업 저항') || nm.includes('저항 밴드') || nm.includes('어시스트 밴드') || (nm.includes('밴드') && !nm.includes('헤드밴드') && !nm.includes('손목'));
+    }
+  },
+  {
+    id: 'grp_wallballs',
+    name: '하이록스 / 크로스핏 월볼 시리즈 (4~30lb 6종 규격)',
+    badge: '6종 규격',
+    note: '하이록스·크로스핏 규격 월볼 (4lb, 6lb, 10lb, 14/16lb, 20lb, 30lb 등 6종)',
+    matchItem: (it) => {
+      const id = Number(it.id);
+      const nm = String(it.name || '');
+      return id === 134 || nm.includes('월볼');
+    }
+  },
+  {
+    id: 'grp_jumpboxes',
+    name: '점핑박스 시리즈 (소프트 2종 + 우드 1종 총 3종)',
+    badge: '3종 규격',
+    note: '안전 고밀도 폼 소프트 플라이오 박스 2종 및 우드 박스 1종',
+    matchItem: (it) => {
+      const id = Number(it.id);
+      const nm = String(it.name || '');
+      return [131, 132, 133].includes(id) || nm.includes('점핑박스') || nm.includes('플라이오');
+    }
+  },
+  {
+    id: 'grp_kettlebells',
+    name: '컴피티션 케틀벨 시리즈 (4KG~32KG 규격별)',
+    badge: '규격별 세트',
+    note: '4, 8, 12, 16, 20, 24, 32KG 등 컴피티션 규격 케틀벨 세트',
+    matchItem: (it) => {
+      const id = Number(it.id);
+      const nm = String(it.name || '');
+      const cat = String(it.category || '');
+      return id === 130 || nm.includes('케틀벨') || cat.includes('케틀벨');
+    }
+  },
+  {
+    id: 'grp_dumbbells',
+    name: '포디움 우레탄 덤벨 시리즈 (5lb~100lb 쌍 세트)',
+    badge: '규격별 세트',
+    note: '5, 10, 15, 20, 25, 30, 35, 40, 50, 70, 100lb 등 쌍 세트 (정리대 제외)',
+    matchItem: (it) => {
+      const id = Number(it.id);
+      const nm = String(it.name || '');
+      const cat = String(it.category || '');
+      if (nm.includes('정리대') || nm.includes('거치대') || nm.includes('랙') || id === 111) return false;
+      return id === 129 || nm.includes('덤벨') || cat.includes('덤벨');
+    }
+  }
+];
+
+let collapsedGroups = new Set(ITEM_GROUPS.map(g => g.id));
+
+let items = [];
+let currentMode = 'gyerim';
+let currentZone = 'ALL';
+let currentSearch = '';
+let draggedIndex = null;
+
+function inferZone(item) {
+  if (item && VALID_ZONES.has(item.zone)) return item.zone;
+  const name = ((item && item.name) || '').toLowerCase();
+  const cat = ((item && item.category) || '').toLowerCase();
+  if (name.includes('냉난방') || name.includes('환기') || name.includes('공조') ||
+      name.includes('온수기') || name.includes('제습기') || name.includes('앰프') ||
+      name.includes('타이머') || name.includes('키오스크')) {
+    return 'MEP';
+  }
+  if (name.includes('철거') || name.includes('샤워실') || name.includes('화장실') ||
+      name.includes('양문형') || name.includes('도장') || name.includes('조명') ||
+      name.includes('간판') || name.includes('소방')) {
+    return 'INTERIOR';
+  }
+  if (cat.includes('유산소') || name.includes('트레드밀') || name.includes('로잉') || name.includes('스키') || name.includes('바이크')) {
+    return 'ERG';
+  }
+  if (cat.includes('썰매') || cat.includes('덤벨') || cat.includes('케틀벨') ||
+      name.includes('썰매') || name.includes('잔디') || name.includes('덤벨 세트') ||
+      name.includes('케틀벨 세트') || name.includes('월볼') || name.includes('점핑박스')) {
+    return 'ROX';
+  }
+  if (name.includes('라운지') || name.includes('큐비클') || name.includes('신발장') ||
+      name.includes('프로틴바') || name.includes('리셉션') || name.includes('리테일') ||
+      name.includes('벤치 소파') || name.includes('테이블')) {
+    return 'LOUNGE';
+  }
+  return 'METCON';
+}
+
+const MERGED_SOUTH_CORE_ITEM = {
+  id: 302,
+  zone: "INTERIOR",
+  name: "웰컴라운지·복도·화장실·남녀 탈의실·샤워실 일괄 시공 (직영)",
+  price: 1500000,
+  qty: 50,
+  note: "라운지(17.85평)+복도(6.8평)+화장실(8.3평)+남·여 탈의·샤워(각 8.3평) = 실면적 49.6평(약 50평) × 평당 150만원"
+};
+
+const MERGED_ARENA_ITEM = {
+  id: 305,
+  zone: "INTERIOR",
+  name: "운동공간 180평 (도장·전기·배선·조명·간판·사인물·소방 등 일괄)",
+  price: 800000,
+  qty: 180,
+  note: "도장, 전기, 배선, 조명, 간판, 사인물, 소방 등 일괄 (평당 80만원 · 약식으로 기재, 전문가이신 의장님 자문 요망)"
+};
+
+function isOldSouthCoreSplitItem(it) {
+  const numId = Number(it.id);
+  const nm = String(it.name || '');
+  if (numId === 303 && nm.includes('남·여 화장실')) return true;
+  if (numId === 304 && nm.includes('웰컴 라운지')) return true;
+  if (numId === 302 && nm.includes('남·여 탈의실')) return true;
+  return false;
+}
+
+function isOldInteriorArenaSplitItem(it) {
+  const z = inferZone(it);
+  if (z !== 'INTERIOR') return false;
+  const numId = Number(it.id);
+  const nm = String(it.name || '');
+  if (numId === 302 || nm.includes('웰컴라운지') || nm.includes('탈의실') || isOldSouthCoreSplitItem(it)) return false;
+  if (nm.includes('운동공간 180평')) return false;
+  if ([301, 305, 306, 307, 308].includes(numId)) return true;
+  if (nm.includes('철거') || nm.includes('도장') || nm.includes('전기') || nm.includes('간판') || nm.includes('소방')) return true;
+  return false;
+}
+
+function normalizeItems(rawList) {
+  let migrated = false;
+  let workingList = Array.isArray(rawList) ? rawList.slice() : [];
+
+  // 1) 일회성 구버전(v42/v41) 사용자 입력값 복원 안전장치:
+  // v43 항목이 초기 프리셋 기본값 그대로인데 v42/v41에서 사용자가 수정한 값이 있다면 복원
+  const legacyFlagKey = 'kyerim_legacy_v42_restored_v1';
+  if (!localStorage.getItem(legacyFlagKey)) {
+    try {
+      const presetMap = new Map(PRESET_GYERIM.map(p => [Number(p.id), p]));
+      const legacyRaw = localStorage.getItem('kyerim_equipment_items_v42') || localStorage.getItem('kyerim_equipment_items_v41');
+      if (legacyRaw) {
+        const legacyList = JSON.parse(legacyRaw);
+        if (Array.isArray(legacyList) && legacyList.length > 0) {
+          const legacyMap = new Map(legacyList.map(l => [Number(l.id), l]));
+          workingList = workingList.map(it => {
+            const idNum = Number(it.id);
+            const preset = presetMap.get(idNum);
+            const legacy = legacyMap.get(idNum);
+            if (preset && legacy && idNum < 300) {
+              const isStillPreset =
+                Number(it.price) === Number(preset.price) &&
+                Number(it.qty) === Number(preset.qty) &&
+                String(it.name || '') === String(preset.name || '') &&
+                String(it.note || '') === String(preset.note || '');
+              const legacyDiffers =
+                Number(legacy.price) !== Number(preset.price) ||
+                Number(legacy.qty) !== Number(preset.qty) ||
+                String(legacy.name || '') !== String(preset.name || '') ||
+                String(legacy.note || '') !== String(preset.note || '');
+              if (isStillPreset && legacyDiffers) {
+                migrated = true;
+                return {
+                  ...it,
+                  name: legacy.name || it.name,
+                  price: Number(legacy.price ?? it.price),
+                  qty: Number(legacy.qty ?? it.qty),
+                  note: legacy.note ?? it.note
+                };
+              }
+            }
+            return it;
+          });
+        }
+      }
+      localStorage.setItem(legacyFlagKey, '1');
+    } catch (e) {}
+  }
+
+  // 2) 5. 인테리어·건축 시공의 기존 3개 항목(302 탈의·샤워, 303 화장실, 304 웰컴라운지·복도)만
+  //    단일 항목(50평 × 150만원)으로 인플레이스 병합 (나머지 1~6구역 사용자 입력값은 100% 보존)
+  const hasOldSouthCore = workingList.some(isOldSouthCoreSplitItem);
+  if (hasOldSouthCore) {
+    migrated = true;
+    let insertedMerged = false;
+    const mergedList = [];
+    for (const it of workingList) {
+      if (isOldSouthCoreSplitItem(it)) {
+        if (!insertedMerged) {
+          mergedList.push({ ...MERGED_SOUTH_CORE_ITEM });
+          insertedMerged = true;
+        }
+      } else {
+        mergedList.push(it);
+      }
+    }
+    workingList = mergedList;
+  }
+
+  // 3) 5. 인테리어·건축 시공의 나머지 항목(도장·전기·배선·조명·간판·사인물·소방·철거 등)을
+  //    '운동공간 180평' 단일 항목(180평 × 80만원)으로 병합 (사용자의 1~4구역 및 타 구역 입력값은 100% 보존)
+  const hasArenaSplit = workingList.some(isOldInteriorArenaSplitItem);
+  const alreadyHasArena = workingList.some(it => String(it.name || '').includes('운동공간 180평'));
+  if (hasArenaSplit && !alreadyHasArena) {
+    migrated = true;
+    let insertedArena = false;
+    const mergedList = [];
+    for (const it of workingList) {
+      if (isOldInteriorArenaSplitItem(it)) {
+        if (!insertedArena) {
+          mergedList.push({ ...MERGED_ARENA_ITEM });
+          insertedArena = true;
+        }
+      } else {
+        mergedList.push(it);
+      }
+    }
+    workingList = mergedList;
+  }
+
+  // 4) 6. 냉난방·공조·설비·가전의 천장형 냉난방기 항목을 40평형 290만원 × 6대 단일 항목으로 업데이트
+  const acUpdateKey = 'kyerim_ac_40py_290man_updated_v1';
+  if (!localStorage.getItem(acUpdateKey)) {
+    workingList = workingList.map(it => {
+      const numId = Number(it.id);
+      const nm = String(it.name || '');
+      if (numId === 401 || (inferZone(it) === 'MEP' && nm.includes('냉난방기'))) {
+        migrated = true;
+        return {
+          ...it,
+          id: 401,
+          zone: 'MEP',
+          name: '40평형 천장형 시스템 냉난방기 (인버터 4-Way)',
+          price: 2900000,
+          qty: 6,
+          note: '운동공간 5대(G~F열 3대 + H~G열 2대) 및 웰컴라운지 1대 · 배관 자재 및 지상 1층 실외기 포함 (대당 290만원)'
+        };
+      }
+      return it;
+    });
+    localStorage.setItem(acUpdateKey, '1');
+  }
+
+  const normalized = workingList.map(it => {
+    const z = inferZone(it);
+    if (!it.zone || it.zone !== z) migrated = true;
+    return {
+      id: it.id || Date.now() + Math.random(),
+      zone: z,
+      name: it.name || '',
+      price: Number(it.price || 0),
+      qty: Number(it.qty || 0),
+      note: it.note || ''
+    };
+  });
+  return { normalized, migrated };
+}
+
+function syncTotalsOnly() {
+  let equipWon = 0;
+  let interiorWon = 0;
+  items.forEach(item => {
+    const rowTotal = Number(item.price || 0) * Number(item.qty || 0);
+    if (INTERIOR_ZONES.has(item.zone)) {
+      interiorWon += rowTotal;
+    } else {
+      equipWon += rowTotal;
+    }
+  });
+
+  const equipManwon = Math.round(equipWon / 10000);
+  const interiorManwon = Math.round(interiorWon / 10000);
+  const totalManwon = Math.round((equipWon + interiorWon) / 10000);
+
+  localStorage.setItem(TOTAL_STORAGE_KEY, equipManwon);
+  localStorage.setItem(V1_TOTAL_KEY, equipManwon);
+  localStorage.setItem(INTERIOR_STORAGE_KEY, interiorManwon);
+  localStorage.setItem(CAPEX_STORAGE_KEY, totalManwon);
+}
+
+function loadData() {
+  currentMode = 'gyerim';
+  localStorage.setItem(MODE_STORAGE_KEY, 'gyerim');
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    try {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        const { normalized, migrated } = normalizeItems(parsed);
+        items = normalized;
+        if (migrated) {
+          saveData();
+        } else {
+          syncTotalsOnly();
+        }
+        return;
+      }
+    } catch (e) {}
+  }
+
+  items = JSON.parse(JSON.stringify(PRESET_GYERIM));
+  saveData();
+}
+
+function saveData() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  localStorage.setItem(MODE_STORAGE_KEY, currentMode);
+  syncTotalsOnly();
+  showSaveIndicator();
+}
+
+function showSaveIndicator() {
+  const badge = document.getElementById("saveStatusBadge");
+  const txt = document.getElementById("saveStatusText");
+  if (!badge || !txt) return;
+
+  const now = new Date();
+  const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+  
+  badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-300 transition-all shadow-xs";
+  txt.textContent = `✓ 저장 완료 (${timeStr})`;
+  
+  clearTimeout(badge._timer);
+  badge._timer = setTimeout(() => {
+    badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200 transition-all";
+    txt.textContent = `실시간 자동 저장 중`;
+  }, 1400);
+}
+
+function escapeHtml(str) {
+  return String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function calculateTotal() {
+  return items.reduce((sum, item) => sum + (Number(item.price || 0) * Number(item.qty || 0)), 0);
+}
+
+function fmtWon(n) {
+  return Math.round(n).toLocaleString('ko-KR') + '원';
+}
+
+function fmtManwon(n) {
+  const man = Number((n / 10000).toFixed(1));
+  if (man >= 10000) {
+    const eok = Math.floor(man / 10000);
+    const rem = Number((man % 10000).toFixed(0));
+    return `${eok}억 ${rem > 0 ? rem.toLocaleString('ko-KR') + '만' : ''}원`;
+  }
+  return `${man.toLocaleString('ko-KR')}만원`;
+}
+
+function buildGroupSummaryRow(group, memberItems) {
+  let groupTotal = 0;
+  let groupQty = 0;
+  memberItems.forEach(it => {
+    groupTotal += Number(it.price || 0) * Number(it.qty || 0);
+    groupQty += Number(it.qty || 0);
+  });
+
+  const isCollapsed = collapsedGroups.has(group.id);
+  const tr = document.createElement("tr");
+  tr.className = `group-summary-row transition cursor-pointer select-none ${isCollapsed ? 'bg-slate-100/90 hover:bg-slate-200/80 border-y-2 border-slate-300' : 'bg-indigo-50/80 hover:bg-indigo-100/80 border-t-2 border-b border-indigo-200'}`;
+  tr.id = `group-row-${group.id}`;
+  tr.setAttribute("data-group-id", group.id);
+
+  tr.innerHTML = `
+    <td class="py-3 px-3 text-center w-12">
+      <div class="w-7 h-7 mx-auto rounded-lg flex items-center justify-center text-slate-400 group-hover:text-slate-700 hover:bg-slate-200/60 transition" title="${isCollapsed ? '클릭하여 하위 규격별 목록 펼치기' : '클릭하여 하위 목록 접기'}">
+        <svg class="w-3.5 h-3.5 transform transition-transform duration-200 ${isCollapsed ? '' : 'rotate-90'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </td>
+    <td class="py-3 px-4">
+      <div class="flex items-center gap-2">
+        <span class="font-extrabold text-slate-900 text-sm tracking-tight">${escapeHtml(group.name)}</span>
+      </div>
+    </td>
+    <td class="py-3 px-4 text-right">
+      <span class="text-xs text-slate-400 font-mono font-medium">규격별 상이</span>
+    </td>
+    <td class="py-3 px-4 text-right font-mono font-black text-slate-900 text-sm tabular-nums" id="group-qty-${group.id}">
+      ${groupQty.toLocaleString('ko-KR')}개
+    </td>
+    <td class="py-3 px-4 text-right font-mono font-black text-slate-900 text-sm tabular-nums" id="group-total-${group.id}">
+      <div>${fmtWon(groupTotal)}</div>
+      <div class="text-[10px] text-slate-500 font-normal">(${fmtManwon(groupTotal)})</div>
+    </td>
+    <td class="py-3 px-4">
+      <span class="text-xs text-slate-600">${escapeHtml(group.note)}</span>
+    </td>
+    <td class="py-3 px-3 text-center">
+      <span class="text-xs text-slate-400 font-mono">묶음</span>
+    </td>
+  `;
+
+  tr.addEventListener("click", (e) => {
+    if (collapsedGroups.has(group.id)) {
+      collapsedGroups.delete(group.id);
+    } else {
+      collapsedGroups.add(group.id);
+    }
+    render();
+  });
+
+  return tr;
+}
+
+function buildItemRow(item, realIdx, isSubItem = false, groupId = null) {
+  const rowTotal = Number(item.price || 0) * Number(item.qty || 0);
+  const tr = document.createElement("tr");
+  tr.className = isSubItem
+    ? "hover:bg-indigo-50/50 bg-indigo-50/20 transition group border-l-4 border-indigo-400"
+    : "hover:bg-white/80 transition group";
+  tr.id = `row-${realIdx}`;
+  tr.setAttribute("draggable", "true");
+  tr.setAttribute("data-idx", realIdx);
+  tr.setAttribute("data-zone", item.zone);
+  if (groupId) tr.setAttribute("data-group-id", groupId);
+
+  const prefixIcon = isSubItem ? `<span class="text-indigo-400 font-mono font-bold mr-1.5">↳</span>` : '';
+
+  tr.innerHTML = `
+    <td class="py-3 px-3 text-center w-12">
+      <div class="drag-handle w-7 h-7 mx-auto rounded-lg hover:bg-slate-200/80 text-slate-300 group-hover:text-slate-600 flex items-center justify-center transition" title="마우스로 잡고 위아래로 끌어 순서 변경">
+        <svg class="w-4 h-4 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M7 2a2 2 0 100 4 2 2 0 000-4zm6 0a2 2 0 100 4 2 2 0 000-4zm-6 6a2 2 0 100 4 2 2 0 000-4zm6 0a2 2 0 100 4 2 2 0 000-4zm-6 6a2 2 0 100 4 2 2 0 000-4zm6 0a2 2 0 100 4 2 2 0 000-4z"/>
+        </svg>
+      </div>
+    </td>
+    <td class="py-3 px-4">
+      <div class="flex items-center">
+        ${prefixIcon}
+        <input type="text" value="${escapeHtml(item.name)}" class="w-full font-semibold text-slate-900 bg-transparent border-b border-transparent focus:border-slate-900 focus:bg-white px-1.5 py-0.5 rounded outline-none transition" data-idx="${realIdx}" data-field="name">
+      </div>
+    </td>
+    <td class="py-3 px-4 text-right">
+      <input type="text" inputmode="numeric" value="${Number(item.price || 0).toLocaleString('ko-KR')}" class="w-28 text-right font-mono font-bold text-slate-900 bg-transparent border-b border-transparent hover:border-slate-300 focus:border-slate-900 focus:bg-white px-1.5 py-0.5 rounded outline-none transition price-input tabular-nums" data-idx="${realIdx}" data-field="price">
+    </td>
+    <td class="py-3 px-4 text-right">
+      <input type="number" value="${item.qty}" min="0" step="1" class="w-16 text-right font-mono font-bold text-slate-900 bg-transparent border-b border-transparent hover:border-slate-300 focus:border-slate-900 focus:bg-white px-1.5 py-0.5 rounded outline-none transition tabular-nums" data-idx="${realIdx}" data-field="qty">
+    </td>
+    <td class="py-3 px-4 text-right font-mono font-bold text-slate-900 text-sm tabular-nums" id="row-total-${realIdx}">
+      <div>${fmtWon(rowTotal)}</div>
+      <div class="text-[10px] text-slate-400 font-normal">(${fmtManwon(rowTotal)})</div>
+    </td>
+    <td class="py-3 px-4">
+      <input type="text" value="${escapeHtml(item.note)}" placeholder="스펙 및 메모" class="w-full text-xs text-slate-500 bg-transparent border-b border-transparent focus:border-slate-300 focus:bg-white px-1.5 py-0.5 rounded outline-none transition" data-idx="${realIdx}" data-field="note">
+    </td>
+    <td class="py-3 px-3 text-center">
+      <button type="button" class="text-slate-300 hover:text-rose-500 p-1 rounded transition del-btn" data-idx="${realIdx}" title="삭제">
+        <svg class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+      </button>
+    </td>
+  `;
+
+  tr.addEventListener("dragstart", (e) => {
+    if (['INPUT', 'BUTTON', 'SELECT'].includes(e.target.tagName)) {
+      if (!e.target.closest('.drag-handle')) {
+        e.preventDefault();
+        return;
+      }
+    }
+    if (currentSearch.trim()) {
+      e.preventDefault();
+      alert("검색 필터를 해제한 상태에서만 순서를 드래그앤드롭으로 변경할 수 있습니다.");
+      return;
+    }
+    draggedIndex = realIdx;
+    tr.classList.add("dragging");
+    e.dataTransfer.effectAllowed = "move";
+    e.dataTransfer.setData("text/plain", realIdx.toString());
+  });
+
+  tr.addEventListener("dragend", () => {
+    tr.classList.remove("dragging");
+    document.querySelectorAll("#zoneTablesContainer tr").forEach(r => r.classList.remove("drag-over-top", "drag-over-bottom"));
+    draggedIndex = null;
+  });
+
+  tr.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+    if (draggedIndex === null || draggedIndex === realIdx) {
+      tr.classList.remove("drag-over-top", "drag-over-bottom");
+      return;
+    }
+    const rect = tr.getBoundingClientRect();
+    const midY = rect.top + rect.height / 2;
+    tr.classList.remove("drag-over-top", "drag-over-bottom");
+    if (e.clientY < midY) {
+      tr.classList.add("drag-over-top");
+    } else {
+      tr.classList.add("drag-over-bottom");
+    }
+  });
+
+  tr.addEventListener("dragleave", () => {
+    tr.classList.remove("drag-over-top", "drag-over-bottom");
+  });
+
+  tr.addEventListener("drop", (e) => {
+    e.preventDefault();
+    tr.classList.remove("drag-over-top", "drag-over-bottom");
+    if (draggedIndex === null || draggedIndex === realIdx) return;
+
+    const rect = tr.getBoundingClientRect();
+    const midY = rect.top + rect.height / 2;
+    const insertBefore = e.clientY < midY;
+
+    const targetZone = items[realIdx].zone;
+    const [movedItem] = items.splice(draggedIndex, 1);
+    movedItem.zone = targetZone;
+
+    let targetIdx = realIdx;
+    if (draggedIndex < targetIdx && insertBefore) {
+      targetIdx -= 1;
+    } else if (draggedIndex > targetIdx && !insertBefore) {
+      targetIdx += 1;
+    }
+    items.splice(targetIdx, 0, movedItem);
+
+    saveData();
+    render();
+  });
+
+  return tr;
+}
+
+function addRowToZone(zoneId) {
+  const newItem = {
+    id: Date.now(),
+    zone: zoneId,
+    name: "새 품목 (신규 추가)",
+    price: 100000,
+    qty: 1,
+    note: ""
+  };
+  const firstZoneIdx = items.findIndex(it => it.zone === zoneId);
+  if (firstZoneIdx >= 0) {
+    items.splice(firstZoneIdx, 0, newItem);
+  } else {
+    items.push(newItem);
+  }
+  saveData();
+  render();
+}
+
+function render() {
+  const container = document.getElementById("zoneTablesContainer");
+  container.innerHTML = "";
+
+  const searchLower = currentSearch.trim().toLowerCase();
+  const visibleZones = currentZone === 'ALL' ? ZONES : ZONES.filter(z => z.id === currentZone);
+
+  let totalDisplayed = 0;
+
+  visibleZones.forEach(zone => {
+    const zoneAllItems = items.filter(it => it.zone === zone.id);
+    const zoneFilteredItems = zoneAllItems.filter(it => {
+      if (!searchLower) return true;
+      const n = (it.name || '').toLowerCase();
+      const note = (it.note || '').toLowerCase();
+      return n.includes(searchLower) || note.includes(searchLower);
+    });
+    totalDisplayed += zoneFilteredItems.length;
+
+    let zoneTotal = 0;
+    let zoneQty = 0;
+    zoneAllItems.forEach(it => {
+      zoneTotal += Number(it.price || 0) * Number(it.qty || 0);
+      zoneQty += Number(it.qty || 0);
+    });
+
+    const card = document.createElement("div");
+    card.className = `border-2 ${zone.cardClass} rounded-2xl overflow-hidden shadow-xs`;
+
+    card.innerHTML = `
+      <div class="px-4 sm:px-5 py-3.5 ${zone.headerBg} border-b flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full ${zone.dotClass} flex-shrink-0"></span>
+          <h3 class="text-base font-extrabold text-slate-900 tracking-tight">${zone.title}</h3>
+          <span class="text-[11px] px-2.5 py-0.5 rounded-full font-bold border ${zone.badgeClass}" id="zone-count-${zone.id}">${zoneAllItems.length}개 품목</span>
+          ${zone.id === 'INTERIOR'
+            ? `<span class="text-xs font-semibold text-indigo-800 bg-indigo-100/90 border border-indigo-300 px-2.5 py-0.5 rounded-full inline-flex items-center gap-1">${zone.subtitle}</span>`
+            : `<span class="text-xs text-slate-600 hidden md:inline">${zone.subtitle}</span>`
+          }
+        </div>
+        <div class="flex items-center gap-2.5 self-start sm:self-auto">
+          <span class="text-xs font-mono font-bold text-slate-800 bg-white/90 px-2.5 py-1 rounded-lg border border-slate-200/80 tabular-nums" id="zone-header-total-${zone.id}">
+            ${fmtWon(zoneTotal)} · ${fmtManwon(zoneTotal)}
+          </span>
+          <button type="button" class="zone-add-btn px-3 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition flex items-center gap-1 shadow-2xs" data-zone="${zone.id}">
+            <span>+</span> 품목 추가
+          </button>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="${zone.theadBg} font-semibold border-b text-xs whitespace-nowrap">
+            <tr>
+              <th class="py-3 px-3 w-12 text-center" title="드래그앤드롭 핸들">순서</th>
+              <th class="py-3 px-4 w-72 sm:w-80">품목명 (규격)</th>
+              <th class="py-3 px-4 w-36 text-right">단가 (원)</th>
+              <th class="py-3 px-4 w-24 text-right">수량</th>
+              <th class="py-3 px-4 w-44 text-right font-bold text-slate-900">합계 (원)</th>
+              <th class="py-3 px-4">공식 스펙 및 비고</th>
+              <th class="py-3 px-3 text-center w-14">삭제</th>
+            </tr>
+          </thead>
+          <tbody id="zone-tbody-${zone.id}" class="divide-y ${zone.tbodyClass} text-slate-700"></tbody>
+          <tfoot class="${zone.tfootClass} border-t font-bold text-slate-900">
+            <tr>
+              <td colspan="3" class="py-3 px-4 text-sm text-slate-900">${zone.title} 소계</td>
+              <td class="py-3 px-4 text-right font-mono text-xs text-slate-600 font-semibold tabular-nums" id="zone-qty-${zone.id}">${zoneQty.toLocaleString('ko-KR')}개</td>
+              <td class="py-3 px-4 text-right font-mono text-base text-slate-900 tabular-nums whitespace-nowrap" id="zone-subtotal-${zone.id}">
+                ${fmtWon(zoneTotal)} <span class="text-xs font-normal text-slate-600">(${fmtManwon(zoneTotal)})</span>
+              </td>
+              <td colspan="2" class="py-3 px-4 text-xs text-slate-500 font-normal">좌측 핸들(⋮⋮) 드래그로 순서 변경</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    `;
+
+    const tbody = card.querySelector(`#zone-tbody-${zone.id}`);
+    if (zoneFilteredItems.length === 0) {
+      const emptyTr = document.createElement("tr");
+      emptyTr.innerHTML = `<td colspan="7" class="py-6 px-4 text-center text-xs text-slate-400">${searchLower ? '검색 조건에 맞는 품목이 없습니다.' : '등록된 품목이 없습니다. 우측 상단 [+ 품목 추가] 버튼으로 추가하세요.'}</td>`;
+      tbody.appendChild(emptyTr);
+    } else {
+      const itemToGroupMap = new Map();
+      ITEM_GROUPS.forEach(g => {
+        zoneFilteredItems.forEach(it => {
+          if (g.matchItem(it)) {
+            itemToGroupMap.set(it, g);
+          }
+        });
+      });
+
+      // 엔티티 구성 (단일 품목 또는 그룹 블록)
+      const entities = [];
+      const handledGroupIds = new Set();
+
+      zoneFilteredItems.forEach(item => {
+        const group = itemToGroupMap.get(item);
+        if (!group || searchLower.length > 0) {
+          const rowTotal = Number(item.price || 0) * Number(item.qty || 0);
+          entities.push({
+            type: 'single',
+            item: item,
+            total: rowTotal
+          });
+        } else {
+          if (!handledGroupIds.has(group.id)) {
+            handledGroupIds.add(group.id);
+            const memberItems = zoneFilteredItems.filter(it => itemToGroupMap.get(it) === group);
+            // 그룹 내부 하위 품목도 금액 높은 순으로 정렬
+            memberItems.sort((a, b) => {
+              const totA = Number(a.price || 0) * Number(a.qty || 0);
+              const totB = Number(b.price || 0) * Number(b.qty || 0);
+              return totB - totA || Number(b.price || 0) - Number(a.price || 0);
+            });
+            let groupTotal = 0;
+            memberItems.forEach(it => {
+              groupTotal += Number(it.price || 0) * Number(it.qty || 0);
+            });
+            entities.push({
+              type: 'group',
+              group: group,
+              memberItems: memberItems,
+              total: groupTotal
+            });
+          }
+        }
+      });
+
+      // 1. 합계금액이 높은 순에서 낮은 순으로 정렬 (내림차순)
+      entities.sort((a, b) => b.total - a.total);
+
+      // 정렬된 순서대로 렌더링
+      entities.forEach(ent => {
+        if (ent.type === 'single') {
+          const realIdx = items.indexOf(ent.item);
+          tbody.appendChild(buildItemRow(ent.item, realIdx));
+        } else {
+          tbody.appendChild(buildGroupSummaryRow(ent.group, ent.memberItems));
+          if (!collapsedGroups.has(ent.group.id)) {
+            ent.memberItems.forEach(subIt => {
+              const realIdx = items.indexOf(subIt);
+              tbody.appendChild(buildItemRow(subIt, realIdx, true, ent.group.id));
+            });
+          }
+        }
+      });
+    }
+
+    container.appendChild(card);
+  });
+
+  const badgeEl = document.getElementById("itemCountBadge");
+  if (badgeEl) {
+    badgeEl.textContent = (currentZone === 'ALL' && !searchLower)
+      ? `총 ${items.length}개 품목`
+      : `총 ${items.length}개 품목 (표시: ${totalDisplayed}개)`;
+  }
+
+  updateSummaries();
+  bindEvents();
+}
+
+function bindEvents() {
+  const container = document.getElementById("zoneTablesContainer");
+
+  container.querySelectorAll(".zone-add-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const zoneId = e.currentTarget.getAttribute("data-zone");
+      addRowToZone(zoneId);
+    });
+  });
+
+  container.querySelectorAll("input[data-field='name'], input[data-field='note']").forEach(input => {
+    input.addEventListener("input", e => {
+      const idx = parseInt(e.target.getAttribute("data-idx"), 10);
+      const field = e.target.getAttribute("data-field");
+      items[idx][field] = e.target.value;
+      saveData();
+    });
+  });
+
+  container.querySelectorAll(".price-input").forEach(input => {
+    input.addEventListener("input", e => {
+      const idx = parseInt(e.target.getAttribute("data-idx"), 10);
+      const raw = e.target.value.replace(/[^0-9]/g, '');
+      const num = parseInt(raw, 10) || 0;
+      items[idx].price = num;
+
+      const oldCursor = e.target.selectionStart;
+      const oldLen = e.target.value.length;
+      e.target.value = num > 0 ? num.toLocaleString('ko-KR') : (raw === '0' ? '0' : '');
+      const newLen = e.target.value.length;
+      e.target.setSelectionRange(oldCursor + (newLen - oldLen), oldCursor + (newLen - oldLen));
+
+      const rowTotal = Number(items[idx].price || 0) * Number(items[idx].qty || 0);
+      const rowTotalEl = document.getElementById(`row-total-${idx}`);
+      if (rowTotalEl) {
+        rowTotalEl.innerHTML = `
+          <div>${fmtWon(rowTotal)}</div>
+          <div class="text-[10px] text-slate-400 font-normal">(${fmtManwon(rowTotal)})</div>
+        `;
+      }
+
+      saveData();
+      updateSummaries();
+    });
+  });
+
+  container.querySelectorAll("input[data-field='qty']").forEach(input => {
+    input.addEventListener("input", e => {
+      const idx = parseInt(e.target.getAttribute("data-idx"), 10);
+      items[idx].qty = parseFloat(e.target.value) || 0;
+
+      const rowTotal = Number(items[idx].price || 0) * Number(items[idx].qty || 0);
+      const rowTotalEl = document.getElementById(`row-total-${idx}`);
+      if (rowTotalEl) {
+        rowTotalEl.innerHTML = `
+          <div>${fmtWon(rowTotal)}</div>
+          <div class="text-[10px] text-slate-400 font-normal">(${fmtManwon(rowTotal)})</div>
+        `;
+      }
+
+      saveData();
+      updateSummaries();
+    });
+  });
+
+  container.querySelectorAll(".del-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const idx = parseInt(e.currentTarget.getAttribute("data-idx"), 10);
+      if (confirm(`'${items[idx].name}' 품목을 삭제하시겠습니까?`)) {
+        items.splice(idx, 1);
+        saveData();
+        render();
+      }
+    });
+  });
+}
+
+function updateSummaries() {
+  const zoneTotals = { METCON: 0, ROX: 0, ERG: 0, LOUNGE: 0, INTERIOR: 0, MEP: 0 };
+  const zoneQtys = { METCON: 0, ROX: 0, ERG: 0, LOUNGE: 0, INTERIOR: 0, MEP: 0 };
+  const zoneCounts = { METCON: 0, ROX: 0, ERG: 0, LOUNGE: 0, INTERIOR: 0, MEP: 0 };
+  let total = 0;
+
+  items.forEach(item => {
+    const z = VALID_ZONES.has(item.zone) ? item.zone : 'METCON';
+    const qty = Number(item.qty || 0);
+    const rowTotal = Number(item.price || 0) * qty;
+    total += rowTotal;
+    zoneTotals[z] += rowTotal;
+    zoneQtys[z] += qty;
+    zoneCounts[z] += 1;
+  });
+
+  ZONES.forEach(z => {
+    const zSum = zoneTotals[z.id];
+    const zQty = zoneQtys[z.id];
+    const zCnt = zoneCounts[z.id];
+    const subEl = document.getElementById(`zone-subtotal-${z.id}`);
+    if (subEl) subEl.innerHTML = `${fmtWon(zSum)} <span class="text-xs font-normal text-slate-600">(${fmtManwon(zSum)})</span>`;
+    const hdrEl = document.getElementById(`zone-header-total-${z.id}`);
+    if (hdrEl) hdrEl.textContent = `${fmtWon(zSum)} · ${fmtManwon(zSum)}`;
+    const qtyEl = document.getElementById(`zone-qty-${z.id}`);
+    if (qtyEl) qtyEl.textContent = `${zQty.toLocaleString('ko-KR')}개`;
+    const cntEl = document.getElementById(`zone-count-${z.id}`);
+    if (cntEl) cntEl.textContent = `${zCnt}개 품목`;
+  });
+
+  // Update Group Summaries
+  ITEM_GROUPS.forEach(group => {
+    const memberItems = items.filter(it => group.matchItem(it));
+    let gQty = 0;
+    let gTotal = 0;
+    memberItems.forEach(it => {
+      const q = Number(it.qty || 0);
+      gQty += q;
+      gTotal += Number(it.price || 0) * q;
+    });
+    const qtyEl = document.getElementById(`group-qty-${group.id}`);
+    const totalEl = document.getElementById(`group-total-${group.id}`);
+    if (qtyEl) qtyEl.textContent = `${gQty.toLocaleString('ko-KR')}개`;
+    if (totalEl) {
+      totalEl.innerHTML = `
+        <div>${fmtWon(gTotal)}</div>
+        <div class="text-[10px] text-slate-500 font-normal">(${fmtManwon(gTotal)})</div>
+      `;
+    }
+  });
+
+  const equipLoungeTotal = zoneTotals.METCON + zoneTotals.ROX + zoneTotals.ERG + zoneTotals.LOUNGE;
+  const interiorMepTotal = zoneTotals.INTERIOR + zoneTotals.MEP;
+
+  document.getElementById("sumTotal").textContent = fmtManwon(total);
+  document.getElementById("sumTotalWon").textContent = `${fmtWon(total)} (1~6구역 전체)`;
+  document.getElementById("footTotal").textContent = `${fmtManwon(total)} (${fmtWon(total)})`;
+
+  const footSplitSubEl = document.getElementById("footSplitSub");
+  if (footSplitSubEl) {
+    footSplitSubEl.textContent = `운동기구·라운지(1~4구역) ${fmtManwon(equipLoungeTotal)} + 인테리어·냉난방·설비(5~6구역) ${fmtManwon(interiorMepTotal)} · 사업계획서 실시간 연동`;
+  }
+
+  const verifyMap = {
+    footVerifyMetcon: zoneTotals.METCON,
+    footVerifyRox: zoneTotals.ROX,
+    footVerifyErg: zoneTotals.ERG,
+    footVerifyLounge: zoneTotals.LOUNGE,
+    footVerifyInterior: zoneTotals.INTERIOR,
+    footVerifyMep: zoneTotals.MEP
+  };
+  Object.entries(verifyMap).forEach(([elId, val]) => {
+    const el = document.getElementById(elId);
+    if (el) el.textContent = fmtWon(val);
+  });
+  const footVerifySumEl = document.getElementById("footVerifySum");
+  if (footVerifySumEl) footVerifySumEl.textContent = fmtWon(total);
+
+  const headerTotalEl = document.getElementById("headerTotalText");
+  if (headerTotalEl) headerTotalEl.textContent = fmtManwon(total);
+  const headerItemEl = document.getElementById("headerItemCountText");
+  if (headerItemEl) headerItemEl.textContent = `6개 구역 · ${items.length}개 핵심 품목`;
+
+  document.getElementById("sumCardio").textContent = fmtManwon(equipLoungeTotal);
+  document.getElementById("sumCardioWon").textContent = `METCON ${fmtManwon(zoneTotals.METCON)} · ROX ${fmtManwon(zoneTotals.ROX)} · 에르그 ${fmtManwon(zoneTotals.ERG)} · 라운지 ${fmtManwon(zoneTotals.LOUNGE)}`;
+
+  document.getElementById("sumXpodium").textContent = fmtManwon(interiorMepTotal);
+  document.getElementById("sumXpodiumWon").textContent = `인테리어·건축 ${fmtManwon(zoneTotals.INTERIOR)} · 냉난방·설비 ${fmtManwon(zoneTotals.MEP)}`;
+}
+
+// Zone Filter pills
+document.querySelectorAll(".zone-pill").forEach(pill => {
+  pill.addEventListener("click", () => {
+    document.querySelectorAll(".zone-pill").forEach(p => {
+      p.classList.remove('active', 'font-bold');
+      p.classList.add('text-slate-600');
+    });
+    pill.classList.add('active', 'font-bold');
+    pill.classList.remove('text-slate-600');
+    currentZone = pill.getAttribute("data-zone");
+    render();
+  });
+});
+
+// Search input
+document.getElementById("searchInput").addEventListener("input", e => {
+  currentSearch = e.target.value;
+  render();
+});
+
+// Copy Current JSON for Preset Export
+const copyJsonBtn = document.getElementById("copyJsonBtn");
+if (copyJsonBtn) {
+  copyJsonBtn.addEventListener("click", () => {
+    const jsonStr = JSON.stringify(items, null, 2);
+    navigator.clipboard.writeText(jsonStr).then(() => {
+      alert("✓ 현재 화면에 입력·수정된 명세서 전체 JSON이 클립보드에 복사되었습니다!\n\n대화창(채팅)에 [Ctrl+V / Cmd+V] 붙여넣어 주시면 즉시 영구 기본값(PRESET)으로 저장해 드립니다.");
+    }).catch(() => {
+      prompt("아래 텍스트를 복사하여 대화창에 붙여넣어 주세요:", jsonStr);
+    });
+  });
+}
+
+// Reset Current
+document.getElementById("resetCurrentBtn").addEventListener("click", () => {
+  if (confirm("계림점 230평 구역별 공식 명세 기본값으로 복원하시겠습니까?\n(직접 수정한 내용은 덮어씌워집니다)")) {
+    items = JSON.parse(JSON.stringify(PRESET_GYERIM));
+    saveData();
+    render();
+  }
+});
+
+// Copy to Clipboard (TSV for Excel)
+document.getElementById("copyClipboardBtn").addEventListener("click", () => {
+  let text = "계림 운동공간 초기 시설 투자비 명세서 (CAPEX)\n";
+  text += "계림점 230평 6개 구역 통합 명세 (운동기구 · 라운지 · 인테리어 · 냉난방 설비)\n";
+  text += "------------------------------------------------------------------------------------------------------\n";
+  text += "구역\t순번\t품목명 (규격)\t단가(원)\t수량\t합계(원)\t합계(만원)\t공식 스펙 및 비고\n";
+
+  ZONES.forEach(zone => {
+    const zoneItems = items.filter(it => it.zone === zone.id);
+    let zoneSum = 0;
+    zoneItems.forEach((item, idx) => {
+      const rowTotal = Number(item.price || 0) * Number(item.qty || 0);
+      zoneSum += rowTotal;
+      const manwon = (rowTotal / 10000).toFixed(1);
+      text += `${zone.title}\t${idx + 1}\t${item.name}\t${item.price}\t${item.qty}\t${rowTotal}\t${manwon}\t${item.note || ''}\n`;
+    });
+    text += `${zone.title} 소계\t\t\t\t\t${zoneSum}\t${(zoneSum / 10000).toFixed(1)}\t\n`;
+  });
+
+  const total = calculateTotal();
+  text += "------------------------------------------------------------------------------------------------------\n";
+  text += `총합계\t\t\t\t\t${total}\t${(total / 10000).toFixed(1)}\t${fmtManwon(total)}\n`;
+
+  navigator.clipboard.writeText(text).then(() => {
+    alert("구역별 명세서 전체 내용이 클립보드에 복사되었습니다.\n(엑셀(Excel)에 [Ctrl+V] 또는 [Cmd+V]로 바로 붙여넣을 수 있습니다)");
+  }).catch(() => {
+    alert("클립보드 복사 실패");
+  });
+});
+
+// Cross-document hub tab sync
+document.querySelectorAll('a[href^="kyerim-"]').forEach(a => {
+  a.addEventListener('click', () => {
+    const href = a.getAttribute('href');
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'switchTab', src: href }, '*');
+    }
+  });
+});
+
+loadData();
+render();
+</script>
+</body>
+</html>

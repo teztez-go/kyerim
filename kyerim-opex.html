@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>계림점 월 고정 실운영비 명세서 — 운영대표 × 의장님</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: { 50: '#fff7ed', 100: '#ffedd5', 500: '#f97316', 600: '#ea580c', 700: '#c2410c' },
+        navy: { 800: '#1e293b', 900: '#0f172a', 950: '#090d16' },
+        gold: { 50: '#fffbeb', 100: '#fef3c7', 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309' }
+      },
+      fontFamily: {
+        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'Apple SD Gothic Neo', 'Noto Sans KR', 'sans-serif'],
+        mono: ['SF Mono', 'ui-monospace', 'Menlo', 'Consolas', 'monospace']
+      }
+    }
+  }
+}
+</script>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  background-color: #f8fafc;
+}
+.tabular-nums { font-variant-numeric: tabular-nums; }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.report-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgb(15 23 42 / 0.03), 0 4px 12px -2px rgb(15 23 42 / 0.04);
+}
+.is-embedded header { display: none !important; }
+.is-embedded main { padding-top: 1.5rem !important; }
+.drag-handle { cursor: grab; user-select: none; }
+.drag-handle:active { cursor: grabbing; }
+tr.dragging { opacity: 0.45; background-color: #f1f5f9 !important; }
+tr.drag-over-top { border-top: 2.5px solid #0f172a !important; }
+tr.drag-over-bottom { border-bottom: 2.5px solid #0f172a !important; }
+</style>
+<script>
+if (window.self !== window.top) {
+  document.documentElement.classList.add('is-embedded');
+}
+</script>
+</head>
+<body class="text-slate-800 font-sans antialiased selection:bg-slate-900 selection:text-white min-h-screen">
+
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-slate-200 px-4 lg:px-8 py-3 shadow-xs">
+  <div class="max-w-[1520px] mx-auto flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <span class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center font-black text-amber-400 text-sm shadow-xs">P</span>
+        <div>
+          <span class="font-bold text-sm sm:text-base tracking-tight text-slate-900">계림 운동공간 위탁운영 프로젝트</span>
+          <span class="text-[11px] text-slate-400 block -mt-0.5 font-mono">월 고정 실운영비 명세서 (OPEX)</span>
+        </div>
+      </a>
+      <span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">의장님 층 소유 (월세 0원)</span>
+    </div>
+
+    <nav class="flex items-center gap-1.5 text-xs sm:text-sm font-medium">
+      <a href="kyerim-plan.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">사업계획 & 수익 계산기</a>
+      <a href="kyerim-opex.html" class="px-3 py-1.5 rounded-lg bg-slate-900 text-white font-semibold transition">월 운영비 명세서</a>
+      <a href="kyerim-equipment.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">시설 초기투자비 명세서</a>
+      <a href="kyerim-pitch.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">공간 기획 제안서</a>
+      <a href="index.html" class="ml-1 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200 transition">허브 ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-[1520px] mx-auto px-4 lg:px-8 py-7 space-y-7">
+
+  <!-- ① EXECUTIVE SUMMARY HEADER (PB Investment Report Style) -->
+  <section class="rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 text-white p-6 sm:p-9 shadow-lg relative overflow-hidden border border-slate-800">
+    <div class="absolute -top-32 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="relative z-10 space-y-6">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-slate-800/90 pb-6">
+        <div class="space-y-2 max-w-4xl">
+          <div class="inline-flex items-center gap-2 text-amber-400 text-xs font-mono uppercase tracking-widest font-semibold">
+            <span>EXECUTIVE OPEX REPORT</span>
+            <span class="text-slate-600">·</span>
+            <span>2대 카테고리 실운영비 명세서</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-snug">
+            현장 운영비 & 코치 인건비 투명 실비 정산 명세
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal pt-0.5">
+            전문 코치진 인건비와 시설 관리비를 2대 카테고리로 투명하게 구분하여, 매월 전산 매출에서 우선 공제하는 실운영비 산출 근거입니다.
+          </p>
+        </div>
+        <div class="flex-shrink-0">
+          <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/90 border border-slate-700 text-xs text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>매월 매출에서 실비 우선 공제</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Key Executive Metrics (Seamlessly bound to JavaScript updateSummaries) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+        <!-- Metric 1: Total OPEX -->
+        <div onclick="setFilter('all')" class="rounded-2xl bg-gradient-to-br from-amber-500/15 to-amber-500/5 border border-amber-400/30 p-4 sm:p-5 cursor-pointer hover:border-amber-400/60 transition group" title="클릭 시 전체 항목 보기">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-amber-300/90 font-medium">월 고정 실운영비 총합계</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-amber-400/20 text-amber-300 font-mono font-bold" id="cardTotalBadge">21개 항목</span>
+          </div>
+          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono tabular-nums mt-1.5" id="sumTotal">7,670,490원</div>
+          <div class="text-xs text-amber-200/70 font-mono mt-1" id="sumTotalSub">약 767만원 · 매출에서 우선 공제</div>
+        </div>
+
+        <!-- Metric 2: Labor Cost -->
+        <div onclick="setFilter('labor')" class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5 cursor-pointer hover:border-slate-500 transition group" title="클릭 시 코치진 인건비만 필터">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-medium">1. 코치진 인건비</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-700 text-slate-300 font-mono font-bold" id="cardLaborBadge">8개 항목</span>
+          </div>
+          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumLabor">6,083,450원</div>
+          <div class="text-xs text-slate-400 font-mono mt-1" id="sumLaborSub">약 608.3만원 (79.3%)</div>
+        </div>
+
+        <!-- Metric 3: Operations & Utilities -->
+        <div onclick="setFilter('ops')" class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5 cursor-pointer hover:border-slate-500 transition group" title="클릭 시 관리비·운영비만 필터">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-medium">2. 관리비·공과금 & 운영비</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-700 text-slate-300 font-mono font-bold" id="cardOpsBadge">13개 항목</span>
+          </div>
+          <div class="text-2xl sm:text-3xl font-black text-white font-mono tabular-nums mt-1.5" id="sumOps">1,587,040원</div>
+          <div class="text-xs text-slate-400 font-mono mt-1" id="sumOpsSub">약 158.7만원 (20.7%)</div>
+        </div>
+
+        <!-- Metric 4: Rent Saving -->
+        <div class="rounded-2xl bg-slate-800/70 border border-slate-700/80 p-4 sm:p-5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-medium">임대 조건 (월세 리스크 0)</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 font-bold">확정</span>
+          </div>
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tabular-nums mt-1.5">보증금·월세 0원</div>
+          <div class="text-xs text-slate-400 mt-1">자가 건물 소유 · 고정비 부담 완전 배제</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② MAIN EDITABLE TABLE CARD -->
+  <section class="report-card rounded-3xl p-6 sm:p-8 space-y-5">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-5 rounded-full bg-slate-900"></span>
+          <h2 class="text-xl font-bold text-slate-900 tracking-tight">월 고정 실운영비 세부 항목 및 산출 근거</h2>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200" id="tableHeaderBadge">2대 카테고리 (21개 항목)</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
+          국세청 간이세액표 및 4대보험·퇴직금 공식이 자동 연동되며, 단가나 수량을 수정하면 즉시 재산출되어 수익 계산기에 실시간 반영됩니다.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <span id="saveStatusBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200 transition-all">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span id="saveStatusText">실시간 자동 저장 중</span>
+        </span>
+        <button type="button" id="addRowBtn" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition flex items-center gap-1 shadow-xs">
+          <span>+</span> 항목 추가
+        </button>
+        <button type="button" id="resetBtn" class="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-medium border border-slate-200 transition">
+          기본값 복원
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Filter Tabs Bar -->
+    <div class="flex flex-wrap items-center justify-between gap-3 pt-1 pb-1">
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-xs font-bold text-slate-400 mr-1">보기 필터:</span>
+        <button type="button" id="btnFilterAll" onclick="setFilter('all')" class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white shadow-xs transition border border-transparent">
+          전체 항목 (<span id="btnFilterAllCount">21개</span> · <span id="btnFilterAllSum">767만</span>)
+        </button>
+        <button type="button" id="btnFilterLabor" onclick="setFilter('labor')" class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition">
+          🧑‍🏫 1. 코치진 인건비 (<span id="btnFilterLaborCount">8개</span> · <span id="btnFilterLaborSum">608.3만</span>)
+        </button>
+        <button type="button" id="btnFilterOps" onclick="setFilter('ops')" class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition">
+          🏢 2. 관리·공과금 & 운영비 (<span id="btnFilterOpsCount">13개</span> · <span id="btnFilterOpsSum">158.7만</span>)
+        </button>
+      </div>
+      <div class="text-[11px] text-slate-400 font-mono hidden md:block">
+        * 좌측 핸들(⋮⋮) 드래그로 순서 변경 가능
+      </div>
+    </div>
+
+    <!-- Table Container -->
+    <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+      <table class="w-full min-w-[1140px] xl:table-fixed text-left text-sm">
+        <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200 text-xs whitespace-nowrap">
+          <tr>
+            <th class="py-3 px-2 w-14 xl:w-[4.5%] text-center" title="드래그앤드롭으로 순서 변경">순서</th>
+            <th class="py-3 px-2.5 w-28 xl:w-[9.5%] text-center whitespace-nowrap">구분</th>
+            <th class="py-3 px-4 w-72 xl:w-[25%]">항목명</th>
+            <th class="py-3 px-4 w-44 xl:w-[13.5%] text-right">단가 / 원금 (원)</th>
+            <th class="py-3 px-4 w-24 xl:w-[8%] text-right">수량</th>
+            <th class="py-3 px-4 w-40 xl:w-[13.5%] text-right font-bold text-slate-900">월 실비 합계</th>
+            <th class="py-3 px-4 w-[280px] xl:w-[22%]">구성 내역 및 산출 근거</th>
+            <th class="py-3 px-2 text-center w-14 xl:w-[4%]">삭제</th>
+          </tr>
+        </thead>
+        <tbody id="opexTableBody" class="divide-y divide-slate-100 text-slate-700">
+          <!-- Rows injected by JavaScript -->
+        </tbody>
+        <tfoot class="bg-slate-50 border-t-2 border-slate-300 text-slate-900">
+          <!-- Cross Verification Subtotal Row -->
+          <tr class="bg-slate-100/70 border-b border-slate-200 text-xs font-semibold text-slate-700">
+            <td colspan="5" class="py-2.5 px-4 text-right">
+              <span class="text-slate-500 mr-2">카테고리별 합산 검증:</span>
+              <span class="inline-flex items-center gap-1 text-slate-800 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono font-bold">인건비 <span id="footSummaryLabor">6,083,450원</span></span>
+              <span class="mx-1 text-slate-400">+</span>
+              <span class="inline-flex items-center gap-1 text-slate-800 bg-white px-2 py-0.5 rounded border border-slate-200 font-mono font-bold">운영비 <span id="footSummaryOps">1,587,040원</span></span>
+              <span class="mx-1 text-slate-400">=</span>
+            </td>
+            <td class="py-2.5 px-4 text-right font-mono font-bold text-slate-900 text-sm whitespace-nowrap tabular-nums" id="footSummarySum">
+              7,670,490원
+            </td>
+            <td colspan="2" class="py-2.5 px-4 text-xs text-emerald-600 font-medium">
+              ✓ 두 카테고리 합계와 총합계 100% 일치
+            </td>
+          </tr>
+          <!-- Grand Total Row -->
+          <tr class="font-bold bg-white">
+            <td colspan="5" class="py-3.5 px-4 text-base text-slate-900">월 고정 실운영비 총합계 (OPEX)</td>
+            <td class="py-3.5 px-4 text-right font-mono text-xl text-slate-900 whitespace-nowrap tabular-nums" id="footTotal">
+              7,670,490원
+            </td>
+            <td colspan="2" class="py-3.5 px-4 text-xs text-slate-500 font-normal" id="footTotalSub">
+              (약 767만원 · 계산기 및 대시보드에 실시간 자동 반영)
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-slate-200/80 bg-white mt-8 py-6 px-4 text-center text-xs text-slate-400 font-mono">
+  계림 운동공간 위탁운영 프로젝트 · 월 고정 실운영비 명세서
+</footer>
+
+<script>
+// 21 items configured with category grouping: 8 Labor + 13 Operations
+const DEFAULT_OPEX = [
+  // 1. 코치진 급여 및 수당 인건비 (8개 항목)
+  { id: 1, category: "labor", name: "기본급", price: 4200000, qty: 1, note: "코치진 기본급여 (상주 헤드코치 등)" },
+  { id: 2, category: "labor", name: "퇴직금(10%)", price: 420000, qty: 1, isAutoSeverance: true, note: "기본급의 10% 자동 연동 (법정 퇴직연금)" },
+  { id: 3, category: "labor", name: "4대보험(업장분)", price: 420000, qty: 1, isFourIns: true, note: "기본급의 10% 자동 연동 (사업주 법정 부담분: 국민연금·건강·고용·산재)" },
+  { id: 4, category: "labor", name: "근로소득세", price: 221320, qty: 1, isIncomeTax: true, note: "국세청 근로소득 간이세액표 공식 자동 산출 (소득세법 시행령 별표2)" },
+  { id: 5, category: "labor", name: "지방소득세", price: 22130, qty: 1, isLocalTax: true, note: "근로소득세의 10% 자동 산출 (지방세법 제87조)" },
+  { id: 6, category: "labor", name: "헤드직급수당", price: 400000, qty: 1, note: "수업 및 센터 총괄 책임 직급수당" },
+  { id: 7, category: "labor", name: "월차수당", price: 240000, qty: 1, note: "법정 월차 / 연차 정산 수당" },
+  { id: 8, category: "labor", name: "일요일 근무수당", price: 160000, qty: 1, note: "일요일/공휴일 오픈 클래스 코칭 수당" },
+
+  // 2. 관리비·공과금 & 센터 운영비 (13개 항목)
+  { id: 9, category: "ops", name: "임대료", price: 0, qty: 1, note: "의장님이 해당 층 소유자이므로 0원 확정" },
+  { id: 10, category: "ops", name: "전기요금", price: 800000, qty: 1, note: "지하 230평 공조·환기 및 냉난방 전기료" },
+  { id: 11, category: "ops", name: "수도요금", price: 100000, qty: 1, note: "남녀 샤워실 및 센터 위생 수도요금" },
+  { id: 12, category: "ops", name: "금융이자", price: 48000000, qty: 5.0, isLoan: true, note: "운영자금 대출이자 (대출금액 × 연금리 ÷ 12)" },
+  { id: 13, category: "ops", name: "세무기장료", price: 100000, qty: 1, note: "세무회계사무소 매월 장부 기장 수수료" },
+  { id: 14, category: "ops", name: "CRM사용료", price: 80000, qty: 1, note: "회원 출석, 수강권 결제 및 예약 앱 솔루션" },
+  { id: 15, category: "ops", name: "SK렌탈", price: 63000, qty: 1, note: "정수기 및 공기청정기 렌탈 관리비" },
+  { id: 16, category: "ops", name: "화재보험료", price: 57000, qty: 1, note: "체육시설업 화재 및 영업배상책임보험" },
+  { id: 17, category: "ops", name: "통신료", price: 40000, qty: 1, note: "매장 인터넷, 와이파이 및 유무선 통신비" },
+  { id: 18, category: "ops", name: "사업주공과세", price: 21040, qty: 230, isOwnerTax: true, note: "지방세법 제81조 주민세 사업소분 자동 산출 (기본세액 6.25만 + 230평 연면적분 19만 ÷ 12개월)" },
+  { id: 19, category: "ops", name: "소모비품", price: 100000, qty: 1, note: "탄막, 테이핑, 청소용품, 구급약품 등 실비" },
+  { id: 20, category: "ops", name: "음악저작권료", price: 18000, qty: 1, note: "체육시설 매장 음악 공연권 저작권료" },
+  { id: 21, category: "ops", name: "유튜브음악", price: 8000, qty: 1, note: "매장 배경음악 스트리밍 정기구독" }
+];
+
+const STORAGE_KEY = "kyerim_opex_items_v7";
+const TOTAL_STORAGE_KEY = "kyerim_opex_total_v2";
+
+let items = [];
+let currentFilter = 'all'; // 'all' | 'labor' | 'ops'
+let draggedIndex = null;
+
+/**
+ * 국세청 근로소득 간이세액 산출 공식 (소득세법 시행령 [별표 2] 기준)
+ */
+function calculateNtsIncomeTax(monthlySalary, dependents = 1) {
+  if (!monthlySalary || monthlySalary <= 0) {
+    return { incomeTax: 0, localIncomeTax: 0 };
+  }
+  const Y = monthlySalary * 12; // 연간 총급여액 환산
+
+  let ded = 0;
+  if (Y <= 5000000) {
+    ded = Y * 0.70;
+  } else if (Y <= 15000000) {
+    ded = 3500000 + (Y - 5000000) * 0.40;
+  } else if (Y <= 45000000) {
+    ded = 7500000 + (Y - 15000000) * 0.15;
+  } else if (Y <= 100000000) {
+    ded = 12000000 + (Y - 45000000) * 0.05;
+  } else {
+    ded = 14750000 + (Y - 100000000) * 0.02;
+  }
+  const earnedIncome = Y - ded;
+
+  const basicPersonalDed = dependents * 1500000;
+  let pensionDed = monthlySalary * 0.045 * 12;
+  const maxPensionAnnual = 6170000 * 0.045 * 12;
+  if (pensionDed > maxPensionAnnual) pensionDed = maxPensionAnnual;
+
+  let specialDed = 0;
+  if (dependents === 1) {
+    if (Y <= 30000000) specialDed = 3100000 + Y * 0.04;
+    else if (Y <= 45000000) specialDed = 3100000 + Y * 0.04 - (Y - 30000000) * 0.05;
+    else if (Y <= 70000000) specialDed = 3100000 + Y * 0.015;
+    else if (Y <= 120000000) specialDed = 3100000;
+    else specialDed = 3100000;
+  } else if (dependents === 2) {
+    if (Y <= 30000000) specialDed = 3600000 + Y * 0.04;
+    else if (Y <= 45000000) specialDed = 3600000 + Y * 0.04 - (Y - 30000000) * 0.05;
+    else if (Y <= 70000000) specialDed = 3600000 + Y * 0.02;
+    else if (Y <= 120000000) specialDed = 3600000;
+    else specialDed = 3600000;
+  } else {
+    if (Y <= 30000000) specialDed = 5000000 + Y * 0.07 + (dependents - 2) * 2400000;
+    else if (Y <= 45000000) specialDed = 5000000 + Y * 0.07 - (Y - 30000000) * 0.05 + (dependents - 2) * 2400000;
+    else if (Y <= 70000000) specialDed = 5000000 + Y * 0.05 + (dependents - 2) * 2400000;
+    else specialDed = 5000000 + (dependents - 2) * 2400000;
+  }
+
+  let taxBase = earnedIncome - basicPersonalDed - pensionDed - specialDed;
+  if (taxBase < 0) taxBase = 0;
+
+  let calcTaxAnnual = 0;
+  if (taxBase <= 14000000) {
+    calcTaxAnnual = taxBase * 0.06;
+  } else if (taxBase <= 50000000) {
+    calcTaxAnnual = 840000 + (taxBase - 14000000) * 0.15;
+  } else if (taxBase <= 88000000) {
+    calcTaxAnnual = 6240000 + (taxBase - 50000000) * 0.24;
+  } else if (taxBase <= 150000000) {
+    calcTaxAnnual = 15360000 + (taxBase - 88000000) * 0.35;
+  } else {
+    calcTaxAnnual = 37060000 + (taxBase - 150000000) * 0.38;
+  }
+
+  let credit = 0;
+  if (calcTaxAnnual <= 1300000) {
+    credit = calcTaxAnnual * 0.55;
+  } else {
+    credit = 715000 + (calcTaxAnnual - 1300000) * 0.30;
+  }
+  let maxCredit = 740000;
+  if (Y > 33000000 && Y <= 70000000) {
+    maxCredit = Math.max(660000, 740000 - (Y - 33000000) * 0.008);
+  } else if (Y > 70000000) {
+    maxCredit = Math.max(500000, 660000 - (Y - 70000000) * 0.5);
+  }
+  credit = Math.min(credit, maxCredit);
+
+  let finalAnnualTax = calcTaxAnnual - credit;
+  if (finalAnnualTax < 0) finalAnnualTax = 0;
+
+  const monthlyIncomeTax = Math.floor(Math.floor(finalAnnualTax / 12) / 10) * 10;
+  const monthlyLocalTax = Math.floor((monthlyIncomeTax * 0.10) / 10) * 10;
+
+  return {
+    incomeTax: monthlyIncomeTax,
+    localIncomeTax: monthlyLocalTax
+  };
+}
+
+function calculateLocalIncomeTax(incomeTax) {
+  return Math.floor((Number(incomeTax || 0) * 0.10) / 10) * 10;
+}
+
+function calculateFourInsurances(monthlySalary) {
+  return Math.round(Number(monthlySalary || 0) * 0.10);
+}
+
+function calculateSeverance(monthlySalary) {
+  return Math.round(Number(monthlySalary || 0) * 0.10);
+}
+
+function calculateOwnerTax(areaPyeong = 230) {
+  const pyeong = Math.max(0, Number(areaPyeong || 0));
+  if (pyeong === 0) return 0;
+  const sqm = Math.floor(pyeong * 3.305785);
+  const basicTaxAnnual = 50000 + 12500;
+  const areaTaxAnnual = sqm > 330 ? sqm * 250 : 0;
+  const annualTotal = basicTaxAnnual + areaTaxAnnual;
+  return Math.floor(Math.floor(annualTotal / 12) / 10) * 10;
+}
+
+function getItemCategory(item) {
+  if (item.category === "labor" || item.category === "ops") {
+    return item.category;
+  }
+  return isLabor(item.name) ? "labor" : "ops";
+}
+
+function isLabor(name) {
+  const n = (name || "").trim();
+  const laborKeywords = ["기본급", "퇴직금", "보험", "소득세", "지방세", "수당", "월차", "일요", "코치", "급여", "인건비", "상여"];
+  return laborKeywords.some(k => n.includes(k));
+}
+
+function syncSeverance() {
+  const baseSalaryItem = items.find(it => it.name.includes("기본급"));
+  const baseSalary = baseSalaryItem ? Number(baseSalaryItem.price || 0) * Number(baseSalaryItem.qty || 1) : 0;
+  const sevItem = items.find(it => it.name.includes("퇴직금"));
+  if (sevItem) {
+    sevItem.price = calculateSeverance(baseSalary);
+    sevItem.qty = 1;
+    sevItem.isAutoSeverance = true;
+  }
+}
+
+function syncFourInsurances() {
+  const baseSalaryItem = items.find(it => it.name.includes("기본급"));
+  const baseSalary = baseSalaryItem ? Number(baseSalaryItem.price || 0) * Number(baseSalaryItem.qty || 1) : 0;
+  const insItem = items.find(it => it.name.includes("4대보험"));
+  if (insItem) {
+    insItem.price = calculateFourInsurances(baseSalary);
+    insItem.qty = 1;
+    insItem.isFourIns = true;
+  }
+}
+
+function syncTaxes() {
+  const baseSalaryItem = items.find(it => it.name.includes("기본급"));
+  const baseSalary = baseSalaryItem ? Number(baseSalaryItem.price || 0) * Number(baseSalaryItem.qty || 1) : 0;
+  const taxes = calculateNtsIncomeTax(baseSalary, 1);
+
+  const incTaxItem = items.find(it => it.name === "근로소득세" || (it.name.includes("소득세") && !it.name.includes("지방")));
+  if (incTaxItem) {
+    incTaxItem.price = taxes.incomeTax;
+    incTaxItem.qty = 1;
+    incTaxItem.isIncomeTax = true;
+  }
+
+  const locTaxItem = items.find(it => it.name.includes("지방소득세") || it.name.includes("지방세"));
+  if (locTaxItem) {
+    locTaxItem.price = taxes.localIncomeTax;
+    locTaxItem.qty = 1;
+    locTaxItem.isLocalTax = true;
+  }
+}
+
+function syncOwnerTax() {
+  const ownerTaxItem = items.find(it => it.name.includes("사업주공과세") || it.isOwnerTax);
+  if (ownerTaxItem) {
+    if (!ownerTaxItem.isOwnerTax || Number(ownerTaxItem.qty || 0) <= 10) {
+      ownerTaxItem.qty = 230;
+    }
+    ownerTaxItem.isOwnerTax = true;
+    ownerTaxItem.price = calculateOwnerTax(ownerTaxItem.qty);
+  }
+}
+
+function organizeItems() {
+  const labor = items.filter(it => getItemCategory(it) === 'labor');
+  const ops = items.filter(it => getItemCategory(it) === 'ops');
+  items = [...labor, ...ops];
+}
+
+function loadData() {
+  const CANDIDATE_KEYS = [
+    STORAGE_KEY,
+    "kyerim_opex_items_v6",
+    "kyerim_opex_items_v5",
+    "kyerim_opex_items_v4",
+    "kyerim_opex_items_v3",
+    "kyerim_opex_items_v2"
+  ];
+
+  let saved = null;
+  for (const k of CANDIDATE_KEYS) {
+    const val = localStorage.getItem(k);
+    if (val) {
+      saved = val;
+      break;
+    }
+  }
+
+  if (saved) {
+    try {
+      let parsed = JSON.parse(saved);
+      if (Array.isArray(parsed) && parsed.length >= 10) {
+        parsed.forEach(it => {
+          if (!it.category) {
+            it.category = isLabor(it.name) ? "labor" : "ops";
+          }
+          if (it.note && it.note.includes("형님")) it.note = it.note.replace(/형님/g, "의장님");
+        });
+
+        items = parsed;
+        organizeItems();
+        syncSeverance();
+        syncTaxes();
+        syncFourInsurances();
+        syncOwnerTax();
+        saveData();
+        return;
+      }
+    } catch(e) {}
+  }
+
+  items = JSON.parse(JSON.stringify(DEFAULT_OPEX));
+  organizeItems();
+  syncSeverance();
+  syncTaxes();
+  syncFourInsurances();
+  syncOwnerTax();
+  saveData();
+}
+
+function saveData() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  const totalWon = calculateTotal();
+  const totalManwon = Math.round(totalWon / 10000);
+  localStorage.setItem(TOTAL_STORAGE_KEY, totalManwon);
+  showSaveIndicator();
+}
+
+function showSaveIndicator() {
+  const badge = document.getElementById("saveStatusBadge");
+  const txt = document.getElementById("saveStatusText");
+  if (!badge || !txt) return;
+
+  const now = new Date();
+  const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+  
+  badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-300 transition-all shadow-xs";
+  txt.textContent = `✓ 저장 완료 (${timeStr})`;
+  
+  clearTimeout(badge._timer);
+  badge._timer = setTimeout(() => {
+    badge.className = "inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200 transition-all";
+    txt.textContent = `실시간 자동 저장 중`;
+  }, 1400);
+}
+
+function calculateRowTotal(item) {
+  if (item.name.includes("금융이자") || item.isLoan) {
+    const loanAmount = Number(item.price || 0);
+    const rate = Number(item.qty || 0);
+    return Math.round(loanAmount * (rate / 100) / 12);
+  }
+  if (item.name.includes("사업주공과세") || item.isOwnerTax) {
+    return Number(item.price || 0);
+  }
+  return Number(item.price || 0) * Number(item.qty || 0);
+}
+
+function calculateTotal() {
+  return items.reduce((sum, item) => sum + calculateRowTotal(item), 0);
+}
+
+function escapeHtml(str) {
+  return String(str ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[ch]));
+}
+
+function fmtWon(n) {
+  return Math.round(n).toLocaleString('ko-KR') + '원';
+}
+
+function fmtManwon(n) {
+  const man = Number((n / 10000).toFixed(1));
+  return `약 ${man.toLocaleString('ko-KR')}만원`;
+}
+
+function fmtRowTotal(n, item) {
+  if (n === 0) {
+    return `<span class="text-emerald-600 font-bold">0원 (면제)</span>`;
+  }
+  return Math.round(n).toLocaleString('ko-KR') + '원';
+}
+
+function setFilter(filter) {
+  currentFilter = filter;
+  
+  const btnAll = document.getElementById("btnFilterAll");
+  const btnLabor = document.getElementById("btnFilterLabor");
+  const btnOps = document.getElementById("btnFilterOps");
+  
+  const activeClass = "bg-slate-900 text-white font-bold shadow-xs border-transparent";
+  const normalClass = "bg-white hover:bg-slate-100 text-slate-700 border-slate-200 font-medium";
+  
+  if (btnAll) btnAll.className = `filter-btn px-3.5 py-1.5 rounded-xl text-xs transition border ${filter === 'all' ? activeClass : normalClass}`;
+  if (btnLabor) btnLabor.className = `filter-btn px-3.5 py-1.5 rounded-xl text-xs transition border ${filter === 'labor' ? activeClass : normalClass}`;
+  if (btnOps) btnOps.className = `filter-btn px-3.5 py-1.5 rounded-xl text-xs transition border ${filter === 'ops' ? activeClass : normalClass}`;
+  
+  render();
+}
+
+function createItemRow(item, index, catOrderNum) {
+  const rowTotal = calculateRowTotal(item);
+  const itemCategory = getItemCategory(item);
+  const isLaborItem = itemCategory === "labor";
+  const isLoan = item.name.includes("금융이자") || item.isLoan;
+  const isSeverance = item.name.includes("퇴직금");
+  const isIncomeTax = item.name.includes("근로소득세") || item.isIncomeTax;
+  const isLocalTax = item.name.includes("지방소득세") || item.name.includes("지방세") || item.isLocalTax;
+  const isFourIns = item.name.includes("4대보험") || item.isFourIns;
+  const isOwnerTax = item.name.includes("사업주공과세") || item.isOwnerTax;
+  const isRent = item.name.includes("임대료");
+
+  const tr = document.createElement("tr");
+  tr.className = "hover:bg-slate-50/80 transition group";
+  tr.draggable = true;
+  tr.dataset.index = index;
+
+  let qtyLabel = "수량";
+  let unitLabel = "";
+  if (isLoan) {
+    qtyLabel = "연금리 %";
+    unitLabel = "%";
+  } else if (isOwnerTax) {
+    qtyLabel = "연면적(평)";
+    unitLabel = "평";
+  }
+
+  let tagBadge = "";
+  const autoBadgeClass = "px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap shrink-0";
+  if (isSeverance) {
+    tagBadge = `<span class="${autoBadgeClass}">기본급 10% 연동</span>`;
+  } else if (isFourIns) {
+    tagBadge = `<span class="${autoBadgeClass}">기본급 10% 연동</span>`;
+  } else if (isIncomeTax) {
+    tagBadge = `<span class="${autoBadgeClass}">국세청 공식</span>`;
+  } else if (isLocalTax) {
+    tagBadge = `<span class="${autoBadgeClass}">소득세 10%</span>`;
+  } else if (isOwnerTax) {
+    tagBadge = `<span class="${autoBadgeClass}">지방세법</span>`;
+  } else if (isRent) {
+    tagBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 whitespace-nowrap shrink-0">월세 0원</span>`;
+  }
+
+  const categoryBadge = isLaborItem 
+    ? `<span class="px-2 py-0.5 rounded-md text-[11px] font-bold bg-slate-100 text-slate-800 border border-slate-200">1. 인건비</span>`
+    : `<span class="px-2 py-0.5 rounded-md text-[11px] font-bold bg-slate-100 text-slate-600 border border-slate-200">2. 운영비</span>`;
+
+  tr.innerHTML = `
+    <td class="py-3 px-2 text-center drag-handle text-slate-300 hover:text-slate-600 transition" title="드래그앤드롭으로 순서 변경">
+      <div class="flex items-center justify-center gap-1 font-mono text-xs">
+        <span class="text-slate-300">⋮⋮</span>
+        <span class="font-bold text-slate-500">${catOrderNum}</span>
+      </div>
+    </td>
+    <td class="py-3 px-2.5 text-center">
+      <select class="cat-select text-[11px] font-bold rounded-lg border border-slate-200 px-2 py-1 bg-white focus:border-slate-900 outline-none" data-idx="${index}">
+        <option value="labor" ${isLaborItem ? 'selected' : ''}>1. 인건비</option>
+        <option value="ops" ${!isLaborItem ? 'selected' : ''}>2. 운영비</option>
+      </select>
+    </td>
+    <td class="py-3 px-4 whitespace-nowrap">
+      <div class="flex items-center gap-1.5">
+        <div class="inline-grid items-center max-w-full min-w-0">
+          <span class="invisible whitespace-pre px-1.5 py-0.5 font-semibold text-sm col-start-1 row-start-1">${escapeHtml(item.name || ' ')}</span>
+          <input type="text" value="${escapeHtml(item.name)}" class="col-start-1 row-start-1 w-full min-w-[3rem] font-semibold text-slate-900 bg-transparent border-b border-transparent hover:border-slate-300 focus:border-slate-900 focus:bg-white px-1.5 py-0.5 rounded outline-none transition" data-idx="${index}" data-field="name">
+        </div>
+        ${tagBadge}
+      </div>
+    </td>
+    <td class="py-3 px-4 text-right">
+      <div class="inline-flex items-center justify-end gap-1">
+        <input type="text" value="${Number(item.price).toLocaleString('ko-KR')}" class="price-input text-right font-mono font-bold text-slate-900 bg-transparent border-b border-transparent hover:border-slate-300 focus:border-slate-900 focus:bg-white px-1.5 py-0.5 rounded outline-none transition w-28 tabular-nums" data-idx="${index}" ${isRent ? 'readonly' : ''}>
+        <span class="text-xs text-slate-400">원</span>
+      </div>
+    </td>
+    <td class="py-3 px-4 text-right">
+      <div class="inline-flex items-center justify-end gap-1">
+        <input type="number" step="${isLoan ? '0.1' : '1'}" min="0" value="${item.qty}" class="qty-input text-right font-mono text-slate-800 bg-transparent border-b border-transparent hover:border-slate-300 focus:border-slate-900 focus:bg-white px-1 py-0.5 rounded outline-none transition w-16 tabular-nums" data-idx="${index}" title="${qtyLabel}">
+        <span class="text-xs text-slate-500 font-medium">${unitLabel}</span>
+      </div>
+    </td>
+    <td class="py-3 px-4 text-right font-mono font-bold text-slate-900 whitespace-nowrap tabular-nums" id="row-total-${index}">
+      ${fmtRowTotal(rowTotal, item)}
+    </td>
+    <td class="py-3 px-4">
+      <input type="text" value="${escapeHtml(item.note || '')}" title="${escapeHtml(item.note || '')}" placeholder="산출 근거 및 비고" class="note-input text-xs text-slate-500 bg-transparent border-b border-transparent hover:border-slate-300 focus:border-slate-900 focus:bg-white px-1.5 py-0.5 rounded outline-none transition w-full" data-idx="${index}" data-field="note">
+    </td>
+    <td class="py-3 px-2 text-center">
+      <button type="button" class="text-slate-300 hover:text-rose-500 p-1.5 rounded transition del-btn" data-idx="${index}" title="삭제">
+        <svg class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+      </button>
+    </td>
+  `;
+
+  // Drag events for row reordering
+  tr.addEventListener("dragstart", (e) => {
+    if (['INPUT', 'BUTTON', 'SELECT'].includes(e.target.tagName)) {
+      if (!e.target.closest('.drag-handle')) {
+        e.preventDefault();
+        return;
+      }
+    }
+    draggedIndex = index;
+    tr.classList.add("dragging");
+    e.dataTransfer.effectAllowed = "move";
+    e.dataTransfer.setData("text/plain", index.toString());
+  });
+
+  tr.addEventListener("dragend", () => {
+    tr.classList.remove("dragging");
+    document.querySelectorAll("#opexTableBody tr").forEach(r => r.classList.remove("drag-over-top", "drag-over-bottom"));
+    draggedIndex = null;
+  });
+
+  tr.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+    if (draggedIndex === null || draggedIndex === index) {
+      tr.classList.remove("drag-over-top", "drag-over-bottom");
+      return;
+    }
+    const rect = tr.getBoundingClientRect();
+    const midY = rect.top + rect.height / 2;
+    tr.classList.remove("drag-over-top", "drag-over-bottom");
+    if (e.clientY < midY) {
+      tr.classList.add("drag-over-top");
+    } else {
+      tr.classList.add("drag-over-bottom");
+    }
+  });
+
+  tr.addEventListener("dragleave", () => {
+    tr.classList.remove("drag-over-top", "drag-over-bottom");
+  });
+
+  tr.addEventListener("drop", (e) => {
+    e.preventDefault();
+    tr.classList.remove("drag-over-top", "drag-over-bottom");
+    if (draggedIndex === null || draggedIndex === index) return;
+
+    const rect = tr.getBoundingClientRect();
+    const midY = rect.top + rect.height / 2;
+    const insertBefore = e.clientY < midY;
+
+    const [movedItem] = items.splice(draggedIndex, 1);
+    
+    const targetCategory = getItemCategory(items[index < draggedIndex ? index : (index > 0 ? index - 1 : 0)]);
+    if (targetCategory) {
+      movedItem.category = targetCategory;
+    }
+
+    let targetIdx = index;
+    if (draggedIndex < targetIdx && insertBefore) {
+      targetIdx -= 1;
+    } else if (draggedIndex > targetIdx && !insertBefore) {
+      targetIdx += 1;
+    }
+    items.splice(targetIdx, 0, movedItem);
+
+    saveData();
+    render();
+  });
+
+  return tr;
+}
+
+function render() {
+  const tbody = document.getElementById("opexTableBody");
+  tbody.innerHTML = "";
+
+  const laborEntries = [];
+  const opsEntries = [];
+
+  items.forEach((item, index) => {
+    const cat = getItemCategory(item);
+    if (cat === "labor") {
+      laborEntries.push({ item, index });
+    } else {
+      opsEntries.push({ item, index });
+    }
+  });
+
+  const laborTotal = laborEntries.reduce((sum, e) => sum + calculateRowTotal(e.item), 0);
+  const opsTotal = opsEntries.reduce((sum, e) => sum + calculateRowTotal(e.item), 0);
+  const grandTotal = laborTotal + opsTotal;
+
+  const laborPct = grandTotal > 0 ? ((laborTotal / grandTotal) * 100).toFixed(1) : "0.0";
+  const opsPct = grandTotal > 0 ? ((opsTotal / grandTotal) * 100).toFixed(1) : "0.0";
+
+  // 1. Render Category 1: Labor
+  if (currentFilter === 'all' || currentFilter === 'labor') {
+    const laborHeaderTr = document.createElement("tr");
+    laborHeaderTr.className = "cat-header-labor bg-slate-100/80 border-t-2 border-b border-slate-200";
+    laborHeaderTr.innerHTML = `
+      <td colspan="8" class="py-3 px-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-slate-900 text-white font-black text-xs flex items-center justify-center shadow-xs">1</span>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-900 text-sm">코치진 급여 및 수당 인건비</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white text-slate-700 border border-slate-200" id="bannerLaborCount">${laborEntries.length}개 항목</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-0.5">상주 헤드코치 기본급, 법정 퇴직연금·4대보험, 제수당 및 원천징수 근로소득세</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-[11px] text-slate-400 font-medium">인건비 소계</span>
+              <div class="flex items-baseline justify-end gap-1.5 font-mono">
+                <span class="font-black text-slate-900 text-base tabular-nums" id="bannerLaborSum">${fmtWon(laborTotal)}</span>
+                <span class="text-xs text-slate-400" id="bannerLaborPct">(${laborPct}%)</span>
+              </div>
+            </div>
+            <button type="button" class="btn-add-labor px-3 py-1.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-xs font-bold shadow-xs transition flex items-center gap-1">
+              <span>+</span> 인건비 추가
+            </button>
+          </div>
+        </div>
+      </td>
+    `;
+    tbody.appendChild(laborHeaderTr);
+
+    laborEntries.forEach((entry, idx) => {
+      const rowEl = createItemRow(entry.item, entry.index, idx + 1);
+      tbody.appendChild(rowEl);
+    });
+
+    const laborSubtotalTr = document.createElement("tr");
+    laborSubtotalTr.className = "bg-slate-50 border-b border-slate-200 font-bold text-slate-800";
+    laborSubtotalTr.innerHTML = `
+      <td colspan="5" class="py-2.5 px-4 text-right">
+        <div class="flex items-center justify-end gap-2 text-xs">
+          <span class="text-slate-700 font-bold">1. 코치진 인건비 소계</span>
+          <span class="text-slate-400 font-normal">(${laborEntries.length}개 항목 · <b class="text-slate-800" id="footLaborPct">${laborPct}%</b>)</span>
+        </div>
+      </td>
+      <td class="py-2.5 px-4 text-right font-mono font-bold text-slate-900 text-sm tabular-nums" id="subtotalLaborFoot">
+        ${fmtWon(laborTotal)}
+      </td>
+      <td colspan="2" class="py-2.5 px-4 text-xs text-slate-500 font-normal" id="subtotalLaborFootDesc">
+        ${fmtManwon(laborTotal)} (기본급+퇴직금10%+수당+4대보험+소득세)
+      </td>
+    `;
+    tbody.appendChild(laborSubtotalTr);
+  }
+
+  // 2. Render Category 2: Operations & Utilities
+  if (currentFilter === 'all' || currentFilter === 'ops') {
+    const opsHeaderTr = document.createElement("tr");
+    opsHeaderTr.className = "cat-header-ops bg-slate-100/80 border-t-2 border-b border-slate-200";
+    opsHeaderTr.innerHTML = `
+      <td colspan="8" class="py-3 px-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-slate-900 text-white font-black text-xs flex items-center justify-center shadow-xs">2</span>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-900 text-sm">관리비·공과금 &amp; 센터 운영비</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white text-slate-700 border border-slate-200" id="bannerOpsCount">${opsEntries.length}개 항목</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-0.5">지하 230평 공조 냉난방·전기·수도, 대출 금융이자, 세무/CRM, 렌탈, 화재보험, 비품 등</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-[11px] text-slate-400 font-medium">운영비 소계</span>
+              <div class="flex items-baseline justify-end gap-1.5 font-mono">
+                <span class="font-black text-slate-900 text-base tabular-nums" id="bannerOpsSum">${fmtWon(opsTotal)}</span>
+                <span class="text-xs text-slate-400" id="bannerOpsPct">(${opsPct}%)</span>
+              </div>
+            </div>
+            <button type="button" class="btn-add-ops px-3 py-1.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-xs font-bold shadow-xs transition flex items-center gap-1">
+              <span>+</span> 운영비 추가
+            </button>
+          </div>
+        </div>
+      </td>
+    `;
+    tbody.appendChild(opsHeaderTr);
+
+    opsEntries.forEach((entry, idx) => {
+      const rowEl = createItemRow(entry.item, entry.index, idx + 1);
+      tbody.appendChild(rowEl);
+    });
+
+    const opsSubtotalTr = document.createElement("tr");
+    opsSubtotalTr.className = "bg-slate-50 border-b border-slate-200 font-bold text-slate-800";
+    opsSubtotalTr.innerHTML = `
+      <td colspan="5" class="py-2.5 px-4 text-right">
+        <div class="flex items-center justify-end gap-2 text-xs">
+          <span class="text-slate-700 font-bold">2. 관리비·공과금 &amp; 센터 운영비 소계</span>
+          <span class="text-slate-400 font-normal">(${opsEntries.length}개 항목 · <b class="text-slate-800" id="footOpsPct">${opsPct}%</b>)</span>
+        </div>
+      </td>
+      <td class="py-2.5 px-4 text-right font-mono font-bold text-slate-900 text-sm tabular-nums" id="subtotalOpsFoot">
+        ${fmtWon(opsTotal)}
+      </td>
+      <td colspan="2" class="py-2.5 px-4 text-xs text-slate-500 font-normal" id="subtotalOpsFootDesc">
+        ${fmtManwon(opsTotal)} (전기·수도·금융이자·세무·비품 등)
+      </td>
+    `;
+    tbody.appendChild(opsSubtotalTr);
+  }
+
+  updateSummaries();
+  bindInputEvents();
+}
+
+function updateSummaries() {
+  let total = 0;
+  let labor = 0;
+  let ops = 0;
+  let laborCount = 0;
+  let opsCount = 0;
+
+  items.forEach(item => {
+    const rowTotal = calculateRowTotal(item);
+    total += rowTotal;
+    if (getItemCategory(item) === "labor") {
+      labor += rowTotal;
+      laborCount++;
+    } else {
+      ops += rowTotal;
+      opsCount++;
+    }
+  });
+
+  const totalCount = items.length;
+  const laborPct = total > 0 ? ((labor / total) * 100).toFixed(1) : "0.0";
+  const opsPct = total > 0 ? ((ops / total) * 100).toFixed(1) : "0.0";
+
+  // Top Summary Cards
+  document.getElementById("sumTotal").textContent = fmtWon(total);
+  document.getElementById("sumTotalSub").textContent = `${fmtManwon(total)} · 매출에서 우선 공제`;
+  document.getElementById("cardTotalBadge").textContent = `${totalCount}개 항목`;
+
+  document.getElementById("sumLabor").textContent = fmtWon(labor);
+  document.getElementById("sumLaborSub").textContent = `${fmtManwon(labor)} (${laborCount}개 항목 · ${laborPct}%)`;
+  document.getElementById("cardLaborBadge").textContent = `${laborCount}개 항목`;
+
+  document.getElementById("sumOps").textContent = fmtWon(ops);
+  document.getElementById("sumOpsSub").textContent = `${fmtManwon(ops)} (${opsCount}개 항목 · ${opsPct}%)`;
+  document.getElementById("cardOpsBadge").textContent = `${opsCount}개 항목`;
+
+  // Category Banner Headers (Live Update)
+  const bannerLaborSumEl = document.getElementById("bannerLaborSum");
+  if (bannerLaborSumEl) bannerLaborSumEl.textContent = fmtWon(labor);
+  const bannerLaborPctEl = document.getElementById("bannerLaborPct");
+  if (bannerLaborPctEl) bannerLaborPctEl.textContent = `(${laborPct}%)`;
+  const bannerLaborCountEl = document.getElementById("bannerLaborCount");
+  if (bannerLaborCountEl) bannerLaborCountEl.textContent = `${laborCount}개 항목`;
+
+  const bannerOpsSumEl = document.getElementById("bannerOpsSum");
+  if (bannerOpsSumEl) bannerOpsSumEl.textContent = fmtWon(ops);
+  const bannerOpsPctEl = document.getElementById("bannerOpsPct");
+  if (bannerOpsPctEl) bannerOpsPctEl.textContent = `(${opsPct}%)`;
+  const bannerOpsCountEl = document.getElementById("bannerOpsCount");
+  if (bannerOpsCountEl) bannerOpsCountEl.textContent = `${opsCount}개 항목`;
+
+  // Category Subtotal Bottom Footers (Live Update)
+  const subtotalLaborFootEl = document.getElementById("subtotalLaborFoot");
+  if (subtotalLaborFootEl) subtotalLaborFootEl.textContent = fmtWon(labor);
+  const footLaborPctEl = document.getElementById("footLaborPct");
+  if (footLaborPctEl) footLaborPctEl.textContent = `${laborPct}%`;
+  const subtotalLaborDescEl = document.getElementById("subtotalLaborFootDesc");
+  if (subtotalLaborDescEl) subtotalLaborDescEl.textContent = `${fmtManwon(labor)} (기본급+퇴직금10%+수당+4대보험+소득세)`;
+
+  const subtotalOpsFootEl = document.getElementById("subtotalOpsFoot");
+  if (subtotalOpsFootEl) subtotalOpsFootEl.textContent = fmtWon(ops);
+  const footOpsPctEl = document.getElementById("footOpsPct");
+  if (footOpsPctEl) footOpsPctEl.textContent = `${opsPct}%`;
+  const subtotalOpsDescEl = document.getElementById("subtotalOpsFootDesc");
+  if (subtotalOpsDescEl) subtotalOpsDescEl.textContent = `${fmtManwon(ops)} (전기·수도·금융이자·세무·비품 등)`;
+
+  // Filter Bar Buttons text
+  document.getElementById("btnFilterAllCount").textContent = `${totalCount}개`;
+  document.getElementById("btnFilterAllSum").textContent = `${Math.round(total / 10000)}만`;
+
+  document.getElementById("btnFilterLaborCount").textContent = `${laborCount}개`;
+  document.getElementById("btnFilterLaborSum").textContent = `${(labor / 10000).toFixed(1)}만`;
+
+  document.getElementById("btnFilterOpsCount").textContent = `${opsCount}개`;
+  document.getElementById("btnFilterOpsSum").textContent = `${(ops / 10000).toFixed(1)}만`;
+
+  // Table Footers
+  document.getElementById("footSummaryLabor").textContent = fmtWon(labor);
+  document.getElementById("footSummaryOps").textContent = fmtWon(ops);
+  document.getElementById("footSummarySum").textContent = fmtWon(total);
+  document.getElementById("footTotal").textContent = fmtWon(total);
+  document.getElementById("footTotalSub").textContent = `(${fmtManwon(total)} · 계산기 및 대시보드에 실시간 자동 반영)`;
+}
+
+function refreshLinkedRows() {
+  syncSeverance();
+  syncTaxes();
+  syncFourInsurances();
+
+  const sevIdx = items.findIndex(it => it.name.includes("퇴직금"));
+  if (sevIdx !== -1) {
+    const sevInput = document.getElementById(`price-input-${sevIdx}`);
+    if (sevInput) sevInput.value = Number(items[sevIdx].price).toLocaleString('ko-KR');
+    const sevTotalEl = document.getElementById(`row-total-${sevIdx}`);
+    if (sevTotalEl) sevTotalEl.innerHTML = fmtRowTotal(items[sevIdx].price, items[sevIdx]);
+  }
+
+  const incIdx = items.findIndex(it => it.name === "근로소득세" || (it.name.includes("소득세") && !it.name.includes("지방")));
+  if (incIdx !== -1) {
+    const incInput = document.getElementById(`price-input-${incIdx}`);
+    if (incInput) incInput.value = Number(items[incIdx].price).toLocaleString('ko-KR');
+    const incTotalEl = document.getElementById(`row-total-${incIdx}`);
+    if (incTotalEl) incTotalEl.innerHTML = fmtRowTotal(items[incIdx].price, items[incIdx]);
+  }
+
+  const locIdx = items.findIndex(it => it.name.includes("지방소득세") || it.name.includes("지방세"));
+  if (locIdx !== -1) {
+    const locInput = document.getElementById(`price-input-${locIdx}`);
+    if (locInput) locInput.value = Number(items[locIdx].price).toLocaleString('ko-KR');
+    const locTotalEl = document.getElementById(`row-total-${locIdx}`);
+    if (locTotalEl) locTotalEl.innerHTML = fmtRowTotal(items[locIdx].price, items[locIdx]);
+  }
+
+  const insIdx = items.findIndex(it => it.name.includes("4대보험"));
+  if (insIdx !== -1) {
+    const insInput = document.getElementById(`price-input-${insIdx}`);
+    if (insInput) insInput.value = Number(items[insIdx].price).toLocaleString('ko-KR');
+    const insTotalEl = document.getElementById(`row-total-${insIdx}`);
+    if (insTotalEl) insTotalEl.innerHTML = fmtRowTotal(items[insIdx].price, items[insIdx]);
+  }
+
+  const ownerTaxIdx = items.findIndex(it => it.name.includes("사업주공과세") || it.isOwnerTax);
+  if (ownerTaxIdx !== -1) {
+    const ownerInput = document.getElementById(`price-input-${ownerTaxIdx}`);
+    if (ownerInput) ownerInput.value = Number(items[ownerTaxIdx].price).toLocaleString('ko-KR');
+    const ownerTotalEl = document.getElementById(`row-total-${ownerTaxIdx}`);
+    if (ownerTotalEl) ownerTotalEl.innerHTML = fmtRowTotal(items[ownerTaxIdx].price, items[ownerTaxIdx]);
+  }
+}
+
+function bindInputEvents() {
+  const tbody = document.getElementById("opexTableBody");
+
+  tbody.querySelectorAll(".price-input").forEach(input => {
+    input.addEventListener("input", e => {
+      const idx = parseInt(e.target.getAttribute("data-idx"));
+      const oldVal = e.target.value;
+      const oldCursor = e.target.selectionStart;
+
+      const raw = oldVal.replace(/[^0-9]/g, '');
+      const num = parseInt(raw, 10) || 0;
+      items[idx].price = num;
+
+      const formatted = num > 0 ? num.toLocaleString('ko-KR') : (raw === '0' ? '0' : '');
+      e.target.value = formatted;
+
+      const diff = formatted.length - oldVal.length;
+      const newCursor = Math.max(0, oldCursor + diff);
+      e.target.setSelectionRange(newCursor, newCursor);
+
+      if (items[idx].name.includes("기본급")) {
+        refreshLinkedRows();
+      }
+
+      const rowTotal = calculateRowTotal(items[idx]);
+      const rowTotalEl = document.getElementById(`row-total-${idx}`);
+      if (rowTotalEl) rowTotalEl.innerHTML = fmtRowTotal(rowTotal, items[idx]);
+
+      saveData();
+      updateSummaries();
+    });
+  });
+
+  tbody.querySelectorAll(".qty-input").forEach(input => {
+    input.addEventListener("input", e => {
+      const idx = parseInt(e.target.getAttribute("data-idx"));
+      items[idx].qty = parseFloat(e.target.value) || 0;
+
+      if (items[idx].name.includes("기본급")) {
+        refreshLinkedRows();
+      }
+      if (items[idx].name.includes("사업주공과세") || items[idx].isOwnerTax) {
+        items[idx].price = calculateOwnerTax(items[idx].qty);
+        const ownerInput = document.getElementById(`price-input-${idx}`);
+        if (ownerInput) ownerInput.value = Number(items[idx].price).toLocaleString('ko-KR');
+      }
+
+      const rowTotal = calculateRowTotal(items[idx]);
+      const rowTotalEl = document.getElementById(`row-total-${idx}`);
+      if (rowTotalEl) rowTotalEl.innerHTML = fmtRowTotal(rowTotal, items[idx]);
+
+      saveData();
+      updateSummaries();
+    });
+  });
+
+  tbody.querySelectorAll("input[data-field='name'], .note-input").forEach(input => {
+    input.addEventListener("input", e => {
+      const idx = parseInt(e.target.getAttribute("data-idx"));
+      const field = e.target.getAttribute("data-field");
+      items[idx][field] = e.target.value;
+      if (field === 'name' && e.target.previousElementSibling) {
+        e.target.previousElementSibling.textContent = e.target.value || ' ';
+      } else if (field === 'note') {
+        e.target.title = e.target.value;
+      }
+      saveData();
+    });
+  });
+
+  tbody.querySelectorAll(".cat-select").forEach(select => {
+    select.addEventListener("change", e => {
+      const idx = parseInt(e.target.getAttribute("data-idx"));
+      items[idx].category = e.target.value;
+      organizeItems();
+      saveData();
+      render();
+    });
+  });
+
+  tbody.querySelectorAll(".del-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const idx = parseInt(e.currentTarget.getAttribute("data-idx"));
+      if (confirm(`'${items[idx].name}' 항목을 삭제하시겠습니까?`)) {
+        items.splice(idx, 1);
+        syncSeverance();
+        syncTaxes();
+        syncFourInsurances();
+        saveData();
+        render();
+      }
+    });
+  });
+
+  tbody.querySelectorAll(".btn-add-labor").forEach(btn => {
+    btn.addEventListener("click", () => {
+      items.push({
+        id: Date.now(),
+        category: "labor",
+        name: "새 코치진 수당/급여 항목",
+        price: 200000,
+        qty: 1,
+        note: "코치진 급여 및 활동 수당"
+      });
+      organizeItems();
+      saveData();
+      render();
+    });
+  });
+
+  tbody.querySelectorAll(".btn-add-ops").forEach(btn => {
+    btn.addEventListener("click", () => {
+      items.push({
+        id: Date.now(),
+        category: "ops",
+        name: "새 센터 운영비 항목",
+        price: 50000,
+        qty: 1,
+        note: "센터 시설 및 운영 경비 실비"
+      });
+      organizeItems();
+      saveData();
+      render();
+    });
+  });
+}
+
+document.getElementById("addRowBtn").addEventListener("click", () => {
+  const cat = currentFilter === 'ops' ? 'ops' : 'labor';
+  items.push({
+    id: Date.now(),
+    category: cat,
+    name: cat === 'labor' ? "새 코치진 수당/급여 항목" : "새 센터 운영비 항목",
+    price: cat === 'labor' ? 200000 : 50000,
+    qty: 1,
+    note: ""
+  });
+  organizeItems();
+  saveData();
+  render();
+});
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  if (confirm("기본 21개 운영비 항목(인건비 8개 + 관리운영비 13개)으로 복원하시겠습니까? (수정한 내용이 초기화됩니다)")) {
+    items = JSON.parse(JSON.stringify(DEFAULT_OPEX));
+    organizeItems();
+    syncSeverance();
+    syncTaxes();
+    syncFourInsurances();
+    saveData();
+    render();
+  }
+});
+
+// Cross-document hub tab sync
+document.querySelectorAll('a[href^="kyerim-"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'switchTab', src: href }, '*');
+    }
+  });
+});
+
+loadData();
+render();
+</script>
+</body>
+</html>
